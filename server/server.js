@@ -1,11 +1,24 @@
-const express = require("express");
+import { Character } from "../data/models/Character.js";
+import { rollDice } from "../game/DiceEngine.js";
+
+const gameState = {
+    characters: []
+};
+
+import express from "express";
+import { createServer } from "http";
+import { Server } from "socket.io";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
+const server = createServer(app);
+const io = new Server(server);
 
-const http = require("http");
-const server = http.createServer(app);
-
-const { Server } = require("socket.io");
-const crypto = require("crypto");
+app.use(express.static(path.join(__dirname, "../src/public")));
 
 let lastSeen = new Map();
 let players = new Map();
@@ -13,9 +26,9 @@ let players = new Map();
 // value: { id, name }
 let playersById = new Map();
 
-const io = new Server(server, {
-    cors: { origin: "*"}
-});
+let characters = new Map();
+// key: charId
+// value: { id, name, ownerId, hp, maxHp, notes, isEnemy }
 
 function nameExists(name) {
     const lower = name.toLowerCase();
@@ -47,9 +60,8 @@ setInterval(() => {
     }
 }, 10000);
 
-
 // when a user connects
-io.on("connection", (socket) => {
+io.on("connection", socket => {
     console.log("Socket connected", socket.id);
     
     lastSeen.set(socket.id, Date.now());
@@ -138,6 +150,49 @@ io.on("connection", (socket) => {
         });
     });
 
+    // character creation
+    socket.on("create-character", ({ name, maxHp = 10, isEnemy = false }) => {
+        const player = players.get(socket.id);
+        if(!player && !isEnemy) return;
+
+        const id = crypto.randomUUID();
+        
+        const character = {
+            id,
+            name,
+            ownerId: isEnemy ? null : player.id,
+            hp: maxHp,
+            maxHp,
+            notes: "",
+            isEnemy,
+        };
+
+        characters.set(id, character);
+
+        io.emit("character-list", Array.from(characters.values()));
+        io.emit("event-log", `${character.name} has entered.`);
+    });
+
+    socket.on("update-character", (updated) => {
+        const char = characters.get(updated.id);
+        if(!char) return;
+
+        Object.assign(char, updated);
+
+        io.emit("character-list", Array.from(characters.values()));
+    });
+
+    socket.on("delete-character", (id) => {
+        const char = characters.get(id);
+        if(!char) {
+            return;
+        }
+
+        characters.delete(id);
+        io.emit("character-list", Array.fromt(characters.values()));
+        io.emit("event-log", `${char.name} has left.`);
+    });
+
     socket.on("disconnect", () => {
         if(players.has(socket.id)) {
             players.delete(socket.id);
@@ -145,9 +200,44 @@ io.on("connection", (socket) => {
             console.log("[disconnect] removed player for socket:", socket.id);
         }
     });
+
+    // example character creation
+    socket.on("gm_createCharacter", (data) => {
+        const character = new Character({
+            id: crypto.randomUUID(),
+            pokemonId: data.pokemonId,
+            name: data.name
+        });
+
+        gameState.characters.push(character);
+
+        io.emit("characterListUpdated", gameState.characters)
+    });
+
+    // example player rolls dice
+    socket.on("player_rollDice", ({ characterId, statKeys }) => {
+        const character = gameState.characters.find(c => c.id === characterId);
+        if (!character) return;
+
+        let totalDice = 0;
+
+        statKeys.forEach(key => {
+            if (character.stats[key]) totalDice += character.stats[key];
+            if (character.skills[key]) totalDice += character.skills[key];
+        });
+
+        const result = rollDice(totalDice);
+
+        io.emit("diceRolled", {
+            characterId,
+            name: character.name,
+            result
+        });
+    });
 });
 
 // start server on port 3000
-server.listen(3000, () => {
+const PORT = 3000;
+server.listen(PORT, () => {
     console.log("Server is running at http://localhost:3000");
 });

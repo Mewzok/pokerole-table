@@ -1,0 +1,77 @@
+[
+  {
+    "id": "bulbasaur",
+    "name": "Bulbasaur",
+    "types": ["Grass", "Poison"],
+    "baseStats": {
+        "HP": 3,
+        "strength": 2,
+        "dexterity": 2,
+        "vitality": 2,
+        "special": 2,
+        "insight": 2
+    },
+    "maxStats": {
+        "strength": 4,
+        "dexterity": 4,
+        "vitality": 4,
+        "special": 4,
+        "insight": 4
+    },
+    "abilities": ["Overgrow"],
+    "moves": ["Tackle", "Growl", "Leech Seed", "Vine Whip", "Poison Powder", "Sleep Powder", "Take Down", "Razor Leaf", "Sweet Scent", "Growth", "Worry Seed", "Double Edge", "Synthesis", "Solar Beam", "Grassy Terrain", "Amnesia", "Grass Pledge"],
+    "rank": "beginner",
+    "height": 0.7,
+    "weight": 7,
+    "weaknesses": {
+        "Flying": 2,
+        "Fire": 2,
+        "Psychic": 2,
+        "Ice": 2
+    },
+    "immunities": {},
+    "resistances": {
+        "Fighting": 0.5,
+        "Water": 0.5,
+        "Grass": 0.5,
+        "Electric": 0.5,
+        "Fairy": 0.5
+    },
+    "image": "https://imgur.com/DJ3VYRy.png"
+  },
+{
+    "id": "pikachu",
+    "name": "Pikachu",
+    "types": ["Electric"],
+    "baseStats": {
+        "HP": 4,
+        "strength": 2,
+        "dexterity": 2,
+        "vitality": 1,
+        "special": 2,
+        "insight": 2
+    },
+    "maxStats": {
+        "strength": 4,
+        "dexterity": 5,
+        "vitality": 3,
+        "special": 4,
+        "insight": 4
+    },
+    "abilities": ["Static", "Lightning Rod"],
+    "moves": ["Thunder Shock", "Tail Whip", "Growl", "Play Nice", "Quick Attack", "Thunder Wave", "Electro Ball", "Double Team", "Nuzzle", "Slam", "Spark", "Thunderbolt", "Feint", "Agility", "Discharge", "Light Screen", "Thunder", "Wild Charge", "Surf", "Volt Tackle", "Extreme Speed"],
+    "rank": "beginner",
+    "height": 0.4,
+    "weight": 6,
+        "weaknesses": {
+        "Ground": 2
+    },
+    "immunities": {},
+    "resistances": {
+        "Flying": 0.5,
+        "Steel": 0.5,
+        "Electric": 0.5
+    },
+    "image": "https://imgur.com/9TN6qW9.png"
+  }
+]

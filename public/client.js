@@ -19,6 +19,14 @@ const joinStatus = document.getElementById("joinStatus");
 const playerList = document.getElementById("playerList");
 const playerDisplayName = document.getElementById("playerDisplayName");
 
+// character variables
+const characterListDiv = document.getElementById("characterList");
+const charNameInput = document.getElementById("charNameInput");
+const charHpInput = document.getElementById("charHpInput");
+const enemyCheck = document.getElementById("enemyCheck");
+const createCharBtn = document.getElementById("createCharBtn");
+const characterGrid = document.getElementById("character-grid");
+
 function readStored(key) {
     const v = localStorage.getItem(key);
     if(v === null || v === undefined) {
@@ -158,6 +166,59 @@ function addLog(message) {
     eventLog.scrollTop = eventLog.scrollHeight;
 }
 
+// ---- character creation ----
+createCharBtn.addEventListener("click", () => {
+    socket.emit("create-character", {
+        name: charNameInput.value.trim(),
+        maxHp: parseInt(charHpInput.value),
+        isEnemy: enemyCheck.checked
+    });
+    charNameInput.value = "";
+});
+
+socket.on("character-list", (chars) => {
+    characterListDiv.innerHTML = "";
+
+    chars.forEach(c => {
+        const div = document.createElement("div");
+        div.className = "character-card";
+
+        div.innerHTML = ` <h3>${c.name} ${c.isEnemy ? "(Enemy)" : ""}</h3>
+            <p>HP: 
+                <input type="number" value="${c.hp}" min="0" max="${c.maxHp}" data-id="${c.id}" class="hpInput">
+                / ${c.maxHp}
+            </p>
+            <textarea class="noteBox" data-id="${c.id}" placeholder="Notes...">${c.notes || ""}</textarea>
+            <button class="deleteCharBtn" data-id="${c.id}">Remove</button>
+        `;
+
+        characterListDiv.appendChild(div);
+    });
+});
+
+// ---- character updates ----
+document.addEventListener("input", (e) => {
+    if(e.target.classList.contains("hpInput")) {
+        socket.emit("character-update", {
+            id: e.target.dataset.id,
+            hp: parseInt(e.target.value)
+        });
+    }
+
+    if(e.target.classList.contains("noteBox")) {
+        socket.emit("character-update", {
+            id: e.target.dataset.id,
+            notes: e.target.value
+        });
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if(e.target.classList.contains("deleteCharBtn")) {
+        socket.emit("delete-character", e.target.dataset.id);
+    }
+});
+
 // ---- shared dice ----
 sharedBtn.addEventListener("click", () => {
     const roll = Math.floor(Math.random() * 6) + 1;
@@ -186,4 +247,39 @@ socket.on("name-change-approved", (player) => {
 
 socket.on("name-change-denied", (data) => {
     alert(data.reason);
+});
+
+// ---- characters ----
+function renderCharacters(characters) {
+    characterGrid.innerHTML = "";
+
+    characters.forEach(c => {
+        const card = document.createElement("div");
+        card.className = "character-card";
+
+        const hpPercent = Math.max(0, Math.min(100, (c.hp / c.maxHp) * 100));
+
+        card.innerHTML = `
+            <img src="${c.img || "https://via.placeholder.com/60"}">
+
+            <div class="character-name">${c.name}</div>
+
+            <div class="hp-container">
+                <div class="hp-label">HP: ${c.hp} / ${c.maxHp}</div>
+                <div class="hp-bar">
+                    <div class="hp-fill" style="width:${hpPercent}%"></div>
+                </div>
+            </div>
+
+            <div class="misc-info">
+                ${c.type1 || ""} ${c.type2 ? "/" + c.type2 : ""}
+            </div>
+        `;
+
+        characterGrid.appendChild(card);
+    });
+}
+
+socket.on("characters-update", (characters) => {
+    renderCharacters(characters);
 });
