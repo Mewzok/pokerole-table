@@ -8,18 +8,19 @@ const { Server } = require("socket.io");
 const crypto = require("crypto");
 
 let lastSeen = new Map();
+let players = new Map();
+// key: socket.id
+// value: { id, name }
+let playersById = new Map();
 
 const io = new Server(server, {
     cors: { origin: "*"}
 });
 
-let players = new Map();
-// key: socket.id
-// value: { id, name }
-
 function nameExists(name) {
-    for(const p of players.values()) {
-        if(p.name.toLowerCase() === name.toLowerCase()) {
+    const lower = name.toLowerCase();
+    for(const p of playersById.values()) {
+        if(p.name.toLowerCase() === lower) {
             return true;
         }
     }
@@ -34,7 +35,9 @@ setInterval(() => {
     const now = Date.now();
 
     for(const [sid, time] of lastSeen.entries()) {
-        if(now - time > 15000) {
+        const age = now - time;
+
+        if(age > 15000) {
             if(players.has(sid)) {
                 players.delete(sid);
                 io.emit("player-list", Array.from(players.values()));
@@ -56,53 +59,72 @@ io.on("connection", (socket) => {
     });
 
     socket.on("request-join", ({ name, existingId }) => {
-    let playerData;
+        const eid = (existingId && existingId !== "undefined" && existingId !== "null") ? existingId : undefined;
+        console.log("[request-join] socket.id:", socket.id, "existingId:", existingId, "name:", name);
 
-    const existingPlayerEntry = Array.from(players.entries()).find(
-        ([sid, p]) => p.id === existingId
-    );
+        let playerData;
+        const existingPlayerEntry = Array.from(players.entries()).find(
+            ([sid, p]) => p.id === eid
+        );
+        const savedById = eid ? playersById.get(eid) : null;
 
-    if(existingPlayerEntry) {
-        const [oldSid, oldPlayer] = existingPlayerEntry;
-        players.delete(oldSid);
-        playerData = {
-            id: oldPlayer.id,
-            name: name || oldPlayer.name || "Unknown",
-        };
-    } else {
-        if(!name || nameExists(name)) {
-            socket.emit("join-denied", { reason: "Name already taken or invalid."});
-            return;
+        if(existingPlayerEntry) {
+            const [oldSid, oldPlayer] = existingPlayerEntry;
+            console.log("[request-join] found existing player entry:", oldSid, oldPlayer);
+            players.delete(oldSid);
+            playerData = {
+                id: oldPlayer.id,
+                name: name || oldPlayer.name || "Unknown",
+            };
+        } else if(savedById) {
+            playerData = { id: savedById.id, name: savedById.name };
+        } else {
+            if(!name || nameExists(name)) {
+                socket.emit("join-denied", { reason: "Name already taken or invalid."});
+                console.log("[request-join] join denied for", socket.id, "name:", name);
+                return;
+            }
+            playerData = { id: crypto.randomUUID(), name };
         }
-        playerData = { id: existingId || crypto.randomUUID(), name };
-    }
 
-    players.set(socket.id, playerData);
-    lastSeen.set(socket.id, Date.now());
+        players.set(socket.id, playerData);
+        playersById.set(playerData.id, { id: playerData.id, name: playerData.name });
+        lastSeen.set(socket.id, Date.now());
 
-    socket.emit("join-approved", playerData);
-    io.emit("playerJoinedAnnouncement", name);
-    io.emit("player-list", Array.from(players.values()));
-});
+        console.log("[request-join] registered player for socket:", socket.id, "->", playerData);
+        socket.emit("join-approved", playerData);
+        io.emit("playerJoinedAnnouncement", playerData.name);
+        io.emit("player-list", Array.from(players.values()));
+    });
 
     socket.on("change-name", (newName) => {
+        console.log("[change-name] socket:", socket.id, "newName:", newName);
         if(nameExists(newName)) {
             socket.emit("name-change-denied", { reason: "Name already taken."});
+            console.log("[change-name] name change denied for socket:", socket.id, "name:", newName);
             return;
         }
 
         const player = players.get(socket.id);
         if(!player) {
+            console.log("[change-name] no player found for socket:", socket.id);
             return;
         }
 
         const oldName = player.name;
         player.name = newName;
 
+        // persist updated name by player ID
+        const saved = playersById.get(player.id) || {};
+        saved.name = newName;
+        playersById.set(player.id, saved);
+        playersById.set(player.id, { id: player.id, name: newName });
+
         socket.emit("name-change-approved", player);
 
         io.emit("event-log", `${oldName} changed name to ${newName}`);
         io.emit("player-list", Array.from(players.values()));
+        console.log("[change-name] updated player:", player, "players map size:", players.size);
     });
 
     // send roll to everyone
@@ -120,6 +142,7 @@ io.on("connection", (socket) => {
         if(players.has(socket.id)) {
             players.delete(socket.id);
             io.emit("player-list", Array.from(players.values()));
+            console.log("[disconnect] removed player for socket:", socket.id);
         }
     });
 });

@@ -19,8 +19,39 @@ const joinStatus = document.getElementById("joinStatus");
 const playerList = document.getElementById("playerList");
 const playerDisplayName = document.getElementById("playerDisplayName");
 
-let PLAYER_ID = localStorage.getItem("playerId") || null;
-let PLAYER_NAME = localStorage.getItem("playerName") || null;
+function readStored(key) {
+    const v = localStorage.getItem(key);
+    if(v === null || v === undefined) {
+        return null;
+    }
+    if(v === "undefined" || v === "null") {
+        return null;
+    }
+    return v;
+}
+
+let PLAYER_ID = readStored("playerId");
+let PLAYER_NAME = readStored("playerName");
+
+let _heartbeatStarted = false;
+let _heartbeatInterval = null;
+
+socket.on("connect", () => {
+    if(!_heartbeatStarted) {
+        _heartbeatStarted = true;
+        _heartbeatInterval = setInterval(() => {
+            socket.emit("heartbeat");
+        }, 5000);
+    }
+});
+
+socket.on("disconnect", () => {
+    if(_heartbeatStarted) {
+        clearInterval(_heartbeatInterval);
+        _heartbeatInterval = null;
+        _heartbeatStarted = false;
+    }
+});
 
 // ---- ui helpers ----
 function showNameEntryScreen() {
@@ -51,6 +82,10 @@ joinBtn.addEventListener("click", () => {
 });
 
 window.onload = () => {
+    console.log("[client] onload localStorage:", {
+        playerId: localStorage.getItem("playerId"),
+        playerName: localStorage.getItem("playerName")
+    });
     if(DEV_BYPASS) {
         joinGame("Dev 0");
         return;
@@ -65,18 +100,23 @@ window.onload = () => {
 
 // ---- server events ----
 socket.on("join-approved", (player) => {
-    PLAYER_ID = player.id;
-    PLAYER_NAME = player.name;
+    PLAYER_ID = player.id || null;
+    PLAYER_NAME = player.name || null;
 
-    localStorage.setItem("playerId", PLAYER_ID);
-    localStorage.setItem("playerName", PLAYER_NAME);
+    if(PLAYER_ID) {
+        localStorage.setItem("playerId", PLAYER_ID);
+    }
+    if(PLAYER_NAME) {
+        localStorage.setItem("playerName", PLAYER_NAME);
+    }
+
+    console.log("[client] join-approved:", player, "localStorage:", {
+        playerId: localStorage.getItem("playerId"),
+        playerName: localStorage.getItem("playerName")
+    });
 
     playerDisplayName.textContent = `${PLAYER_NAME}`;
     showMainGameScreen();
-
-    setInterval(() => {
-        socket.emit("heartbeat");
-    }, 5000);
 });
 
 socket.on("join-denied", (data) => {
@@ -141,6 +181,7 @@ socket.on("name-change-approved", (player) => {
     PLAYER_NAME = player.name;
     localStorage.setItem("playerName", PLAYER_NAME);
     playerDisplayName.textContent = `${PLAYER_NAME}`;
+    console.log("[client] name-change-approved, saved playerName:", PLAYER_NAME);
 });
 
 socket.on("name-change-denied", (data) => {
