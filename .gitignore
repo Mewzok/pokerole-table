@@ -1,0 +1,41 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# Build output
+dist/
+build/
+.cache/
+.tmp/
+
+# Logs
+logs
+*.log
+*.log.*
+log/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor junk
+.vscode/
+.idea/
+*.swp
+
+# Coverage / testing
+coverage/
+.nyc_output/
+
+# Misc
+*.temp
+*.tmp

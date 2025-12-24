@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(#2b3c6b, #0f1a33);
+    color: #f4f4f4;
+    font-family: "Verdana", "Trebuchet MS", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    width: 900px;
+    background: #fdf6d8;
+    color: #333;
+    border-radius: 18px;
+    padding: 20px 30px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    border: 4px solid #6aa1ff;
+}
+
+h1 {
+    text-align: center;
+    color: #2a5bd7;
+    text-shadow: 1px 1px 0 white;
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 25px;
+    color: #2b4b9b;
+}
+
+button {
+    background: #4ea8ff;
+    color: white;
+    border: 2px solid #234c99;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+button:hover {
+    background: #6bc0ff;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* Layout */
+.section {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #9ec4ff;
+}
+
+/* Event Log */
+#eventLogContainer {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #dcdcdc;
+    height: 180px;
+    overflow-y: auto;
+}
+
+#eventLog li {
+    list-style: none;
+    padding: 4px 0;
+    border-bottom: 1px dashed #cccccc;
+}
+
+/* Player Name */
+#playerHeader {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#playerHeader button {
+    padding: 6px 12px;
+}
+
+/* Player List */
+#playerListContainer {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #dcdcdc;
+}
+
+#playerList li {
+    list-style: none;
+    padding: 6px;
+    background: #eef4ff;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    border: 1px solid #9ec4ff;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Pokerole Table</title>
+    </head>
+    <body>
+        <div id="app">
+
+            <!-- Join Screen -->
+            <div id="joinScreen">
+                <h1>Pokerole Table</h1>
+
+                <h2>Enter Name</h2>
+                <input id="nameInput">
+                <button id="joinBtn">Join</button>
+                <p id="joinStatus"></p>
+            </div>
+
+            <!-- Main Game Screen -->
+             <div id="gameScreen" style="display:none;">
+                <h1>Pokerole Table</h1>
+
+                <div id="playerHeader">
+                    <span id="playerDisplayName"></span>
+                    <button onclick="changeName()">Change Name</button>
+                </div>
+
+                <h2>Shared Dice Roller</h2>
+                <button id="sharedRollBtn">Roll Shared Dice</button>
+                <p id="sharedResult"></p>
+
+                <div id="playerListContainer">
+                    <h2>Players Online</h2>
+                    <ul id="playerList"></ul>
+                </div>
+
+                <div id="eventLogContainer">
+                    <h2>Event Log</h2>
+                    <ul id="eventLog"></ul>
+                </div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
+</html>
