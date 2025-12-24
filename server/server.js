@@ -1,5 +1,6 @@
 import { Character } from "../data/models/Character.js";
 import { rollDice } from "../game/DiceEngine.js";
+import { createCharacter, updateCharacter, deleteCharacter, listCharacters } from "./characters.js";
 
 const gameState = {
     characters: []
@@ -28,7 +29,7 @@ let playersById = new Map();
 
 let characters = new Map();
 // key: charId
-// value: { id, name, ownerId, hp, maxHp, notes, isEnemy }
+// value: { id, name, ownerId, hp, maxHp, notes }
 
 function nameExists(name) {
     const lower = name.toLowerCase();
@@ -151,20 +152,19 @@ io.on("connection", socket => {
     });
 
     // character creation
-    socket.on("create-character", ({ name, maxHp = 10, isEnemy = false }) => {
+    socket.on("create-character", ({ name, maxHp = 10 }) => {
         const player = players.get(socket.id);
-        if(!player && !isEnemy) return;
+        if(!player) return;
 
         const id = crypto.randomUUID();
         
         const character = {
             id,
             name,
-            ownerId: isEnemy ? null : player.id,
+            ownerId: player.id,
             hp: maxHp,
             maxHp,
             notes: "",
-            isEnemy,
         };
 
         characters.set(id, character);
@@ -201,38 +201,29 @@ io.on("connection", socket => {
         }
     });
 
-    // example character creation
+    // gm adds a character
     socket.on("gm_createCharacter", (data) => {
-        const character = new Character({
-            id: crypto.randomUUID(),
+        const character = createCharacter({
             pokemonId: data.pokemonId,
             name: data.name
         });
-
-        gameState.characters.push(character);
-
-        io.emit("characterListUpdated", gameState.characters)
+        io.emit("characterListUpdated", listCharacters());
     });
 
-    // example player rolls dice
-    socket.on("player_rollDice", ({ characterId, statKeys }) => {
-        const character = gameState.characters.find(c => c.id === characterId);
-        if (!character) return;
+    // gm updates a character
+    socket.on("gm_updateCharacter", (data) => {
+        const char = updateCharacter(data.id, data.updates);
+        if(char) {
+            io.emit("characterListUpdated", listCharacters());
+        }
+    });
 
-        let totalDice = 0;
-
-        statKeys.forEach(key => {
-            if (character.stats[key]) totalDice += character.stats[key];
-            if (character.skills[key]) totalDice += character.skills[key];
-        });
-
-        const result = rollDice(totalDice);
-
-        io.emit("diceRolled", {
-            characterId,
-            name: character.name,
-            result
-        });
+    // gm deletes a character
+    socket.on("gm_deleteCharacter", (id) => {
+        const char = deleteCharacter(id);
+        if(char) {
+            io.emit("characterListUpdated", listCharacters());
+        }
     });
 });
 

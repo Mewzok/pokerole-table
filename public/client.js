@@ -23,9 +23,9 @@ const playerDisplayName = document.getElementById("playerDisplayName");
 const characterListDiv = document.getElementById("characterList");
 const charNameInput = document.getElementById("charNameInput");
 const charHpInput = document.getElementById("charHpInput");
-const enemyCheck = document.getElementById("enemyCheck");
 const createCharBtn = document.getElementById("createCharBtn");
 const characterGrid = document.getElementById("character-grid");
+let selectedCharacterId = null;
 
 function readStored(key) {
     const v = localStorage.getItem(key);
@@ -171,7 +171,6 @@ createCharBtn.addEventListener("click", () => {
     socket.emit("create-character", {
         name: charNameInput.value.trim(),
         maxHp: parseInt(charHpInput.value),
-        isEnemy: enemyCheck.checked
     });
     charNameInput.value = "";
 });
@@ -183,7 +182,7 @@ socket.on("character-list", (chars) => {
         const div = document.createElement("div");
         div.className = "character-card";
 
-        div.innerHTML = ` <h3>${c.name} ${c.isEnemy ? "(Enemy)" : ""}</h3>
+        div.innerHTML = ` <h3>${c.name}</h3>
             <p>HP: 
                 <input type="number" value="${c.hp}" min="0" max="${c.maxHp}" data-id="${c.id}" class="hpInput">
                 / ${c.maxHp}
@@ -283,3 +282,84 @@ function renderCharacters(characters) {
 socket.on("characters-update", (characters) => {
     renderCharacters(characters);
 });
+
+// pokemon
+// add pokemon
+document.getElementById("add-pokemon-btn").addEventListener("click", () => {
+    const name = prompt("Enter character name:");
+    const pokemonId = prompt("Enter Pokémon ID:");
+    if(!name || !pokemonId) {
+        return;
+    }
+
+    socket.emit("gm_createCharacter", { name, pokemonId });
+});
+
+// update pokemon
+document.getElementById("update-pokemon-btn").addEventListener("click", () => {
+    if(!selectedCharacterId) {
+        return alert("Select a character first.");
+    }
+    const updates = {
+        hp: parseInt(prompt("Enter new HP:")),
+        notes: prompt("Enter new notes:")
+    };
+    socket.emit("gm_updateCharacter", { id: selectedCharacterId, ...updates });
+});
+
+// delete pokemon
+document.getElementById("delete-pokemon-btn").addEventListener("click", () => {
+    if(!selectedCharacterId) {
+        return alert("Select a character first.");
+    }
+    if(!confirm("Are you sure you want to delete this character?")) {
+        return;
+    }
+    socket.emit("gm_deleteCharacter", selectedCharacterId);
+});
+
+// render characters
+socket.on("characterListUpdated", (characters) => {
+    const grid = document.getElementById("character-grid");
+    grid.innerHTML = ""; // clear grid
+    characters.forEach(char => {
+    const card = document.createElement("div");
+    card.className = "character-card";
+    card.dataset.id = char.id;
+
+    card.innerHTML = `
+      <img src="${char.image}" alt="${char.name}" />
+      <h4>${char.name}</h4>
+      <p>HP: ${char.hp}/${char.maxHp}</p>
+      <p>Items: ${char.items?.join(", ") || "None"}</p>
+    `;
+
+    // highlight/select
+    card.addEventListener("click", () => {
+      document.querySelectorAll(".character-card").forEach(c => c.classList.remove("selected"));
+      card.classList.add("selected");
+      selectedCharacterId = char.id;
+
+      // update the player stat card panel
+      renderPlayerStatCard(char);
+    });
+
+    grid.appendChild(card);
+  });
+});
+
+// render player stat card
+function renderPlayerStatCard(char) {
+    const panel = document.getElementById("player-stat-panel");
+
+    panel.innerHTML = `
+    <h3>${char.name}</h3>
+    <img src="${char.image}" alt="${char.name}" />
+    <p>HP: ${char.hp}/${char.maxHp}</p>
+    <p>Will: ${char.will}</p>
+    <p>Initiative: ${char.initiative}</p>
+    <p>Stats: ${JSON.stringify(char.stats)}</p>
+    <p>Skills: ${JSON.stringify(char.skills)}</p>
+    <p>Moves: ${char.moves?.join(", ") || "None"}</p>
+  `;
+}

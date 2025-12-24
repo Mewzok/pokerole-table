@@ -231,3 +231,29 @@ button:hover {
     font-size: 12px;
     opacity: 0.8;
 }
+
+/* ==== Character Grid ==== */
+#character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.character-card {
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.character-card:selected {
+    border-color: #f00;
+    background-color: #fee;
+}
+
+.character-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
