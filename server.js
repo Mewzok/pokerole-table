@@ -29,6 +29,22 @@ function nameExists(name) {
 // serve static files
 app.use(express.static("public"));
 
+// clean up ghost players
+setInterval(() => {
+    const now = Date.now();
+
+    for(const [sid, time] of lastSeen.entries()) {
+        if(now - time > 15000) {
+            if(players.has(sid)) {
+                players.delete(sid);
+                io.emit("player-list", Array.from(players.values()));
+            }
+            lastSeen.delete(sid);
+        }
+    }
+}, 10000);
+
+
 // when a user connects
 io.on("connection", (socket) => {
     console.log("Socket connected", socket.id);
@@ -40,29 +56,34 @@ io.on("connection", (socket) => {
     });
 
     socket.on("request-join", ({ name, existingId }) => {
-        // if previous ID exists and socket died, remove
-        for(const [sid, p] of players.entries()) {
-            if(p.id === existingId) {
-                players.delete(sid);
-            }
-        }
+    let playerData;
 
-        if(nameExists(name)) {
-            socket.emit("join-denied", { reason: "Name already taken."});
+    const existingPlayerEntry = Array.from(players.entries()).find(
+        ([sid, p]) => p.id === existingId
+    );
+
+    if(existingPlayerEntry) {
+        const [oldSid, oldPlayer] = existingPlayerEntry;
+        players.delete(oldSid);
+        playerData = {
+            id: oldPlayer.id,
+            name: name || oldPlayer.name || "Unknown",
+        };
+    } else {
+        if(!name || nameExists(name)) {
+            socket.emit("join-denied", { reason: "Name already taken or invalid."});
             return;
         }
+        playerData = { id: existingId || crypto.randomUUID(), name };
+    }
 
-        const playerData = {
-            id: existingId || crypto.randomUUID(),
-            name
-        };
+    players.set(socket.id, playerData);
+    lastSeen.set(socket.id, Date.now());
 
-        players.set(socket.id, playerData);
-
-        socket.emit("join-approved", playerData);
-        io.emit("playerJoinedAnnouncement", name);
-        io.emit("player-list", Array.from(players.values()));
-    });
+    socket.emit("join-approved", playerData);
+    io.emit("playerJoinedAnnouncement", name);
+    io.emit("player-list", Array.from(players.values()));
+});
 
     socket.on("change-name", (newName) => {
         if(nameExists(newName)) {
@@ -102,21 +123,6 @@ io.on("connection", (socket) => {
         }
     });
 });
-
-// clean up ghost players
-setInterval(() => {
-    const now = Date.now();
-
-    for(const [sid, time] of lastSeen.entries()) {
-        if(now - time > 15000) {
-            if(players.has(sid)) {
-                players.delete(sid);
-                io.emit("player-list", Array.from(players.values()));
-            }
-            lastSeen.delete(sid);
-        }
-    }
-}, 10000);
 
 // start server on port 3000
 server.listen(3000, () => {

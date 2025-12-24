@@ -5,7 +5,45 @@
         <title>Pokerole Table</title>
     </head>
     <body>
-        <div id="app">
+        <div id="app-layout">
+
+            <!-- Player List -->
+            <aside id="players-panel">
+                <h2>Player List</h2>
+                <ul id="playerList"></ul>
+            </aside>
+
+            <!-- Main Panel -->
+             <main id="main-panel">
+                <div id="dashboardHeader">
+                    <h1>Dashboard</h1>
+
+                    <div id="playerHeader">
+                        <span id="playerDisplayName"></span>
+                        <button onclick="changeName()">Change Name</button>
+                    </div>
+                </div>
+
+                <section id="characters-area">
+                    <h2>Characters</h2>
+                    <!-- character blocks here-->
+                </section>
+
+                <section id="enemies-area">
+                    <h2>Enemies</h2>
+                    <!-- enemy blocks here-->
+                </section>
+
+                <section id="dice-area">
+                    <h2>Dice & Rolls</h2>
+                    <div id="diceResults"></div>
+                </section>
+            </main>
+
+            <aside id="eventLogContainer">
+                <h2>Event Log</h2>
+                <div id="eventLog"></div>
+            </aside>
 
             <!-- Join Screen -->
             <div id="joinScreen">
@@ -15,30 +53,6 @@
                 <input id="nameInput">
                 <button id="joinBtn">Join</button>
                 <p id="joinStatus"></p>
-            </div>
-
-            <!-- Main Game Screen -->
-             <div id="gameScreen" style="display:none;">
-                <h1>Pokerole Table</h1>
-
-                <div id="playerHeader">
-                    <span id="playerDisplayName"></span>
-                    <button onclick="changeName()">Change Name</button>
-                </div>
-
-                <h2>Shared Dice Roller</h2>
-                <button id="sharedRollBtn">Roll Shared Dice</button>
-                <p id="sharedResult"></p>
-
-                <div id="playerListContainer">
-                    <h2>Players Online</h2>
-                    <ul id="playerList"></ul>
-                </div>
-
-                <div id="eventLogContainer">
-                    <h2>Event Log</h2>
-                    <ul id="eventLog"></ul>
-                </div>
             </div>
         </div>
         <script src="/socket.io/socket.io.js"></script>

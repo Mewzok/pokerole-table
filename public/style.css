@@ -1,108 +1,145 @@
-body {
-    background: linear-gradient(#2b3c6b, #0f1a33);
-    color: #f4f4f4;
-    font-family: "Verdana", "Trebuchet MS", sans-serif;
-    margin: 0;
-    min-height: 100vh;
+/* ==== 3 Column Layout ==== */
 
+#app-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 320px;
+    height: 100vh;
+}
+
+#dashboardHeader {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
-#app {
-    width: 900px;
-    background: #fdf6d8;
-    color: #333;
-    border-radius: 18px;
-    padding: 20px 30px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-    border: 4px solid #6aa1ff;
+#playerHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-h1 {
-    text-align: center;
-    color: #2a5bd7;
-    text-shadow: 1px 1px 0 white;
-    margin-top: 0;
-}
-
-h2 {
-    margin-top: 25px;
-    color: #2b4b9b;
-}
-
-button {
-    background: #4ea8ff;
-    color: white;
-    border: 2px solid #234c99;
-    padding: 10px 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform 0.1s ease, background 0.2s ease;
-}
-
-button:hover {
-    background: #6bc0ff;
-}
-
-button:active {
-    transform: scale(0.96);
-}
-
-/* Layout */
-.section {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 2px solid #9ec4ff;
-}
-
-/* Event Log */
-#eventLogContainer {
-    background: #ffffff;
-    border-radius: 10px;
+/* ==== Panel Shared Styling ==== */
+aside, main {
     padding: 10px;
-    border: 2px solid #dcdcdc;
-    height: 180px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 5px 0 10px 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+/* ==== Left - Player Panel ==== */
+#players-panel {
     overflow-y: auto;
 }
 
-#eventLog li {
+#playerList {
     list-style: none;
-    padding: 4px 0;
-    border-bottom: 1px dashed #cccccc;
+    padding: 0;
+    margin: 0;
 }
 
-/* Player Name */
-#playerHeader {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    margin-bottom: 10px;
+/* === Center - Main Panel ==== */
+#main-panel {
+    overflow-y: auto;
 }
 
-#playerHeader button {
-    padding: 6px 12px;
-}
-
-/* Player List */
-#playerListContainer {
-    background: #ffffff;
-    border-radius: 10px;
+#main-panel section {
+    background: #343434;
     padding: 10px;
-    border: 2px solid #dcdcdc;
+    border-radius: 6px;
+    margin-bottom: 12px;
 }
 
-#playerList li {
-    list-style: none;
-    padding: 6px;
-    background: #eef4ff;
+/* ==== Right - Event Log ==== */
+#log-panel {
+    overflow-y: auto;
+}
+
+#eventLog {
+    height: calc(100% - 40px);
+    overflow-y: auto;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+#eventLog .entry {
+    padding: 6px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* ==== Color and Theme Styling ==== */
+/* == Main == */
+:root {
+    --bg: #0b1f2a;
+    --bg-panel: #112f3f;
+    --accent: #3fc1c9;
+    --accent-soft: #2fa3b0;
+    --text: #e6f4ff;
+    --text-dim: #aac7d1;
+    --highlight: #ffd66b;
+}
+
+body {
+    background: radial-gradient(circle at top, #143d55, #0b1f2a 60%);
+    color: var(--text);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* == Panels == */
+.panel {
+    background: linear-gradient(180deg, #17394c, #0f2a36);
+    border: 2px solid #225a70;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 0 12px rgba(63, 193, 201, 0.25);
+}
+
+#playerList, #eventLog {
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    background: #0d2530;
+    border: 1px solid #224b5b;
     border-radius: 8px;
-    margin-bottom: 4px;
-    border: 1px solid #9ec4ff;
+    padding: 8px;
+}
+
+/* == List Items == */
+#playerList li, #eventLog li {
+    padding: 4px 6px;
+    margin-bottom: 3px;
+    color: var(--text);
+}
+
+#playerList li:hover {
+    background: rgba(63, 193, 201, 0.12);
+    border-radius: 6px;
+}
+
+/* Player name display */
+#playerDisplayName {
+    font-weight: bold;
+    color: var(--highlight);
+    text-shadow: 0 0 8px rgba(255, 214, 107, 0.4);
+}
+
+/* Buttons */
+button {
+    background: var(--accent-soft);
+    border: none;
+    border-radius: 8px;
+    color: #062025;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(63, 193, 201, 0.4);
+}
+
+button:hover {
+    background: var(--accent);
 }

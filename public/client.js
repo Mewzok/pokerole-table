@@ -95,11 +95,15 @@ socket.on("playerJoinedAnnouncement", (name) => {
 // player list
 function renderPlayerList(list) {
     playerList.innerHTML = "";
+
     list.forEach(player => {
         const li = document.createElement("li");
         li.textContent = player.name;
         playerList.appendChild(li);
     });
+
+    // auto scroll to bottom
+    playerList.scrollTop = playerList.scrollHeight;
 }
 
 // ---- event log ----
@@ -109,6 +113,9 @@ function addLog(message) {
     const li = document.createElement("li");
     li.textContent = message;
     eventLog.appendChild(li);
+
+    // auto scroll to bottom
+    eventLog.scrollTop = eventLog.scrollHeight;
 }
 
 // ---- shared dice ----
