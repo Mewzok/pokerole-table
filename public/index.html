@@ -48,7 +48,7 @@
                 <section class="tabView" id="tab-characters">
                     <h2>Character Manager</h2>
 
-                    <button id="create-character-btn" class="gm-only">Create Character</button>
+                    <button id="createCharacterBtn">Create Character</button>
 
                     <div id="character-list-panel">
                         <!-- detailed sheet goes here -->
@@ -73,8 +73,30 @@
                 <button id="joinBtn">Join</button>
                 <p id="joinStatus"></p>
             </div>
+
+            <!-- Game Screen -->
+            <div id="gameScreen" style="display: none;">
+
+            </div>
         </div>
+
+        <dialog id="characterDialog" class="char-dialog">
+            <h3 id="charDialogTitle">Create Character</h3>
+
+            <label>Name</label>
+            <input id="charNameInput" type="text">
+
+            <label>Max HP</label>
+            <input id="charHpInput" type="number" min="1" value="3">
+
+            <div style="margin-top: 10px;">
+                <button id="saveCharacterBtn">Save</button>
+                <button id="cancelCharacterBtn">Cancel</button>
+            </div>
+        </dialog>
+
         <script src="/socket.io/socket.io.js"></script>
         <script src="client.js"></script>
     </body>
+
 </html>

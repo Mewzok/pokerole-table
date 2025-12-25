@@ -8,10 +8,6 @@ const eventLog = document.getElementById("eventLog");
 // dev tools
 const DEV_BYPASS = false;
 
-// dice
-const sharedBtn = document.getElementById("sharedRollBtn");
-const sharedResult = document.getElementById("sharedResult");
-
 // player variables
 const nameInput = document.getElementById("nameInput");
 const joinBtn = document.getElementById("joinBtn");
@@ -21,11 +17,15 @@ const playerDisplayName = document.getElementById("playerDisplayName");
 
 // character variables
 const characterListDiv = document.getElementById("characterList");
-const charNameInput = document.getElementById("charNameInput");
-const charHpInput = document.getElementById("charHpInput");
-const createCharBtn = document.getElementById("createCharBtn");
 const characterGrid = document.getElementById("character-grid");
 let selectedCharacterId = null;
+
+// character creator variables
+let CHARACTERS = [];
+let editingCharacterId = null;
+const dialog = document.getElementById("characterDialog");
+const charNameInput = document.getElementById("charNameInput");
+const charHpInput = document.getElementById("charHpInput");
 
 function readStored(key) {
     const v = localStorage.getItem(key);
@@ -188,32 +188,9 @@ function addLog(message) {
 }
 
 // ---- character creation ----
-createCharBtn.addEventListener("click", () => {
-    socket.emit("create-character", {
-        name: charNameInput.value.trim(),
-        maxHp: parseInt(charHpInput.value),
-    });
-    charNameInput.value = "";
-});
-
 socket.on("character-list", (chars) => {
-    characterListDiv.innerHTML = "";
-
-    chars.forEach(c => {
-        const div = document.createElement("div");
-        div.className = "character-card";
-
-        div.innerHTML = ` <h3>${c.name}</h3>
-            <p>HP: 
-                <input type="number" value="${c.hp}" min="0" max="${c.maxHp}" data-id="${c.id}" class="hpInput">
-                / ${c.maxHp}
-            </p>
-            <textarea class="noteBox" data-id="${c.id}" placeholder="Notes...">${c.notes || ""}</textarea>
-            <button class="deleteCharBtn" data-id="${c.id}">Remove</button>
-        `;
-
-        characterListDiv.appendChild(div);
-    });
+    CHARACTERS = chars;
+    renderCharacterList();
 });
 
 // ---- character updates ----
@@ -237,17 +214,6 @@ document.addEventListener("click", (e) => {
     if(e.target.classList.contains("deleteCharBtn")) {
         socket.emit("delete-character", e.target.dataset.id);
     }
-});
-
-// ---- shared dice ----
-sharedBtn.addEventListener("click", () => {
-    const roll = Math.floor(Math.random() * 6) + 1;
-    socket.emit("sharedRoll", roll);
-});
-
-socket.on("sharedRollResult", (data) => {
-    sharedResult.textContent = "Shared roll: " + data.roll;
-    addLog(`${data.name} rolled a ${data.roll}`);
 });
 
 // ---- name change ----
@@ -300,40 +266,91 @@ function renderCharacters(characters) {
     });
 }
 
-// pokemon
-// add pokemon
-document.getElementById("add-pokemon-btn").addEventListener("click", () => {
-    const name = prompt("Enter character name:");
-    const pokemonId = prompt("Enter Pokémon ID:");
-    if(!name || !pokemonId) {
+function renderCharacterList() {
+    const container = document.getElementById("characterList");
+    container.innerHTML = "";
+
+    if (!CHARACTERS || CHARACTERS.length === 0) {
+        container.innerHTML = "<p>No characters yet.</p>";
         return;
     }
 
-    socket.emit("gm_createCharacter", { name, pokemonId });
-});
+    CHARACTERS.forEach(char => {
+        const div = document.createElement("div");
+        div.className = "character-card";
 
-// update pokemon
-document.getElementById("update-pokemon-btn").addEventListener("click", () => {
-    if(!selectedCharacterId) {
-        return alert("Select a character first.");
-    }
-    const updates = {
-        hp: parseInt(prompt("Enter new HP:")),
-        notes: prompt("Enter new notes:")
-    };
-    socket.emit("gm_updateCharacter", { id: selectedCharacterId, ...updates });
-});
+        div.innerHTML = `
+            <h3>${char.name}</h3>
+            <p>HP: ${char.hp}/${char.maxHp}</p>
+            ${char.ownerName ? `<p>Owner: ${char.ownerName}</p>` : ""}
+            <div class="char-buttons">
+                <button onclick="editCharacter('${char.id}')">Edit</button>
+                <button onclick="deleteCharacter('${char.id}')">Delete</button>
+            </div>
+        `;
 
-// delete pokemon
-document.getElementById("delete-pokemon-btn").addEventListener("click", () => {
-    if(!selectedCharacterId) {
-        return alert("Select a character first.");
-    }
-    if(!confirm("Are you sure you want to delete this character?")) {
+        container.appendChild(div);
+    });
+}
+
+document.getElementById("createCharacterBtn").onclick = () => {
+    editingCharacterId = null;
+    document.getElementById("charDialogTitle").textContent = "Create Character";
+    charNameInput.value = null;
+    charHpInput.value = 3;
+    dialog.showModal();
+};
+
+document.getElementById("cancelCharacterBtn").onclick = () => {
+    dialog.close();
+};
+
+document.getElementById("saveCharacterBtn").onclick = () => {
+    const name = charNameInput.value.trim();
+    const maxHp = parseInt(charHpInput.value);
+
+    if(!name || maxHp <= 0) {
         return;
     }
-    socket.emit("gm_deleteCharacter", selectedCharacterId);
-});
+
+    if(editingCharacterId) {
+        socket.emit("update-character", {
+            id: editingCharacterId,
+            name,
+            maxHp,
+            hp: maxHp
+        });
+    } else {
+        socket.emit("create-character", {
+            name,
+            maxHp
+        });
+    }
+
+    dialog.close();
+};
+
+window.editCharacter = function(id) {
+    const c = CHARACTERS.find(x => x.id === id);
+    if(!c) {
+        return;
+    }
+
+    editingCharacterId = id;
+
+    document.getElementById("charDialogTitle").textContent = "Edit Character";
+    charNameInput.value = c.name;
+    charHpInput.value = c.maxHp;
+
+    dialog.showModal();
+};
+
+window.deleteCharacter = function(id) {
+    if(!confirm("Delete this character?")) {
+        return;
+    }
+    socket.emit("delete-character", id);
+};
 
 // render characters
 socket.on("characterListUpdated", (characters) => {
@@ -407,35 +424,7 @@ function openCharacterSheet(char) {
     <button id="save-character-btn">Save</button>
     <button id="delete-character-btn" class="gm-only">Delete</button>
   `;
-
-  document.getElementById("save-character-btn").onclick = () => {
-    socket.emit("gm_updateCharacter", {
-      id: char.id,
-      updates: {
-        name: document.getElementById("edit-name").value,
-        hp: Number(document.getElementById("edit-hp").value),
-        will: Number(document.getElementById("edit-will").value),
-      },
-    });
-  };
-
-  document.getElementById("delete-character-btn").onclick = () => {
-    if (!confirm("Delete character?")) return;
-    socket.emit("gm_deleteCharacter", char.id);
-  };
 }
-
-// create character button
-document.getElementById("create-character-btn").addEventListener("click", () => {
-    const name = prompt("Character Name: ");
-    const pokemonId = prompt("Pokémon ID: ");
-
-    if(!name || !pokemonId) {
-        return;
-    }
-
-    socket.emit("gm_createCharacter", { name, pokemonId });
-});
 
 // handle GM
 if(!window.isGM) {

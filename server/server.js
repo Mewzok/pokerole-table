@@ -98,22 +98,21 @@ io.on("connection", socket => {
             playerData = { id: crypto.randomUUID(), name };
         }
 
-        players.set(socket.id, playerData);
-        playersById.set(playerData.id, { id: playerData.id, name: playerData.name });
-        lastSeen.set(socket.id, Date.now());
-
-        console.log("[request-join] registered player for socket:", socket.id, "->", playerData);
-        socket.emit("join-approved", playerData);
         // first player to join is GM temporarily
         playerData.isGM = playersById.size === 0;
-        io.emit("playerJoinedAnnouncement", playerData.name);
-        io.emit("player-list", Array.from(players.values()));
 
+        players.set(socket.id, playerData);
         playersById.set(playerData.id, {
             id: playerData.id,
             name: playerData.name,
             isGM: playerData.isGM
         });
+        lastSeen.set(socket.id, Date.now());
+
+        console.log("[request-join] registered player for socket:", socket.id, "->", playerData);
+        socket.emit("join-approved", playerData);
+        io.emit("playerJoinedAnnouncement", playerData.name);
+        io.emit("player-list", Array.from(players.values()));
     });
 
     socket.on("change-name", (newName) => {
@@ -271,7 +270,7 @@ function broadcastCharacterList() {
         const list = Array.from(characters.values());
 
         if(!player.isGM) {
-            const filtered = list.filter(c => c.ownerID === player.id);
+            const filtered = list.filter(c => c.ownerId === player.id);
             io.to(sid).emit("character-list", filtered);
         } else {
             io.to(sid).emit("character-list", list);
