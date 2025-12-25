@@ -384,7 +384,7 @@ socket.on("characterListUpdated", (characters) => {
 
 // render player stat card
 function renderPlayerStatCard(char) {
-    const panel = document.getElementById("player-stat-panel");
+    const panel = document.getElementById("player-stat-card");
 
     panel.innerHTML = `
     <h3>${char.name}</h3>
