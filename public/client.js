@@ -62,6 +62,24 @@ socket.on("disconnect", () => {
 });
 
 // ---- ui helpers ----
+const tabButtons = document.querySelectorAll(".tabBtn");
+const tabViews = document.querySelectorAll(".tabView");
+
+tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const tab = btn.dataset.tab;
+
+        tabButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        tabViews.forEach(v => {
+            v.classList.remove("active");
+        });
+
+        document.getElementById(`tab-${tab}`).classList.add("active");
+    });
+});
+
 function showNameEntryScreen() {
     joinScreen.style.display = "block";
     gameScreen.style.display = "none";
@@ -110,6 +128,7 @@ window.onload = () => {
 socket.on("join-approved", (player) => {
     PLAYER_ID = player.id || null;
     PLAYER_NAME = player.name || null;
+    IS_GM = player.isGM;
 
     if(PLAYER_ID) {
         localStorage.setItem("playerId", PLAYER_ID);
@@ -117,6 +136,8 @@ socket.on("join-approved", (player) => {
     if(PLAYER_NAME) {
         localStorage.setItem("playerName", PLAYER_NAME);
     }
+
+    document.getElementById("playerDisplayName").textContent = `${IS_GM ? "(GM) " : ""}${PLAYER_NAME}`;
 
     console.log("[client] join-approved:", player, "localStorage:", {
         playerId: localStorage.getItem("playerId"),
@@ -279,10 +300,6 @@ function renderCharacters(characters) {
     });
 }
 
-socket.on("characters-update", (characters) => {
-    renderCharacters(characters);
-});
-
 // pokemon
 // add pokemon
 document.getElementById("add-pokemon-btn").addEventListener("click", () => {
@@ -362,4 +379,65 @@ function renderPlayerStatCard(char) {
     <p>Skills: ${JSON.stringify(char.skills)}</p>
     <p>Moves: ${char.moves?.join(", ") || "None"}</p>
   `;
+}
+
+// render character sheet
+function openCharacterSheet(char) {
+    const panel = document.getElementById("character-sheet-panel");
+
+    panel.innerHTML = `<h2>${char.name}</h2>
+
+    <img src="${char.image}" style="width:150px">
+
+    <label>Name</label>
+    <input id="edit-name" value="${char.name}">
+
+    <label>HP</label>
+    <input id="edit-hp" type="number" value="${char.hp}">
+    
+    <label>Will</label>
+    <input id="edit-will" type="number" value="${char.will}">
+
+    <h3>Stats</h3>
+    <pre>${JSON.stringify(char.stats, null, 2)}</pre>
+
+    <h3>Moves</h3>
+    <pre>${char.moves?.join(", ")}</pre>
+
+    <button id="save-character-btn">Save</button>
+    <button id="delete-character-btn" class="gm-only">Delete</button>
+  `;
+
+  document.getElementById("save-character-btn").onclick = () => {
+    socket.emit("gm_updateCharacter", {
+      id: char.id,
+      updates: {
+        name: document.getElementById("edit-name").value,
+        hp: Number(document.getElementById("edit-hp").value),
+        will: Number(document.getElementById("edit-will").value),
+      },
+    });
+  };
+
+  document.getElementById("delete-character-btn").onclick = () => {
+    if (!confirm("Delete character?")) return;
+    socket.emit("gm_deleteCharacter", char.id);
+  };
+}
+
+// create character button
+document.getElementById("create-character-btn").addEventListener("click", () => {
+    const name = prompt("Character Name: ");
+    const pokemonId = prompt("Pokémon ID: ");
+
+    if(!name || !pokemonId) {
+        return;
+    }
+
+    socket.emit("gm_createCharacter", { name, pokemonId });
+});
+
+// handle GM
+if(!window.isGM) {
+    document.querySelectorAll(".gm-only").forEach(e => e.remove());
 }

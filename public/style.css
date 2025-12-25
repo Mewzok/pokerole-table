@@ -257,3 +257,45 @@ button:hover {
     height: 64px;
     object-fit: contain;
 }
+
+/* ---- Characters Tab ---- */
+#characters-tab {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 10px;
+}
+
+#character-list-panel {
+    border-right: 2px solid #444;
+}
+
+.character-list-item {
+    display: flex;
+    gap: 10px;
+    padding: 6px;
+    border: 1px solid #666;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.character-list-item:hover {
+    background: #222;
+}
+
+#tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.tabBtn.active {
+    background: var(--accent);
+    color: black;
+}
+
+.tabView {
+    display: none;
+}
+
+.tabView.active {
+    display: block;
+}

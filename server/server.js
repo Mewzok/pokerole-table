@@ -19,8 +19,6 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
-app.use(express.static(path.join(__dirname, "../src/public")));
-
 let lastSeen = new Map();
 let players = new Map();
 // key: socket.id
@@ -106,8 +104,16 @@ io.on("connection", socket => {
 
         console.log("[request-join] registered player for socket:", socket.id, "->", playerData);
         socket.emit("join-approved", playerData);
+        // first player to join is GM temporarily
+        playerData.isGM = playersById.size === 0;
         io.emit("playerJoinedAnnouncement", playerData.name);
         io.emit("player-list", Array.from(players.values()));
+
+        playersById.set(playerData.id, {
+            id: playerData.id,
+            name: playerData.name,
+            isGM: playerData.isGM
+        });
     });
 
     socket.on("change-name", (newName) => {
@@ -154,43 +160,69 @@ io.on("connection", socket => {
     // character creation
     socket.on("create-character", ({ name, maxHp = 10 }) => {
         const player = players.get(socket.id);
-        if(!player) return;
+        if(!player)  {
+            return;
+        }
 
-        const id = crypto.randomUUID();
+        // enforce character limit per player unless GM
+        const ownedCount = Array.from(characters.values()).filter(c => c.ownerId === player.id).length;
+
+        if(!player.isGM && ownedCount >= 3) {
+            socket.emit("character-creation-denied", { reason: "Character limit reached."});
+            return;
+        }
         
         const character = {
-            id,
+            id: crypto.randomUUID(),
             name,
-            ownerId: player.id,
+            ownerId: player.isGM ? null : player.id,
+            ownerName: player.name,
             hp: maxHp,
             maxHp,
             notes: "",
         };
 
-        characters.set(id, character);
+        characters.set(character.id, character);
 
-        io.emit("character-list", Array.from(characters.values()));
-        io.emit("event-log", `${character.name} has entered.`);
+        broadcastCharacterList();
     });
 
     socket.on("update-character", (updated) => {
+        const player = players.get(socket.id);
+        if(!player)  {
+            return;
+        }
+
         const char = characters.get(updated.id);
-        if(!char) return;
+        if(!char) {
+            return;
+        }
+
+        if(!player.isGM && char.ownerId !== player.id) {
+            return;
+        }
 
         Object.assign(char, updated);
-
-        io.emit("character-list", Array.from(characters.values()));
+        broadcastCharacterList();
     });
 
     socket.on("delete-character", (id) => {
+        const player = players.get(socket.id);
+        if(!player) {
+            return;
+        }
+
         const char = characters.get(id);
         if(!char) {
             return;
         }
 
+        if(!player.isGM && char.ownerId !== player.id) {
+            return;
+        }
+
         characters.delete(id);
-        io.emit("character-list", Array.fromt(characters.values()));
-        io.emit("event-log", `${char.name} has left.`);
+        broadcastCharacterList();
     });
 
     socket.on("disconnect", () => {
@@ -232,3 +264,17 @@ const PORT = 3000;
 server.listen(PORT, () => {
     console.log("Server is running at http://localhost:3000");
 });
+
+// utility
+function broadcastCharacterList() {
+    for(const [sid, player] of players.entries()) {
+        const list = Array.from(characters.values());
+
+        if(!player.isGM) {
+            const filtered = list.filter(c => c.ownerID === player.id);
+            io.to(sid).emit("character-list", filtered);
+        } else {
+            io.to(sid).emit("character-list", list);
+        }
+    }
+}

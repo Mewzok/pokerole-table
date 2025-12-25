@@ -18,28 +18,43 @@
                 <div id="dashboardHeader">
                     <h1>Dashboard</h1>
 
+                    <div id="tabs">
+                        <button class="tabBtn active" data-tab="game">Game</button>
+                        <button class="tabBtn" data-tab="characters">Characters</button>
+                    </div>
+
                     <div id="playerHeader">
                         <span id="playerDisplayName"></span>
                         <button onclick="changeName()">Change Name</button>
                     </div>
                 </div>
 
-                <section id="characters-area">
-                    <h2>Characters</h2>
-                    <div id="character-grid"></div>
+                <!-- Game Tab -->
+                 <section class="tabView active" id="tab-game">
+                    <h2>Game View</h2>
+
+                    <section id="characters-area">
+                        <h3>Characters</h3>
+                        <div id="character-grid"></div>
+                    </section>
+
+                    <section id="dice-area">
+                        <h3>Dice & Rolls</h3>
+                        <div id="diceResults"></div>
+                    </section>
+                 </section>
+
+                <!-- Characters Tab -->
+                <section class="tabView" id="tab-characters">
+                    <h2>Character Manager</h2>
+
+                    <button id="create-character-btn" class="gm-only">Create Character</button>
+
+                    <div id="character-list-panel">
+                        <!-- detailed sheet goes here -->
+                    </div>
                 </section>
 
-                <section id="dice-area">
-                    <h2>Dice & Rolls</h2>
-                    <div id="diceResults"></div>
-                </section>
-
-                <div id="gm-controls">
-                    <h3>GM Controls</h3>
-                    <button id="add-pokemon-btn">Add Pokémon</button>
-                    <button id="update-pokemon-btn">Update Pokémon</button>
-                    <button id="delete-pokemon-btn">Delete Pokémon</button>
-                </div>
             </main>
 
             <aside id="eventLogContainer">
