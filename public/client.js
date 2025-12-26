@@ -27,6 +27,17 @@ const dialog = document.getElementById("characterDialog");
 const charNameInput = document.getElementById("charNameInput");
 const charHpInput = document.getElementById("charHpInput");
 
+// character creator sheet variables
+const sheetPanel = document.getElementById("character-sheet-panel");
+const sheetTitle = document.getElementById("sheet-title");
+const sheetName = document.getElementById("sheet-name");
+const sheetSpecies = document.getElementById("sheet-species");
+const sheetMaxHp = document.getElementById("sheet-maxhp");
+const sheetSave = document.getElementById("sheet-save");
+const sheetCancel = document.getElementById("sheet-cancel");
+const sheetDelete = document.getElementById("sheet-delete");
+const createCharacterBtn = document.getElementById("createCharacterBtn");
+
 function readStored(key) {
     const v = localStorage.getItem(key);
     if(v === null || v === undefined) {
@@ -191,6 +202,7 @@ function addLog(message) {
 socket.on("character-list", (chars) => {
     CHARACTERS = chars;
     renderCharacterList();
+    renderCharacters(chars);
 });
 
 // ---- character updates ----
@@ -239,26 +251,32 @@ socket.on("name-change-denied", (data) => {
 function renderCharacters(characters) {
     characterGrid.innerHTML = "";
 
+    if(!characters || characters.length === 0) {
+        characterGrid.innerHTML = "<p>No characters yet.</p>";
+        return;
+    }
+
     characters.forEach(c => {
+        const species = window.pokemon?.find(p => p.id === c.pokemonId);
+        const hpPercent = Math.max(0, Math.min(100, (c.hp / c.maxHp) * 100));
+
         const card = document.createElement("div");
         card.className = "character-card";
 
-        const hpPercent = Math.max(0, Math.min(100, (c.hp / c.maxHp) * 100));
-
-        card.innerHTML = `
-            <img src="${c.img || "https://via.placeholder.com/60"}">
+        card.innerHTML= `
+            <img src="${species?.image || "https://via.placeholder.com/80"}">
 
             <div class="character-name">${c.name}</div>
+
+            <div class="misc-info">
+                ${species?.type1 || ""} ${species?.type2 ? "/" + species.type2 : ""}
+            </div>
 
             <div class="hp-container">
                 <div class="hp-label">HP: ${c.hp} / ${c.maxHp}</div>
                 <div class="hp-bar">
                     <div class="hp-fill" style="width:${hpPercent}%"></div>
                 </div>
-            </div>
-
-            <div class="misc-info">
-                ${c.type1 || ""} ${c.type2 ? "/" + c.type2 : ""}
             </div>
         `;
 
@@ -283,104 +301,155 @@ function renderCharacterList() {
             <h3>${char.name}</h3>
             <p>HP: ${char.hp}/${char.maxHp}</p>
             ${char.ownerName ? `<p>Owner: ${char.ownerName}</p>` : ""}
-            <div class="char-buttons">
-                <button onclick="editCharacter('${char.id}')">Edit</button>
-                <button onclick="deleteCharacter('${char.id}')">Delete</button>
-            </div>
         `;
 
+        div.onclick = () => openCharacterSheet(char);
         container.appendChild(div);
     });
 }
 
+function openCharacterSheet(char) {
+    editingCharacterId = char.id;
+    sheetPanel.style.display = "block";
+    createCharacterBtn.style.display = "none";
+
+    const species = window.pokemon.find(p => p.id === char.pokemonId);
+
+    sheetTitle.textContent = `Editing ${char.nickname || char.name}`;
+    document.getElementById("sheet-species-name").textContent = species.name;
+
+    // nickname
+    document.getElementById("sheet-nickname").value = char.nickname || "";
+
+    // image
+    const img = document.getElementById("sheet-image");
+    img.src = char.image;
+    img.alt = char.nickname || char.name;
+
+    // type
+    document.getElementById("sheet-types").textContent = species.types.join(" / ");
+
+    // stats
+    const statDiv = document.getElementById("sheet-stats");
+    statDiv.innerHTML = `
+            <p>HP: ${char.stats.HP}</p>
+            <p>Strength: ${char.stats.strength}</p>
+            <p>Dexterity: ${char.stats.dexterity}</p>
+            <p>Vitality: ${char.stats.vitality}</p>
+            <p>Special: ${char.stats.special}</p>
+            <p>Insight: ${char.stats.insight}</p>
+        `;
+
+        // calculated
+        const calcDiv = document.getElementById("sheet-calculated");
+        calcDiv.innerHTML = `
+            <p>Will: ${char.will}</p>
+            <p>Initiative: ${char.initiative}</p>
+            <p>Defense: ${char.defense}</p>
+            <p>Special Defense: ${char.specialDefense}</p>
+        `;
+
+        // abilities dropdown
+        const abilitySelect = document.getElementById("sheet-abilities");
+        abilitySelect.innerHTML = "";
+        species.abilities.forEach(a => {
+            const opt = document.createElement("option");
+            opt.value = a;
+            opt.textContent = a;
+            if(a === char.abilitiy) opt.selected = true;
+            abilitySelect.appendChild(opt);
+        });
+
+        // height + weight
+        const h = document.getElementById("sheet-height");
+        const w = document.getElementById("sheet-weight");
+
+        h.value = (char.heightPercent || 1) * 100;
+        w.value = (char.weightPercent || 1) * 100;
+
+        document.getElementById("sheet-height-label").textContent = h.value;
+        document.getElementById("sheet-weight-label").textContent = w.value;
+
+        h.oninput = () => 
+            document.getElementById("sheet-height-label").textContent = h.value;
+
+        w.oninput = () => 
+            document.getElementById("sheet-weight-label").textContent = w.value;
+
+        // ---- Skills ----
+        const skillDiv = document.getElementById("sheet-skills");
+        skillDiv.innerHTML = "";
+
+        Object.entries(char.skills).forEach(([name, value]) => {
+            const row = document.createElement("div");
+            row.innerHTML = `
+                ${name}:
+                <input type="number" min="0" max="5"
+                    data-skill="${name}"
+                    value="${value}">
+            `;
+            skillDiv.appendChild(row);
+        });
+
+        // GM delete permissions
+        sheetDelete.style.display = IS_GM || char.ownerId === PLAYER_ID ? "inline-block" : "none";
+}
+
 document.getElementById("createCharacterBtn").onclick = () => {
     editingCharacterId = null;
-    document.getElementById("charDialogTitle").textContent = "Create Character";
-    charNameInput.value = null;
-    charHpInput.value = 3;
-    dialog.showModal();
+    
+    sheetPanel.style.display = "block";
+    sheetTitle.textContent = "Create Character";
+
+    sheetName.value = "";
+    sheetSpecies.value = "";
+    sheetMaxHp.value = 3;
+
+    sheetDelete.style.display = "none";
+
+    // hide button while sheet is open
+    createCharacterBtn.style.display = "none";
 };
 
-document.getElementById("cancelCharacterBtn").onclick = () => {
-    dialog.close();
+sheetCancel.onclick = () => {
+    sheetPanel.style.display = "none";
+    createCharacterBtn.style.display = "inline-block";
+}
+
+sheetSave.onclick = () => {
+    const nickname = document.getElementById("sheet-nickname").value.trim();
+    const ability = document.getElementById("sheet-ability").value;
+
+    const height = document.getElementById("sheet-height").value / 100;
+    const weight = document.getElementById("sheet-weight").value / 100;
+
+    const skillInputs = document.querySelectorAll("#sheet-skills input");
+    const skills = {};
+    skillInputs.forEach(s => {
+        skills[s.dataset.skill] = parseInt(s.value) || 0;
+    });
+
+    socket.emit("update-character", {
+        id: editingCharacterId,
+        nickname,
+        ability,
+        heightPercent: height,
+        weightPercent: weight,
+        skills
+    });
+
+    sheetPanel.style.display = "none";
+    createCharacterBtn.style.display = "inline-block";
 };
 
-document.getElementById("saveCharacterBtn").onclick = () => {
-    const name = charNameInput.value.trim();
-    const maxHp = parseInt(charHpInput.value);
-
-    if(!name || maxHp <= 0) {
-        return;
-    }
-
-    if(editingCharacterId) {
-        socket.emit("update-character", {
-            id: editingCharacterId,
-            name,
-            maxHp,
-            hp: maxHp
-        });
-    } else {
-        socket.emit("create-character", {
-            name,
-            maxHp
-        });
-    }
-
-    dialog.close();
-};
-
-window.editCharacter = function(id) {
-    const c = CHARACTERS.find(x => x.id === id);
-    if(!c) {
-        return;
-    }
-
-    editingCharacterId = id;
-
-    document.getElementById("charDialogTitle").textContent = "Edit Character";
-    charNameInput.value = c.name;
-    charHpInput.value = c.maxHp;
-
-    dialog.showModal();
-};
-
-window.deleteCharacter = function(id) {
+sheetDelete.onclick = () => {
     if(!confirm("Delete this character?")) {
         return;
     }
-    socket.emit("delete-character", id);
+    socket.emit("delete-character", editingCharacterId);
+    sheetPanel.style.display = "none";
+    createCharacterBtn.style.display = "inline-block";
 };
-
-// render characters
-socket.on("characterListUpdated", (characters) => {
-    const grid = document.getElementById("character-grid");
-    grid.innerHTML = ""; // clear grid
-    characters.forEach(char => {
-    const card = document.createElement("div");
-    card.className = "character-card";
-    card.dataset.id = char.id;
-
-    card.innerHTML = `
-      <img src="${char.image}" alt="${char.name}" />
-      <h4>${char.name}</h4>
-      <p>HP: ${char.hp}/${char.maxHp}</p>
-      <p>Items: ${char.items?.join(", ") || "None"}</p>
-    `;
-
-    // highlight/select
-    card.addEventListener("click", () => {
-      document.querySelectorAll(".character-card").forEach(c => c.classList.remove("selected"));
-      card.classList.add("selected");
-      selectedCharacterId = char.id;
-
-      // update the player stat card panel
-      renderPlayerStatCard(char);
-    });
-
-    grid.appendChild(card);
-  });
-});
 
 // render player stat card
 function renderPlayerStatCard(char) {
@@ -395,34 +464,6 @@ function renderPlayerStatCard(char) {
     <p>Stats: ${JSON.stringify(char.stats)}</p>
     <p>Skills: ${JSON.stringify(char.skills)}</p>
     <p>Moves: ${char.moves?.join(", ") || "None"}</p>
-  `;
-}
-
-// render character sheet
-function openCharacterSheet(char) {
-    const panel = document.getElementById("character-sheet-panel");
-
-    panel.innerHTML = `<h2>${char.name}</h2>
-
-    <img src="${char.image}" style="width:150px">
-
-    <label>Name</label>
-    <input id="edit-name" value="${char.name}">
-
-    <label>HP</label>
-    <input id="edit-hp" type="number" value="${char.hp}">
-    
-    <label>Will</label>
-    <input id="edit-will" type="number" value="${char.will}">
-
-    <h3>Stats</h3>
-    <pre>${JSON.stringify(char.stats, null, 2)}</pre>
-
-    <h3>Moves</h3>
-    <pre>${char.moves?.join(", ")}</pre>
-
-    <button id="save-character-btn">Save</button>
-    <button id="delete-character-btn" class="gm-only">Delete</button>
   `;
 }
 

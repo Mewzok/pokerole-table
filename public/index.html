@@ -48,11 +48,61 @@
                 <section class="tabView" id="tab-characters">
                     <h2>Character Manager</h2>
 
-                    <button id="createCharacterBtn">Create Character</button>
-
-                    <div id="characterList">
-                        <!-- detailed sheet goes here -->
+                    <div id="character-header">
+                        <button id="createCharacterBtn">Create Character</button>
                     </div>
+
+                    <div id="characterList"></div>
+
+                    <div id="character-sheet-panel" style="display:none;">
+
+                        <h2 id="sheet-title"></h2>
+
+                        <div class="sheet-row">
+                            <div>
+                                <label>Species</label>
+                                <div id="sheet-species-name"></div>
+
+                                <label>Nickname</label>
+                                <input id="sheet-nickname">
+                            </div>
+
+                            <div>
+                                <img id="sheet-image" style="width:140px">
+                            </div>
+                        </div>
+
+                        <h3>Type</h3>
+                        <div id="sheet-types"></div>
+
+                        <h3>Stats</h3>
+                        <div id="sheet-stats"></div>
+
+                        <h3>Calculated</h3>
+                        <div id="sheet-calculated"></div>
+
+                        <h3>Ability</h3>
+                        <select id="sheet-ability"></select>
+
+                        <h3>Size</h3>
+                        <label>Height %</label>
+                        <input id="sheet-height" type="range" min="50" max="150" value="100">
+                        <span id="sheet-height-label"></span>%
+
+                        <label>Weight %</label>
+                        <input id="sheet-weight" type="range" min="50" max="150" value="100">
+                        <span id="sheet-weight-label"></span>%
+
+                        <h3>Skills</h3>
+                        <div id="sheet-skills"></div>
+
+                        <div style="margin-top:10px;">
+                            <button id="sheet-save">Save</button>
+                            <button id="sheet-cancel">Cancel</button>
+                            <button id="sheet-delete" class="gm-only">Delete</button>
+                        </div>
+                    </div>
+                    
                 </section>
 
             </main>
@@ -96,6 +146,7 @@
         </dialog>
 
         <script src="/socket.io/socket.io.js"></script>
+        <script type="module" src="/data/pokedexLoader.js"></script>
         <script src="client.js"></script>
     </body>
 

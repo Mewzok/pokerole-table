@@ -1,4 +1,4 @@
-import { Character } from "../data/models/Character.js";
+import { Character } from "../public/data/models/Character.js";
 import { rollDice } from "../game/DiceEngine.js";
 import { createCharacter, updateCharacter, deleteCharacter, listCharacters } from "./characters.js";
 

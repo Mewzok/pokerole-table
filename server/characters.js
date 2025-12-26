@@ -1,4 +1,4 @@
-import { Character } from "../data/models/Character.js";
+import { Character } from "../public/data/models/Character.js";
 import crypto from "crypto";
 
 export const characters = new Map();
