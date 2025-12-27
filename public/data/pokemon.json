@@ -22,7 +22,7 @@
     "moves": ["Tackle", "Growl", "Leech Seed", "Vine Whip", "Poison Powder", "Sleep Powder", "Take Down", "Razor Leaf", "Sweet Scent", "Growth", "Worry Seed", "Double Edge", "Synthesis", "Solar Beam", "Grassy Terrain", "Amnesia", "Grass Pledge"],
     "rank": "beginner",
     "height": 0.7,
-    "weight": 7,
+    "weight": 15,
     "weaknesses": {
         "Flying": 2,
         "Fire": 2,
@@ -38,6 +38,46 @@
         "Fairy": 0.5
     },
     "image": "https://imgur.com/DJ3VYRy.png"
+  },
+  {
+    "id": "charmander",
+    "name": "Charmander",
+    "types": ["Fire"],
+    "baseStats": {
+        "HP": 3,
+        "strength": 2,
+        "dexterity": 2,
+        "vitality": 1,
+        "special": 2,
+        "insight": 2
+    },
+    "maxStats": {
+        "strength": 4,
+        "dexterity": 4,
+        "vitality": 3,
+        "special": 4,
+        "insight": 4
+    },
+    "abilities": ["Blaze"],
+    "moves": ["Scratch", "Growl", "Ember", "Smokescreen", "Dragon Rage", "Scary Face", "Fire Fang", "Flame Burst", "Slash", "Fire Spin", "Flamethrower", "Inferno", "Metal Claw", "Dragon Dance", "Fire Pledge"],
+    "rank": "beginner",
+    "height": 0.6,
+    "weight": 18,
+    "weaknesses": {
+        "Ground": 2,
+        "Rock": 2,
+        "Water": 2
+    },
+    "immunities": {},
+    "resistances": {
+        "Bug": 0.5,
+        "Steel": 0.5,
+        "Fire": 0.5,
+        "Grass": 0.5,
+        "Ice": 0.5,
+        "Fairy": 0.5
+    },
+    "image": "https://imgur.com/Bxs5XDv.png"
   },
 {
     "id": "pikachu",

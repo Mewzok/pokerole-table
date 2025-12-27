@@ -58,53 +58,190 @@
 
                         <h2 id="sheet-title"></h2>
 
-                        <div class="sheet-row">
-                            <div>
-                                <label>Species</label>
-                                <div id="sheet-species-name"></div>
+                        <!-- identity -->
+                         <section class="sheet-section">
+                            <h3>Identity</h3>
 
-                                <label>Nickname</label>
-                                <input id="sheet-nickname">
+                            <div class="sheet-row">
+                                <div>
+                                    <label>Species</label>
+                                    <div id="sheet-species-name" class="readonly"></div>
+                                    <select id="sheet-species-picker"></select>
+
+                                    <label>Nickname</label>
+                                    <input id="sheet-nickname">
+                                </div>
+
+                                <div>
+                                    <img id="sheet-image" style="width:140px">
+                                </div>
                             </div>
 
                             <div>
-                                <img id="sheet-image" style="width:140px">
+                                <label>Types</label>
+                                <div id="sheet-types" class="readonly"></div>
                             </div>
-                        </div>
+                        </section>
 
-                        <h3>Type</h3>
-                        <div id="sheet-types"></div>
+                        <!-- progression -->
+                        <section class="sheet-section">
+                            <h3>Progression</h3>
 
-                        <h3>Stats</h3>
-                        <div id="sheet-stats"></div>
+                            <div class="sheet-grid">
+                                <div>
+                                    <label>Level</label>
+                                    <input id="sheet-level" type="number" readonly>
+                                </div>
 
-                        <h3>Calculated</h3>
-                        <div id="sheet-calculated"></div>
+                                <div>
+                                    <label>EXP</label>
+                                    <input id="sheet-exp" type="number" readonly>
+                                </div>
+                            </div>
 
-                        <h3>Ability</h3>
-                        <select id="sheet-ability"></select>
+                            <div class="gm-only">
+                                <button id="gm-add-exp">+ EXP</button>
+                                <button id="gm-set-level">Set Level</button>
+                            </div>
+                        </section>
 
-                        <h3>Size</h3>
-                        <label>Height %</label>
-                        <input id="sheet-height" type="range" min="50" max="150" value="100">
-                        <span id="sheet-height-label"></span>%
+                        <!-- stats -->
+                        <section class="sheet-section">
+                            <h3>Stats (Species Based)</h3>
+                            <div id="sheet-stats" class="stat-grid"></div>
+                        </section>
 
-                        <label>Weight %</label>
-                        <input id="sheet-weight" type="range" min="50" max="150" value="100">
-                        <span id="sheet-weight-label"></span>%
+                        <!-- calculated -->
+                        <section class="sheet-section">
+                            <h3>Calculated</h3>
+                            <div id="sheet-calculated" class="stat-grid">
+                                <!-- Will -->
+                                <!-- Initiative -->
+                                <!-- Defense -->
+                                <!-- Special Defense -->
+                                <!-- Max HP -->
+                            </div>
+                        </section>
 
-                        <h3>Skills</h3>
-                        <div id="sheet-skills"></div>
+                        <!-- ability -->
+                        <section class="sheet-section">
+                            <h3>Ability</h3>
+                            <select id="sheet-ability"></select>
+                            <button id="ability-random">Random</button>
+                        </section>
 
-                        <div style="margin-top:10px;">
+                        <!-- nature -->
+                        <section class="sheet-section">
+                            <h3>Nature</h3>
+                            <select id="sheet-nature">
+                                <!-- 25 natures -->
+                            </select>
+                        </section>
+
+                        <!-- size -->
+                        <section class="sheet-section">
+                            <h3>Size</h3>
+
+                            <label>Size (%)</label>
+                            <input id="sheet-size" type="range" min="90" max="110" value="100">
+                            <span id="sheet-size-label"></span>%
+                            <div id="sheet-dimensions"></div>
+                        </section>
+
+                        <!-- attributes -->
+                        <section class="sheet-section">
+                            <h3>Attributes</h3>
+
+                            <div class="sheet-grid">
+                                <div>
+                                    <label>Logic</label>
+                                    <input id="sheet-logic" type="number" min="1" max="5">
+                                </div>
+
+                                <div>
+                                    <label>Instinct</label>
+                                    <input id="sheet-instinct" type="number" min="1" max="5">
+                                </div>
+
+                                <div>
+                                    <label>Primal</label>
+                                    <input id="sheet-primal" type="number" min="0" max="5">
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- skills -->
+                        <section class="sheet-section">
+                            <h3>Skills</h3>
+
+                            <div id="sheet-skills" class="skill-grid">
+                                <div> Brawl <input id="skill-braw" type="number" min="0" max="5"></div>
+                                <div> Channel <input id="skill-channel" type="number" min="0" max="5"></div>
+                                <div> Clash <input id="skill-clash" type="number" min="0" max="5"></div>
+                                <div> Evasion <input id="skill-evasion" type="number" min="0" max="5"></div>
+                                <div> Alert <input id="skill-alert" type="number" min="0" max="5"></div>
+                                <div> Athletic <input id="skill-athletic" type="number" min="0" max="5"></div>
+                                <div> Nature <input id="skill-nature" type="number" min="0" max="5"></div>
+                                <div> Stealth <input id="skill-stealth" type="number" min="0" max="5"></div>
+                                <div> Allure <input id="skill-allure" type="number" min="0" max="5"></div>
+                                <div> Etiquette <input id="skill-etiquette" type="number" min="0" max="5"></div>
+                                <div> Intimidate <input id="skill-intimidate" type="number" min="0" max="5"></div>
+                                <div> Perform <input id="skill-perform" type="number" min="0" max="5"></div>
+                            </div>
+                            <div id="sheet-skill-points"></div>
+                            <button id="skills-randomize">Randomize Skills</button>
+                        </section>
+
+                        <!-- social skill -->
+                        <section class="sheet-section">
+                            <h3>Social Skills</h3>
+
+                            <div class="skill-grid">
+                                <div> Tough <input id="social-tough" type="number" min="1" max="5"></div>
+                                <div> Cool <input id="social-cool" type="number" min="1" max="5"></div>
+                                <div> Beauty <input id="social-beauty" type="number" min="1" max="5"></div>
+                                <div> Cute <input id="social-cute" type="number" min="1" max="5"></div>
+                                <div> Clever <input id="social-clever" type="number" min="1" max="5"></div>
+                            </div>
+                        </section>
+
+                        <!-- moves -->
+                        <section class="sheet-section">
+                            <h3>Moves</h3>
+
+                            <div>
+                                <strong>Active Moves (4)</strong>
+                                <div id="sheet-active-moves"></div>
+                            </div>
+
+                            <div>
+                                <strong>Learnset</strong>
+                                <div id="sheet-learnset"></div>
+                            </div>
+
+                            <div class="gm-only">
+                                <button id="gm-add-move">Add Move</button>
+                            </div>
+                        </section>
+
+                        <!-- items -->
+                        <section class="sheet-section">
+                            <h3>Items & Accessories</h3>
+                            
+                            <div id="sheet-items"></div>
+                            <div id="sheet-accessories"></div>
+                        </section>
+
+                        <!-- actions -->
+                         <section class="sheet-sections">
                             <button id="sheet-save">Save</button>
                             <button id="sheet-cancel">Cancel</button>
                             <button id="sheet-delete" class="gm-only">Delete</button>
-                        </div>
-                    </div>
-                    
-                </section>
+                         </section>
 
+
+                    </div>
+                </section>
             </main>
 
             <aside id="eventLogContainer">

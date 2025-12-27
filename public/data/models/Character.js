@@ -3,71 +3,26 @@ const require = createRequire(import.meta.url);
 const pokemonData = require("../pokemon.json");
 
 export class Character {
-    constructor({
-        id,
-        ownerId = null,
-        pokemonId,
-        nickname = null,
-
-        // core state
-        hp = null,
-        maxHp = null,
-        exp = 0,
-        level = 1,
-
-        // optional overrides
-        ability = nill,
-        heightPercent = 1.0,
-        weightPercent = 1.0,
-
-        stats = {},
-        skills = {},
-        contest = {},
-
-        logic = 1,
-        instinct = 1,
-        primal = 0,
-
-        movesLearned = [],
-        activeMoves = [],
-
-        items = [],
-        accessories = [],
-        conditions = ["Healthy"],
-
-        imageOverride = null
-    }) {
-        // ---- Basic Required Fields ----
+    constructor({ id, ownerId, ownerName, pokemonId, nickname = null }) {
         this.id = id;
         this.ownerId = ownerId;
+        this.ownerName = ownerName;
+
         this.pokemonId = pokemonId;
-
-        // ---- Look Up Species ----
         this.species = pokemonData.find(p => p.id === pokemonId);
-        if(!this.species) {
-            throw new Error(`Pokémon '${pokemonId}' not found in database.`);
-        }
+        if(!this.species) throw new Error(`Pokémon '${pokemonId}' not found.`);
 
-        // ---- Name / Identity ----
-        this.nickname = nickname || this.species.name;
+        // identity
+        this.nickname = nickname;
+        this.level = 1;
+        this.exp = 0;
 
-        // ---- Base + Max Stats ----
-        this.baseStats = { ...this.species.baseStats };
+        // base stats (species-defined)
+        this.stats = { ...this.species.baseStats };
         this.maxStats = { ...this.species.maxStats };
 
-        // ---- Character Current Stats (can change in gameplay) ----
-        this.stats = {
-            HP: this.baseStats.HP,
-            strength: this.baseStats.strength,
-            dexterity: this.baseStats.dexterity,
-            vitality: this.baseStats.vitality,
-            special: this.baseStats.special,
-            insight: this.baseStats.insight,
-            ...stats
-        };
-
-        // ---- Skills ----
-        const defaultSkills = {
+        // skills
+        this.skills = {
             brawl: 0,
             channel: 0,
             clash: 0,
@@ -82,13 +37,10 @@ export class Character {
             perform: 0
         };
 
-        this.skills = {
-            ...defaultSkills,
-            ...skills(skills | {})
-        };
+        this.skillPoints = 3;
 
-        // ---- Contest Stats ----
-        const defaultContest = {
+        // social
+        this.social = {
             tough: 1,
             cool: 1,
             beauty: 1,
@@ -96,70 +48,168 @@ export class Character {
             clever: 1
         };
 
-        this.contest = {
-            ...defaultContest,
-            ...(contest || {})
+        // attributes
+        this.attributes = {
+            logic: 1,
+            instrinct: 1,
+            primal: 0
         };
 
-        // ---- Logic / Instinct / Primal ----
-        this.logic = logic ?? 1;
-        this.instinct = instinct ?? 1;
-        this.primal = primal ?? 0;
+        // ability and nature
+        this.ability = this.species.abilities[0];
+        this.nature = null;
 
-        // ---- Moves ----
-        this.movesLearned = movesLearned.length ? movesLearned : this.getStarterMoves();
-        this.activeMoves = activeMoves.length ? activeMoves.slice(0, 4) : this.activeMoves.movesLearned.slice(0, 4);
+        // moves
+        this.moves = {
+            learnset: [],
+            active: []
+        };
 
-        // ---- Height / Weight ----
-        this.heightPercent = Math.max(0.5, Math.min(1.5, heightPercent));
-        this.weightPercent = Math.max(0.5, Math.min(1.5, weightPercent));
+        // items
+        this.items = [];
+        thjis.accessories = [];
 
-        // ---- HP ----
-        this.maxHp = maxHp ?? this.stats.HP;
-        this.hp = hp ?? this.maxHp;
+        // conditions
+        this.conditions = ["Healthy"];
 
-        // ---- Calculate Values ----
-        this.will = this.stats.insight + 2;
-        this.initiative = (this.stats.dexterity || 0) + (this.skills.alert || 0);
-        this.defense = this.stats.vitality;
-        this.specialDefense = this.stats.insight;
+        // size
+        this.size = 1.0;
 
-        // ---- EXP / Level ----
-        this.exp = exp;
-        this.level = level;
+        this.recalculateSize();
 
-        // ---- Items ----
-        this.items = items || [];
-        this.accessories = accessories || [];
+        // overrides
+        this.imageOverride = null;
 
-        // ---- Conditions ----
-        this.conditions = conditions?.length ? conditions : ["Healthy"];
-
-        // ---- Image ----
-        this.image = imageOverride || this.species.image;
-        this.imageOverride = imageOverride;
-
-        // ---- Ability ----
-        this.ability = ability || this.pickDefaultAbility();
+        // derived stats
+        this.recalculateDerived();
     }
 
-    // ----------------------------------
-    // Helpers
-    // ----------------------------------
-    pickDefaultAbility() {
-        if(Array.isArray(this.species.abilities) && this.species.abilities.length) {
-            return this.species.abilities[0];
+    recalculateDerived() {
+        this.derived = {
+            maxHp: this.stats.HP * 3,
+            will: this.stats.insight + 2,
+            initiative: this.statis.dexterity + this.skills.alert,
+            defense: this.stats.vitality,
+            spDefense: this.stats.insight
+        };
+
+        this.recalculateSize();
+        this.hp = this.hp ?? this.derived.maxHp;
+    }
+
+    recalculateSize() {
+        this.height = +(this.species.height * this.size).toFixed(2);
+        this.weight = +(this.species.weight * this.size).toFixed(2);
+    }
+
+    get displayName() {
+        return this.nickname || this.species.name;
+    }
+
+    get image() {
+        return this.imageOverride || this.species.image;
+    }
+
+    canIncreaseSkill(skill) {
+        return this.skills[skill] < 5;
+    }
+
+    spendSkillPoint(skill) {
+        if(this.skillPoints <= 0) {
+            return false;
+        }
+        if(this.skills[skill] >= 5) {
+            return false;
         }
 
-        return null;
+        this.skills[skill]++;
+        this.skillPoints--;
+        return true;
     }
 
-    getStarterMoves() {
-        if(!this.species.moves) {
-            return [];
+    getSkillUpgradeCost(skill) {
+        const current = this.skills[skill];
+
+        if(current >= 5) {
+            return null;
+        }
+        if(current === 0) {
+            return 6;
         }
 
-        // later filter by rank
-        return this.species.moves.slice(0, 4);
+        return current * 10;
     }
+
+    upgradeSkill(skill) {
+        const cost = this.getSkillUpgradeCost(skill);
+        if(cost === null) {
+            return false;
+        }
+        if(this.exp < cost) {
+            return false;
+        }
+
+        this.skills[skill]++;
+        this.exp -= cost;
+        this.level++;
+
+        return true;
+    }
+
+    applyPaidUpgrade(cost = 1) {
+        if(this.exp < cost) {
+            return false;
+        }
+
+        this.exp -= cost;
+        this.level++;
+        return true;
+    }
+
+    getStatUpgradeCost(stat) {
+        const next = this.stats[stat] + 1;
+        const max = this.species.maxStats[stat];
+
+        if(next > max) {
+            return null;
+        }
+        return next * 10;
+    }
+
+    upgradeStat(stat) {
+        const cost = this.getStatUpgradeCost(stat);
+        if(cost === null) {
+            return false;
+        }
+        if(this.exp < cost) {
+            return false;
+        }
+
+        this.stats[stat]++;
+        this.exp -= cost;
+        this.level++;
+        this.racalculateDerived();
+
+        return true;
+    }
+
+    setLevel(value) {
+        this.level = Math.max(1, value);
+    }
+
+    setExp(value) {
+        this.exp = Math.max(0, value);
+    }
+
+    setSkill(skill, value) {
+        this.skills[skill] = Math.min(5, Math.max(0, value));
+    }
+
+    static MOVE_COSTS = {
+        beginner: 5,
+        amateur: 10,
+        ace: 15,
+        pro: 20,
+        master: 25
+    };
 }

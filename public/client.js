@@ -37,6 +37,31 @@ const sheetSave = document.getElementById("sheet-save");
 const sheetCancel = document.getElementById("sheet-cancel");
 const sheetDelete = document.getElementById("sheet-delete");
 const createCharacterBtn = document.getElementById("createCharacterBtn");
+const SKILLS = ["Brawl", "Channel", "Clash", "Evasion", "Alert", "Athletic", "Nature", "Stealth", "Allure", "Etiquette", "Intimidate", "Perform"];
+const sizeSlider = document.getElementById("sheet-size");
+const sizeLabel = document.getElementById("sheet-size-label");
+const dimensionsDiv = document.getElementById("sheet-dimensions");
+let skillPointsRemaining = 3;
+let skillValues = {};
+
+// pokemon variables
+const speciesPicker = document.getElementById("sheet-species-picker");
+window.POKEMON = [];
+
+// handle pokemon
+async function loadPokemonData() {
+    try {
+        const res = await fetch("/data/pokemon.json");
+        const data = await res.json();
+        window.POKEMON = data;
+        console.log("[client] Loaded pokemon:", data.length);
+        populateSpeciesDropdown();
+    } catch (err) {
+        console.error("Failed to load pokemon.json", err);
+    }
+}
+
+loadPokemonData();
 
 function readStored(key) {
     const v = localStorage.getItem(key);
@@ -315,84 +340,15 @@ function openCharacterSheet(char) {
 
     const species = window.pokemon.find(p => p.id === char.pokemonId);
 
-    sheetTitle.textContent = `Editing ${char.nickname || char.name}`;
     document.getElementById("sheet-species-name").textContent = species.name;
-
-    // nickname
     document.getElementById("sheet-nickname").value = char.nickname || "";
+    document.getElementById("sheet-image").src = char.image;
 
-    // image
-    const img = document.getElementById("sheet-image");
-    img.src = char.image;
-    img.alt = char.nickname || char.name;
-
-    // type
-    document.getElementById("sheet-types").textContent = species.types.join(" / ");
-
-    // stats
-    const statDiv = document.getElementById("sheet-stats");
-    statDiv.innerHTML = `
-            <p>HP: ${char.stats.HP}</p>
-            <p>Strength: ${char.stats.strength}</p>
-            <p>Dexterity: ${char.stats.dexterity}</p>
-            <p>Vitality: ${char.stats.vitality}</p>
-            <p>Special: ${char.stats.special}</p>
-            <p>Insight: ${char.stats.insight}</p>
-        `;
-
-        // calculated
-        const calcDiv = document.getElementById("sheet-calculated");
-        calcDiv.innerHTML = `
-            <p>Will: ${char.will}</p>
-            <p>Initiative: ${char.initiative}</p>
-            <p>Defense: ${char.defense}</p>
-            <p>Special Defense: ${char.specialDefense}</p>
-        `;
-
-        // abilities dropdown
-        const abilitySelect = document.getElementById("sheet-abilities");
-        abilitySelect.innerHTML = "";
-        species.abilities.forEach(a => {
-            const opt = document.createElement("option");
-            opt.value = a;
-            opt.textContent = a;
-            if(a === char.abilitiy) opt.selected = true;
-            abilitySelect.appendChild(opt);
-        });
-
-        // height + weight
-        const h = document.getElementById("sheet-height");
-        const w = document.getElementById("sheet-weight");
-
-        h.value = (char.heightPercent || 1) * 100;
-        w.value = (char.weightPercent || 1) * 100;
-
-        document.getElementById("sheet-height-label").textContent = h.value;
-        document.getElementById("sheet-weight-label").textContent = w.value;
-
-        h.oninput = () => 
-            document.getElementById("sheet-height-label").textContent = h.value;
-
-        w.oninput = () => 
-            document.getElementById("sheet-weight-label").textContent = w.value;
-
-        // ---- Skills ----
-        const skillDiv = document.getElementById("sheet-skills");
-        skillDiv.innerHTML = "";
-
-        Object.entries(char.skills).forEach(([name, value]) => {
-            const row = document.createElement("div");
-            row.innerHTML = `
-                ${name}:
-                <input type="number" min="0" max="5"
-                    data-skill="${name}"
-                    value="${value}">
-            `;
-            skillDiv.appendChild(row);
-        });
-
-        // GM delete permissions
-        sheetDelete.style.display = IS_GM || char.ownerId === PLAYER_ID ? "inline-block" : "none";
+    renderStats(char);
+    renderCalculated(char);
+    renderSkills(char);
+    renderSize(char);
+    renderAbility(char, species);
 }
 
 document.getElementById("createCharacterBtn").onclick = () => {
@@ -400,10 +356,6 @@ document.getElementById("createCharacterBtn").onclick = () => {
     
     sheetPanel.style.display = "block";
     sheetTitle.textContent = "Create Character";
-
-    sheetName.value = "";
-    sheetSpecies.value = "";
-    sheetMaxHp.value = 3;
 
     sheetDelete.style.display = "none";
 
@@ -465,6 +417,269 @@ function renderPlayerStatCard(char) {
     <p>Skills: ${JSON.stringify(char.skills)}</p>
     <p>Moves: ${char.moves?.join(", ") || "None"}</p>
   `;
+}
+
+// render attributes
+function renderSkills(character) {
+    const container = document.getElementById("sheet-skills");
+    container.innerHTML = "";
+
+    SKILLS.forEach(skill => {
+        const value = character.skills[skill] || 0;
+        const cost = character.getSkillUpgradeCost(skill);
+
+        const row = document.createElement("div");
+        row.className = "skill-row";
+
+        const label = document.createElement("span");
+        label.textContent = `${skill.toUpperCase()}: ${value}`;
+
+        const btn = document.createElement("button");
+        btn.textContent = "+";
+        btn.disabled = cost === null || character.exp < cost;
+
+        btn.title = cost === null ? "Maxed" : `Cost: ${cost} EXP`;
+
+        btn.onclick = () => {
+            if(character.upgradeSkill(skill)) {
+                refreshCharacterUI(character);
+            }
+        };
+
+        row.appendChild(label);
+        row.appendChild(btn);
+        container.appendChild(row);
+    });
+}
+
+function renderProgress(character) {
+    document.getElementById("exp-value").textContent = character.exp;
+    document.getElementById("level-value").textContent = character.level;
+}
+
+function resetSkills() {
+    skillPointsRemaining = 3;
+    skillValues = {};
+    SKILLS.forEach(s => skillValues[s] = 0);
+    renderSkills();
+}
+
+function renderSkills() {
+    const container = document.getElementById("sheet-skills");
+    const pointsLabel = document.getElementById("sheet-skill-points");
+
+    container.innerHTML = "";
+    pointsLabel.textContent = `Points Remaining: ${skillPointsRemaining}`;
+
+    SKILLS.forEach(skill => {
+        const row = document.createElement("div");
+        row.className = "skill-row";
+
+        row.innerHTML = `
+            <span>${skill}</span>
+            <button data-skill="${skill}" data-dir="-1">−</button>
+            <span>${skillValues[skill]} / 5</span>
+            <button data-skill="${skill}" data-dir="1">+</button>
+        `;
+
+        container.appendChild(row);
+    });
+}
+
+document.getElementById("sheet-skills").addEventListener("click", e => {
+    if(!e.target.dataset.skill) {
+        return;
+    }
+
+    const skill = e.target.dataset.skill;
+    const dir = parseInt(e.target.dataset.dir);
+
+    if(dir === 1 && skillPointsRemaining === 0) {
+        return;
+    }
+    if(dir === -1 && skillValues[skill] === 0) {
+        return;
+    }
+    if(dir === 1 && skillValues[skill] >= 5) {
+        return;
+    }
+
+    skillValues[skill] += dir;
+    skillPointsRemaining -= dir;
+
+    renderSkills();
+    renderCalculated(currentSpecies, skillValues);
+});
+
+document.getElementById("skills-randomize").onclick = () => {
+    resetSkills();
+    while(skillPointsRemaining > 0) {
+        const s = SKILLS[Math.floor(Math.random() * SKILLS.length)];
+        if(skillValues[s] < 5) {
+            skillValues[s]++;
+            skillPointsRemaining--;
+        }
+    }
+    renderSkills();
+    renderCalculated(currentSpecies, skillValues);
+};
+
+// main character refresh
+function refreshCharacterUI(character) {
+    renderSkills(character);
+    renderProgress(character);
+}
+
+// gm exp button
+document.getElementById("gm-add-exp").onclick = () => {
+    currentCharacter.exp += 10;
+    refreshCharacterUI(currentCharacter);
+};
+
+// pokemon data functions
+function populateSpeciesDropdown() {
+    if(!window.POKEMON || window.POKEMON.length === 0) {
+        return;
+    }
+
+    speciesPicker.innerHTML = "";
+
+    window.POKEMON.forEach(p => {
+        const opt = document.createElement("option");
+        opt.value = p.id;
+        opt.textContent = p.name;
+        speciesPicker.appendChild(opt);
+    });
+}
+
+speciesPicker.addEventListener("change", () => {
+    const pokemonId = speciesPicker.value;
+    const species = window.POKEMON.find(p => p.id === pokemonId);
+    if(!species) {
+        return;
+    }
+
+    currentSpecies = species;
+    populateAbilities(species);
+    resetSkills();
+    updateSizeDisplay(species);
+    renderSpeciesInfo(species);
+    renderCalculated(species, skillValues);
+});
+
+function renderSpeciesStats(species) {
+    const statsDiv = document.getElementById("sheet-stats");
+    statsDiv.innerHTML = "";
+
+    Object.entries(species.baseStats).forEach(([stat, value]) => {
+        const row = document.createElement("div");
+        row.className = "stat-row";
+
+        row.innerHTML = `
+        <span>${stat}</span>
+        <span>${value} / ${species.maxStats[stat] ?? value}</span>
+        `;
+
+        statsDiv.appendChild(row);
+    });
+}
+
+function renderCalculated(species, skills = {}) {
+    const calcDiv = document.getElementById("sheet-calculated");
+    calcDiv.innerHTML = "";
+
+    const insight = species.baseStats.insight;
+    const dex = species.baseStats.dexterity;
+    const vit = species.baseStats.vitality;
+    const alert = skills.Alert || 0;
+
+    const calculated = {
+        "Will: ": insight + 2,
+        "Initiative: ": dex + alert,
+        "Defense: ": vit,
+        "SP Defense: ": insight,
+        "Max HP: ": species.baseStats.HP + vit
+    };
+
+    Object.entries(calculated).forEach(([label, value]) => {
+        const row = document.createElement("div");
+        row.className = "stat-row";
+        row.innerHTML = `<span>${label}</span><span>${value}</span>`;
+        calcDiv.appendChild(row);
+    });
+}
+
+function renderSpeciesInfo(species) {
+    document.getElementById("sheet-species-name").textContent = species.name;
+    document.getElementById("sheet-image").src = species.image;
+
+    // types
+    document.getElementById("sheet-types").textContent = species.types.join(" / ");
+
+    // ability
+    const abilitySelect = document.getElementById("sheet-ability");
+    abilitySelect.innerHTML = "";
+    species.abilities.forEach(a => {
+        const opt = document.createElement("option");
+        opt.value = a;
+        opt.textContent = a;
+        abilitySelect.appendChild(opt);
+    });
+
+    renderSpeciesStats(species);
+    renderCalculated(species);
+}
+
+// size functions
+sizeSlider.addEventListener("input", () => {
+    updateSizeDisplay(currentSpecies);
+});
+
+function updateSizeDisplay(species) {
+    const size = parseInt(sizeSlider.value);
+    sizeLabel.textContent = size;
+
+    const height = (species.height * size / 100).toFixed(2);
+    const weight = (species.weight * size / 100).toFixed(2);
+
+    dimensionsDiv.innerHTML = `
+        <p>Height: ${height}m / ${convertMetersToFeetInches(height)}</p>
+        <p>Weight: ${weight} kg / ${convertKgToLbs(weight)} lbs</p>
+    `;
+}
+
+function convertMetersToFeetInches(meters) {
+    const totalInches = meters * 39.3700787;
+
+    const feet = Math.floor(totalInches / 12);
+
+    const inches = (totalInches % 12).toFixed(0);
+
+    return `${feet}'${inches}"`;
+}
+
+function convertKgToLbs(kg) {
+    const factor = 2.2046226218;
+    return (kg * factor).toFixed(0);
+}
+
+// abilitiy functions
+function populateAbilities(species) {
+    const select = document.getElementById("sheet-ability");
+    select.innerHTML = "";
+
+    species.abilities.forEach(a => {
+        const opt = document.createElement("option");
+        opt.value = a;
+        opt.textContent = a;
+        select.appendChild(opt);
+    });
+}
+
+document.getElementById("ability-random").onlick = () => {
+    const abilities = currentSpecies.abilities
+    const pick = abilities[Math.floor(Math.random() * abilities.length)];
+    document.getElementById("sheet-ability").value = pick;
 }
 
 // handle GM
