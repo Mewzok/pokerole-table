@@ -48,6 +48,9 @@ let skillValues = {};
 const speciesPicker = document.getElementById("sheet-species-picker");
 window.POKEMON = [];
 
+// move variables
+let MOVES = {};
+
 // handle pokemon
 async function loadPokemonData() {
     try {
@@ -61,7 +64,21 @@ async function loadPokemonData() {
     }
 }
 
-loadPokemonData();
+async function loadMoves() {
+    const res = await fetch("/data/moves.json");
+    const data = await res.json();
+
+    data.forEach(move => {
+        MOVES[move.id] = move;
+    });
+
+    console.log(`[moves] Loaded $(Object.keys(MOVES).length) moves`);
+}
+
+window.addEventListener("load", async () => {
+    await loadPokemonData();
+    await loadMoves();
+});
 
 function readStored(key) {
     const v = localStorage.getItem(key);
@@ -680,6 +697,45 @@ document.getElementById("ability-random").onlick = () => {
     const abilities = currentSpecies.abilities
     const pick = abilities[Math.floor(Math.random() * abilities.length)];
     document.getElementById("sheet-ability").value = pick;
+}
+
+// move functions
+function renderMove(moveId) {
+    const move = MOVES[moveId];
+    if(!move) {
+        return "(Unknown Move)";
+    }
+
+    let effectsText = "None";
+    if(move.effects.length) {
+        effectsText = move.effects.map(e => {
+            if(e.type === "stat-stage") {
+                return `${e.stat} ${e.amount > 0 ? "+" : ""}${e.amount}`;
+            }
+            if(e.type === "flinch") {
+                return `Flinch (${e.dice} dice)`;
+            }
+            if(e.type === "recoil") {
+                return "Recoil Damage";
+            }
+            if(e.type === "self-accuracy-mod") {
+                return `Accuracy ${e.amount}`;
+            }
+            return e.type;
+        }).join(", ");
+    }
+
+    return `
+        <div class="move-card">
+            <strong>${move.name}</strong>
+            <div>Type: ${move.type} (${move.category})</div>
+            <div>Accuracy: ${move.accuracy.formula}</div>
+            <div>Power: ${move.power.base} + ${move.power.scaling}</div>
+            <div>Targets: ${move.targets}</div>
+            <div>Effects: ${effectsText}</div>
+            <em>${move.description}</em>
+        </div>
+    `;
 }
 
 // handle GM

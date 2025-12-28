@@ -19,7 +19,14 @@
         "insight": 4
     },
     "abilities": ["Overgrow"],
-    "moves": ["Tackle", "Growl", "Leech Seed", "Vine Whip", "Poison Powder", "Sleep Powder", "Take Down", "Razor Leaf", "Sweet Scent", "Growth", "Worry Seed", "Double Edge", "Synthesis", "Solar Beam", "Grassy Terrain", "Amnesia", "Grass Pledge"],
+    "moves": {
+        "starter": ["tackle", "growl"],
+        "beginner": ["leech-seed", "vine-whip"],
+        "amateur": ["poison-powder", "sleep-powder", "take-down", "razor-leaf", "sweet-scent", "growth"],
+        "ace": ["worry-seed", "double-edge", "synthesis"],
+        "pro": ["solar-beam", "grassy-terrain", "amnesia", "grass-pledge"],
+        "master": []
+    },
     "rank": "beginner",
     "height": 0.7,
     "weight": 15,
@@ -59,7 +66,14 @@
         "insight": 4
     },
     "abilities": ["Blaze"],
-    "moves": ["Scratch", "Growl", "Ember", "Smokescreen", "Dragon Rage", "Scary Face", "Fire Fang", "Flame Burst", "Slash", "Fire Spin", "Flamethrower", "Inferno", "Metal Claw", "Dragon Dance", "Fire Pledge"],
+    "moves": {
+        "starter": ["scratch", "growl"],
+        "beginner": ["ember", "smokescreen"],
+        "amateur": ["dragon-rage", "scary-face", "fire-fang", "flame-burst", "slash", "fire-spin"],
+        "ace": ["flamethrower", "inferno"],
+        "pro": ["metal-claw", "dragon-dance", "fire-pledge"],
+        "master": []
+    },
     "rank": "beginner",
     "height": 0.6,
     "weight": 18,
@@ -78,6 +92,50 @@
         "Fairy": 0.5
     },
     "image": "https://imgur.com/Bxs5XDv.png"
+  },
+  {
+    "id": "squirtle",
+    "name": "Squirtle",
+    "types": ["Water"],
+    "baseStats": {
+        "HP": 3,
+        "strength": 2,
+        "dexterity": 1,
+        "vitality": 2,
+        "special": 2,
+        "insight": 2
+    },
+    "maxStats": {
+        "strength": 4,
+        "dexterity": 3,
+        "vitality": 4,
+        "special": 4,
+        "insight": 4
+    },
+    "abilities": ["Torrent"],
+    "moves": {
+    "starter": ["tackle", "tail-whip"],
+    "beginner": ["water-gun", "withdraw"],
+    "amateur": ["bubble", "bite", "rapid-spin", "protect", "water-pulse", "aqua-tail"],
+    "ace": ["skull-bash", "iron-defense", "rain-dance", "hydro-pump"],
+    "pro": ["aqua-jet", "water-pledge", "icy-wind"],
+    "master": []
+    },
+    "rank": "beginner",
+    "height": 0.5,
+    "weight": 20,
+    "weaknesses": {
+        "Grass": 2,
+        "Electric": 2
+    },
+    "immunities": {},
+    "resistances": {
+        "Steel": 0.5,
+        "Fire": 0.5,
+        "Water": 0.5,
+        "Ice": 0.5
+    },
+    "image": "https://imgur.com/Y2bJxZt.png"
   },
 {
     "id": "pikachu",

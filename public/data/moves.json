@@ -1,0 +1,90 @@
+[
+    {
+        "id": "vine-whip",
+        "name": "Vine Whip",
+        "type": "Grass",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon lashes vines to strike the foe."
+    },
+    {
+        "id": "trop-kick",
+        "name": "Trop Kick",
+        "type": "Grass",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [
+            {
+                "type": "stat-stage",
+                "stat": "Strength",
+                "amount": -1,
+                "duration": "battle"
+            }
+        ],
+        "description": "The user strikes with an intense and alluring kick."
+    },
+    {
+        "id": "bone-club",
+        "name": "Bone Club",
+        "type": "Ground",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [
+            {
+                "type": "flinch",
+                "dice": 2
+            },
+            {
+                "type": "self-accuracy-mod",
+                "amount": -2
+            }
+        ],
+        "description": "The user hits the target with a bone, the smack may leave a bump on the target's head."
+    },
+    {
+        "id": "wood-hammer",
+        "name": "Wood Hammer",
+        "type": "Grass",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base":5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [
+            {
+                "type": "recoil"
+            }
+        ],
+        "description": "The Pokémon recklessly slams the foe with a part of its rugged body, the user also gets hurt in the process."
+    }
+]

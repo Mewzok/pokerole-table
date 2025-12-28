@@ -4,6 +4,9 @@ const pokemonData = require("../pokemon.json");
 
 export class Character {
     constructor({ id, ownerId, ownerName, pokemonId, nickname = null }) {
+        moves: [];
+        const MAX_MOVES = 4;
+
         this.id = id;
         this.ownerId = ownerId;
         this.ownerName = ownerName;
