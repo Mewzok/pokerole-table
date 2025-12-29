@@ -44,6 +44,15 @@ const dimensionsDiv = document.getElementById("sheet-dimensions");
 let skillPointsRemaining = 3;
 let skillValues = {};
 
+// move variables
+const MOVE_XP_COST = {
+    beginner: 5,
+    amateur: 10,
+    ace: 15,
+    pro: 20,
+    master: 25
+};
+
 // pokemon variables
 const speciesPicker = document.getElementById("sheet-species-picker");
 window.POKEMON = [];
@@ -567,6 +576,9 @@ function populateSpeciesDropdown() {
         opt.textContent = p.name;
         speciesPicker.appendChild(opt);
     });
+
+    var event = new Event('change');
+    speciesPicker.dispatchEvent(event);
 }
 
 speciesPicker.addEventListener("change", () => {
@@ -699,41 +711,83 @@ document.getElementById("ability-random").onlick = () => {
     document.getElementById("sheet-ability").value = pick;
 }
 
-// move functions
-function renderMove(moveId) {
-    const move = MOVES[moveId];
-    if(!move) {
-        return "(Unknown Move)";
-    }
+// --------------------------------------------------------------------------- move functions ---------------------------------------------------------------------------
+function renderActiveMoves(character) {
+    const container = document.getElementById("active-move-list");
+    container.innerHTML = "";
 
-    let effectsText = "None";
-    if(move.effects.length) {
-        effectsText = move.effects.map(e => {
-            if(e.type === "stat-stage") {
-                return `${e.stat} ${e.amount > 0 ? "+" : ""}${e.amount}`;
-            }
-            if(e.type === "flinch") {
-                return `Flinch (${e.dice} dice)`;
-            }
-            if(e.type === "recoil") {
-                return "Recoil Damage";
-            }
-            if(e.type === "self-accuracy-mod") {
-                return `Accuracy ${e.amount}`;
-            }
-            return e.type;
-        }).join(", ");
-    }
+    character.moves.active.forEach((moveId, index) => {
+        const move = MOVES[moveId];
 
+        const div = document.createElement("div");
+        div.className = "move-slot";
+        div.innerHTML = `
+            ${renderMove(moveId)}
+            <button data-index="${index}">Remove</button>
+            `;
+
+            div.querySelector("button").onclick = () => {
+                character.moves.active.splice(index, 1);
+                renderCharacterSheet(character);
+                renderActiveMoves(character);
+                renderLearnableMoves(character, currentSpecies);
+            };
+
+            container.appendChild(div);
+    });
+}
+
+function renderLearnableMoves(character, pokemon) {
+    const container = document.getElementById("move-rank-sections");
+    container.innerHTML = "";
+
+    for(const rank in pokemon.moves) {
+        if(rank === "starter") {
+            continue;
+        }
+
+        const section = document.createElement("div");
+        section.innerHTML = `<h5>${rank.toUpperCase()} (${MOVE_XP_COST[rank]} XP)</h5>`;
+
+        pokemon.moves[rank].forEach(moveId => {
+            const alreadyLearned = character.moves.learned.includes(moveId);
+            const canLearn = character.moves.active.length < 4;
+
+            const btn = document.createElement("button");
+            btn.textContent = alreadyLearned ? "Learned" : "Learn";
+            btn.disabled = alreadyLearned || !canLearn;
+
+            btn.onclick = () => {
+                character.moves.learned.push(moveId);
+                character.moves.active.push(moveId);
+                renderCharacterSheet(character);
+                renderActiveMoves(character);
+                renderLearnableMoves(character, currentSpecies);
+            };
+
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = renderMove(moveId);
+            wrapper.appendChild(btn);
+
+            section.appendChild(wrapper);
+        });
+
+        container.appendChild(section);
+    }
+}
+
+function renderMoveCard(move, options = {}) {
     return `
         <div class="move-card">
-            <strong>${move.name}</strong>
-            <div>Type: ${move.type} (${move.category})</div>
-            <div>Accuracy: ${move.accuracy.formula}</div>
-            <div>Power: ${move.power.base} + ${move.power.scaling}</div>
-            <div>Targets: ${move.targets}</div>
-            <div>Effects: ${effectsText}</div>
-            <em>${move.description}</em>
+            <img src="${move.image}" alt="${move.name}" loading="lazy">
+            <div class="move-meta">
+                <strong>${move.name}</strong>
+                <div>${move.type} • ${move.category}</div>
+                <div>Accuracy: ${move.accuracy.formula}</div>
+                <div>Power: ${move.power.base} + ${move.power.scaling}</div>
+                <div class="move-desc">${move.description}</div>
+            </div>
+            ${options.button || ""}
         </div>
     `;
 }

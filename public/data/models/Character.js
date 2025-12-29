@@ -64,8 +64,8 @@ export class Character {
 
         // moves
         this.moves = {
-            learnset: [],
-            active: []
+            active: [],
+            learned: []
         };
 
         // items

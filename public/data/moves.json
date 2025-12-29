@@ -14,7 +14,8 @@
         },
         "targets": "Single",
         "effects": [],
-        "description": "The Pokémon lashes vines to strike the foe."
+        "description": "The Pokémon lashes vines to strike the foe.",
+        "image": "https://imgur.com/mH5ZPWJ.png"
     },
     {
         "id": "trop-kick",
@@ -38,7 +39,23 @@
                 "duration": "battle"
             }
         ],
-        "description": "The user strikes with an intense and alluring kick."
+        "description": "The user strikes with an intense and alluring kick.",
+        "image": "https://imgur.com/psOIqfT.png"
+    },
+    {
+        "id": "leech-seed",
+        "name": "Leech Seed",
+        "type": "Grass",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user plants some seeds on the target, the seeds sprout and restore the user's health by absorbing the foe's vital energy.",
+        "image": "https://imgur.com/mH5ZPWJ.png"
     },
     {
         "id": "bone-club",
@@ -64,7 +81,8 @@
                 "amount": -2
             }
         ],
-        "description": "The user hits the target with a bone, the smack may leave a bump on the target's head."
+        "description": "The user hits the target with a bone, the smack may leave a bump on the target's head.",
+        "image": "https://imgur.com/7zok0es.png"
     },
     {
         "id": "wood-hammer",
@@ -85,6 +103,7 @@
                 "type": "recoil"
             }
         ],
-        "description": "The Pokémon recklessly slams the foe with a part of its rugged body, the user also gets hurt in the process."
+        "description": "The Pokémon recklessly slams the foe with a part of its rugged body, the user also gets hurt in the process.",
+        "image": "https://imgur.com/pG63AfX.png"
     }
 ]
