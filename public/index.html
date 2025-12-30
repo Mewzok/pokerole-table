@@ -233,21 +233,49 @@
                         <section class="sheet-section">
                             <h3>Moves</h3>
 
-                            <div id="active-moves">
-                                <h4>Active Moves</h4>
-                                <div id="active-move-list"></div>
-                            </div>
+                            <div id="moves-panel">
 
-                            <div id="learned-moves">
-                                <h4>Learned Moves</h4>
-                                <div id="move-rank-sections"></div>
-                            </div>
+                                <!-- active moves -->
+                                <section id="active-moves">
+                                    <h4>Active Moves</h4>
+                                    <div class="moves-grid" id="active-moves-grid"></div>
+                                </section>
 
-                            <div id="learnable-moves">
-                                <h4>Learnable Moves</h4>
-                            </div>
+                                <!-- learnable moves -->
+                                <section id="learnable-moves">
+                                    <h4>Learnable Moves</h4>
 
-                            <button class="gm-only" id="gm-add-move">Add Any Move</button>
+                                    <div class="move-rank-group" data-rank="starter">
+                                        <h5>Starter</h5>
+                                        <div class="moves-grid"></div>
+                                    </div>
+
+                                    <div class="move-rank-group" data-rank="beginner">
+                                        <h5>Beginner</h5>
+                                        <div class="moves-grid"></div>
+                                    </div>
+
+                                    <div class="move-rank-group" data-rank="amateur">
+                                        <h5>Amateur</h5>
+                                        <div class="moves-grid"></div>
+                                    </div>
+
+                                    <div class="move-rank-group" data-rank="ace">
+                                        <h5>Ace</h5>
+                                        <div class="moves-grid"></div>
+                                    </div>
+
+                                    <div class="move-rank-group" data-rank="pro">
+                                        <h5>Pro</h5>
+                                        <div class="moves-grid"></div>
+                                    </div>
+
+                                    <div class="move-rank-group" data-rank="master">
+                                        <h5>Master</h5>
+                                        <div class="moves-grid"></div>
+                                    </div>
+                                </section>
+                            </div>
                         </section>
 
                         <!-- items -->
@@ -292,21 +320,6 @@
 
             </div>
         </div>
-
-        <dialog id="characterDialog" class="char-dialog">
-            <h3 id="charDialogTitle">Create Character</h3>
-
-            <label>Name</label>
-            <input id="charNameInput" type="text">
-
-            <label>Max HP</label>
-            <input id="charHpInput" type="number" min="1" value="3">
-
-            <div style="margin-top: 10px;">
-                <button id="saveCharacterBtn">Save</button>
-                <button id="cancelCharacterBtn">Cancel</button>
-            </div>
-        </dialog>
 
         <script src="/socket.io/socket.io.js"></script>
         <script type="module" src="/data/pokedexLoader.js"></script>

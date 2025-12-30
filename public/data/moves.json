@@ -55,7 +55,48 @@
         "targets": "Single",
         "effects": [],
         "description": "The user plants some seeds on the target, the seeds sprout and restore the user's health by absorbing the foe's vital energy.",
-        "image": "https://imgur.com/mH5ZPWJ.png"
+        "image": "https://imgur.com/BL5ZAdw.png"
+    },
+        {
+        "id": "tackle",
+        "name": "Tackle",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A basic attack that consists on charging at an enemy.",
+        "image": "https://imgur.com/9rytyCJ.png"
+    },
+    {
+    "id": "growl",
+    "name": "Leech Seed",
+    "type": "Grass",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Tough/Cute + Perform",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "All",
+    "effects": [
+        {
+                "type": "stat-stage",
+                "stat": "Strength",
+                "amount": -1,
+                "duration": "battle",
+                "sound-based": true
+        }
+    ],
+    "description": "Either by a mancing attitude or cute demeanor, the foe will be unsure about attacking the user with full force.",
+    "image": "https://imgur.com/HQy6SOk.png"
     },
     {
         "id": "bone-club",

@@ -16,16 +16,11 @@ const playerList = document.getElementById("playerList");
 const playerDisplayName = document.getElementById("playerDisplayName");
 
 // character variables
-const characterListDiv = document.getElementById("characterList");
 const characterGrid = document.getElementById("character-grid");
-let selectedCharacterId = null;
 
 // character creator variables
 let CHARACTERS = [];
 let editingCharacterId = null;
-const dialog = document.getElementById("characterDialog");
-const charNameInput = document.getElementById("charNameInput");
-const charHpInput = document.getElementById("charHpInput");
 
 // character creator sheet variables
 const sheetPanel = document.getElementById("character-sheet-panel");
@@ -50,10 +45,22 @@ const MOVE_XP_COST = {
     amateur: 10,
     ace: 15,
     pro: 20,
-    master: 25
+    master: 25,
+    champion: 30
 };
 
+const RANK_ORDER = [
+    "starter",
+    "beginner",
+    "amateur",
+    "ace",
+    "pro",
+    "master",
+    "champion"
+];
+
 // pokemon variables
+let currentSpecies = null;
 const speciesPicker = document.getElementById("sheet-species-picker");
 window.POKEMON = [];
 
@@ -308,7 +315,7 @@ function renderCharacters(characters) {
     }
 
     characters.forEach(c => {
-        const species = window.pokemon?.find(p => p.id === c.pokemonId);
+        const species = window.POKEMON?.find(p => p.id === c.pokemonId);
         const hpPercent = Math.max(0, Math.min(100, (c.hp / c.maxHp) * 100));
 
         const card = document.createElement("div");
@@ -364,7 +371,7 @@ function openCharacterSheet(char) {
     sheetPanel.style.display = "block";
     createCharacterBtn.style.display = "none";
 
-    const species = window.pokemon.find(p => p.id === char.pokemonId);
+    const species = window.POKEMON.find(p => p.id === char.pokemonId);
 
     document.getElementById("sheet-species-name").textContent = species.name;
     document.getElementById("sheet-nickname").value = char.nickname || "";
@@ -375,12 +382,16 @@ function openCharacterSheet(char) {
     renderSkills(char);
     renderSize(char);
     renderAbility(char, species);
+    renderMovesPanel(char);
 }
 
 document.getElementById("createCharacterBtn").onclick = () => {
     editingCharacterId = null;
     
     sheetPanel.style.display = "block";
+    speciesPicker.value = window.POKEMON[0].id;
+    speciesPicker.dispatchEvent(new Event("change"));
+
     sheetTitle.textContent = "Create Character";
 
     sheetDelete.style.display = "none";
@@ -446,43 +457,6 @@ function renderPlayerStatCard(char) {
 }
 
 // render attributes
-function renderSkills(character) {
-    const container = document.getElementById("sheet-skills");
-    container.innerHTML = "";
-
-    SKILLS.forEach(skill => {
-        const value = character.skills[skill] || 0;
-        const cost = character.getSkillUpgradeCost(skill);
-
-        const row = document.createElement("div");
-        row.className = "skill-row";
-
-        const label = document.createElement("span");
-        label.textContent = `${skill.toUpperCase()}: ${value}`;
-
-        const btn = document.createElement("button");
-        btn.textContent = "+";
-        btn.disabled = cost === null || character.exp < cost;
-
-        btn.title = cost === null ? "Maxed" : `Cost: ${cost} EXP`;
-
-        btn.onclick = () => {
-            if(character.upgradeSkill(skill)) {
-                refreshCharacterUI(character);
-            }
-        };
-
-        row.appendChild(label);
-        row.appendChild(btn);
-        container.appendChild(row);
-    });
-}
-
-function renderProgress(character) {
-    document.getElementById("exp-value").textContent = character.exp;
-    document.getElementById("level-value").textContent = character.level;
-}
-
 function resetSkills() {
     skillPointsRemaining = 3;
     skillValues = {};
@@ -550,12 +524,6 @@ document.getElementById("skills-randomize").onclick = () => {
     renderCalculated(currentSpecies, skillValues);
 };
 
-// main character refresh
-function refreshCharacterUI(character) {
-    renderSkills(character);
-    renderProgress(character);
-}
-
 // gm exp button
 document.getElementById("gm-add-exp").onclick = () => {
     currentCharacter.exp += 10;
@@ -594,6 +562,7 @@ speciesPicker.addEventListener("change", () => {
     updateSizeDisplay(species);
     renderSpeciesInfo(species);
     renderCalculated(species, skillValues);
+    renderMovesPanel({species, moves: []});
 });
 
 function renderSpeciesStats(species) {
@@ -705,7 +674,7 @@ function populateAbilities(species) {
     });
 }
 
-document.getElementById("ability-random").onlick = () => {
+document.getElementById("ability-random").onclick = () => {
     const abilities = currentSpecies.abilities
     const pick = abilities[Math.floor(Math.random() * abilities.length)];
     document.getElementById("sheet-ability").value = pick;
@@ -713,83 +682,114 @@ document.getElementById("ability-random").onlick = () => {
 
 // --------------------------------------------------------------------------- move functions ---------------------------------------------------------------------------
 function renderActiveMoves(character) {
-    const container = document.getElementById("active-move-list");
-    container.innerHTML = "";
+    const grid = document.getElementById("active-moves-grid");
+    grid.innerHTML = "";
 
-    character.moves.active.forEach((moveId, index) => {
+    if(!character.moves || character.moves.length === 0) {
+        grid.innerHTML = "<em>No active moves</em>";
+        return;
+    }
+
+    character.moves.forEach(moveId => {
         const move = MOVES[moveId];
+        if(!move) {
+            return;
+        }
 
-        const div = document.createElement("div");
-        div.className = "move-slot";
-        div.innerHTML = `
-            ${renderMove(moveId)}
-            <button data-index="${index}">Remove</button>
-            `;
-
-            div.querySelector("button").onclick = () => {
-                character.moves.active.splice(index, 1);
-                renderCharacterSheet(character);
-                renderActiveMoves(character);
-                renderLearnableMoves(character, currentSpecies);
-            };
-
-            container.appendChild(div);
+        const card = createMoveCard(move, { active: true, ok: true });
+        grid.appendChild(card);
     });
 }
 
-function renderLearnableMoves(character, pokemon) {
-    const container = document.getElementById("move-rank-sections");
-    container.innerHTML = "";
+function renderLearnableMoves(character, species) {
+    document.querySelectorAll(".move-rank-group").forEach(group => {
+        const rank = group.dataset.rank;
+        const grid = group.querySelector(".moves-grid");
 
-    for(const rank in pokemon.moves) {
-        if(rank === "starter") {
-            continue;
-        }
+        grid.innerHTML = "";
 
-        const section = document.createElement("div");
-        section.innerHTML = `<h5>${rank.toUpperCase()} (${MOVE_XP_COST[rank]} XP)</h5>`;
+        const moveIds = species.moves[rank] || [];
 
-        pokemon.moves[rank].forEach(moveId => {
-            const alreadyLearned = character.moves.learned.includes(moveId);
-            const canLearn = character.moves.active.length < 4;
+        moveIds.forEach(moveId => {
+            const move = MOVES[moveId];
+            if(!move) {
+                return;
+            }
 
-            const btn = document.createElement("button");
-            btn.textContent = alreadyLearned ? "Learned" : "Learn";
-            btn.disabled = alreadyLearned || !canLearn;
-
-            btn.onclick = () => {
-                character.moves.learned.push(moveId);
-                character.moves.active.push(moveId);
-                renderCharacterSheet(character);
-                renderActiveMoves(character);
-                renderLearnableMoves(character, currentSpecies);
-            };
-
-            const wrapper = document.createElement("div");
-            wrapper.innerHTML = renderMove(moveId);
-            wrapper.appendChild(btn);
-
-            section.appendChild(wrapper);
+            const card = createMoveCard(move, { ok: false, reason: rank.toUpperCase() });
+            grid.appendChild(card);
         });
-
-        container.appendChild(section);
-    }
+    });
 }
 
-function renderMoveCard(move, options = {}) {
-    return `
-        <div class="move-card">
-            <img src="${move.image}" alt="${move.name}" loading="lazy">
-            <div class="move-meta">
-                <strong>${move.name}</strong>
-                <div>${move.type} • ${move.category}</div>
-                <div>Accuracy: ${move.accuracy.formula}</div>
-                <div>Power: ${move.power.base} + ${move.power.scaling}</div>
-                <div class="move-desc">${move.description}</div>
-            </div>
-            ${options.button || ""}
+function createMoveCard(move, state) {
+    const card = document.createElement("div");
+    card.classList.add("move-card");
+
+    card.innerHTML = `
+        <div class="move-header">
+            <span class="move-name">${move.name}</span>
+            <span class="move-type ${move.type.toLowerCase()}">${move.type}</span>
+        </div>
+
+        <div class="move-meta">
+            <span>${move.category}</span>
+            <span>Power: ${move.power.base} + ${move.power.scaling}</span>
+            <span>Accuracy: ${move.accuracy.formula}</span>
+        </div>
+
+        <p class="move-desc">${move.description}</p>
+
+        <div class="move-actions">
+            ${renderMoveActionButton(state, move)}
         </div>
     `;
+
+    return card;
+}
+
+function renderMoveActionButton(state, move) {
+    if(!state.ok) {
+        return `<button disabled>${state.reason}</button>`;
+    }
+
+    return `<button onclick="learnMove('${move.id}')">Learn</button>`;
+}
+
+function renderMove(moveId) {
+    const move = MOVES[moveId];
+    if(!move) {
+        return "<div>Unknown move</div>";
+    }
+    return createMoveCard(move);
+}
+
+function canLearnMove(species, moveId, moveRank, character) {
+    // already learned?
+    if(character.moves.includes(moveId)) {
+        return { ok: false, reason: "known" };
+    }
+
+    // rank locked?
+    const speciesRankIndex = RANK_ORDER.indexOf(species.rank.toLowerCase());
+    const moveRankIndex = RANK_ORDER.indexOf(moveRank);
+    if(moveRankIndex > speciesRankIndex) {
+        return { ok: false, reason: "rank" };
+    }
+
+    // exp check
+    const cost = MOVE_EXP_COSTS[moveRank];
+    if(character.exp < cost) {
+        return { ok: false, reason: "exp" };
+    }
+
+    return { ok: true };
+}
+
+function renderMovesPanel(character) {
+    const species = character.species;
+    renderActiveMoves(character);
+    renderLearnableMoves(character, species);
 }
 
 // handle GM
