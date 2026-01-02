@@ -40,7 +40,7 @@ let skillPointsRemaining = 3;
 let skillValues = {};
 
 // move variables
-const MOVE_XP_COST = {
+const MOVE_EXP_COSTS = {
     beginner: 5,
     amateur: 10,
     ace: 15,
@@ -562,7 +562,13 @@ speciesPicker.addEventListener("change", () => {
     updateSizeDisplay(species);
     renderSpeciesInfo(species);
     renderCalculated(species, skillValues);
-    renderMovesPanel({species, moves: []});
+    renderMovesPanel({
+        species,
+        moves: {
+            learned: [],
+            active: []
+        }
+    });
 });
 
 function renderSpeciesStats(species) {
@@ -685,23 +691,60 @@ function renderActiveMoves(character) {
     const grid = document.getElementById("active-moves-grid");
     grid.innerHTML = "";
 
-    if(!character.moves || character.moves.length === 0) {
+    const active = character?.moves?.active || [];
+
+    if(active.length === 0) {
         grid.innerHTML = "<em>No active moves</em>";
         return;
     }
 
-    character.moves.forEach(moveId => {
+    active.forEach(moveId => {
         const move = MOVES[moveId];
         if(!move) {
             return;
         }
 
-        const card = createMoveCard(move, { active: true, ok: true });
+        const card = createMoveCard(move, { 
+            active: true,
+            ok: true
+        });
+        grid.appendChild(card);
+    });
+}
+
+function renderKnownMoves(character) {
+    const grid = document.getElementById("known-moves-grid");
+    grid.innerHTML = "";
+
+    const learned = character?.moves?.learned || [];
+    const active = character?.moves?.active || [];
+
+    const inactive = learned.filter(m => !active.includes(m));
+
+    if(inactive.length === 0) {
+        grid.innerHTML = "<em>No known moves</em>";
+        return;
+    }
+
+    inactive.forEach(moveId => {
+        const move = MOVES[moveId];
+        if(!move) {
+            return;
+        }
+
+        const card = createMoveCard(move, {
+            ok: true,
+            action: "activate",
+            moveId
+        });
+
         grid.appendChild(card);
     });
 }
 
 function renderLearnableMoves(character, species) {
+    normalizeMoves(character);
+
     document.querySelectorAll(".move-rank-group").forEach(group => {
         const rank = group.dataset.rank;
         const grid = group.querySelector(".moves-grid");
@@ -716,7 +759,14 @@ function renderLearnableMoves(character, species) {
                 return;
             }
 
-            const card = createMoveCard(move, { ok: false, reason: rank.toUpperCase() });
+            const check = canLearnMove(species, moveId, rank, character);
+
+            const card = createMoveCard(move, { 
+                ok: check.ok,
+                reason: check.reason,
+                rank 
+            });
+
             grid.appendChild(card);
         });
     });
@@ -749,11 +799,21 @@ function createMoveCard(move, state) {
 }
 
 function renderMoveActionButton(state, move) {
+    if(state.action === "activate") {
+        return `<button onclick="activateMove('${move.id}')">Activate</button>`;
+    }
+
+    if(state.action === "deactivate") {
+        return `<button onclick="deactivateMove('${move.id}')">Deactivate</button>`;
+    }
+
     if(!state.ok) {
         return `<button disabled>${state.reason}</button>`;
     }
 
-    return `<button onclick="learnMove('${move.id}')">Learn</button>`;
+    return `<button onclick="learnMove('${move.id}', '${state.rank}')">
+        Learn (${MOVE_EXP_COSTS[state.rank]} EXP)
+    </button>`;
 }
 
 function renderMove(moveId) {
@@ -765,31 +825,70 @@ function renderMove(moveId) {
 }
 
 function canLearnMove(species, moveId, moveRank, character) {
+    normalizeMoves(character);
+
     // already learned?
-    if(character.moves.includes(moveId)) {
-        return { ok: false, reason: "known" };
+    if(character.moves.learned.includes(moveId)) {
+        return { ok: false, reason: "Known" };
     }
 
     // rank locked?
     const speciesRankIndex = RANK_ORDER.indexOf(species.rank.toLowerCase());
     const moveRankIndex = RANK_ORDER.indexOf(moveRank);
+
     if(moveRankIndex > speciesRankIndex) {
-        return { ok: false, reason: "rank" };
+        return { ok: false, reason: "Rank Locked" };
     }
 
     // exp check
     const cost = MOVE_EXP_COSTS[moveRank];
     if(character.exp < cost) {
-        return { ok: false, reason: "exp" };
+        return { ok: false, reason: "Not Enough EXP" };
     }
 
     return { ok: true };
 }
 
+function learnMove(moveId, moveRank) {
+    socket.emit("character-learn-move", {
+        characterId: editingCharacterId,
+        moveId,
+        moveRank
+    });
+}
+
 function renderMovesPanel(character) {
+    normalizeMoves(character);
+
     const species = character.species;
     renderActiveMoves(character);
+    renderKnownMoves(character);
     renderLearnableMoves(character, species);
+}
+
+function normalizeMoves(character) {
+    if(!character.moves) {
+        character.moves = { learned: [], active: [] };
+    }
+    if(!Array.isArray(character.moves.learned)) {
+        character.moves.learned = [];
+    }
+    if(!Array.isArray(character.moves.active)) {
+        character.moves.active = [];
+    }
+}
+
+function activateMove(moveId) {
+    socket.emit("character-activate-move", {
+        characterId: editingCharacterId,
+        moveId
+    });
+}
+
+function deactiveMove(moveId) {
+    socket.emit("character-deactivate-move", {
+        moveId
+    });
 }
 
 // handle GM

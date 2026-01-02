@@ -2,11 +2,18 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const pokemonData = require("../pokemon.json");
 
+const MOVE_EXP_COST = {
+    starter: 0,
+    beginner: 5,
+    amateur: 10,
+    ace: 15,
+    pro: 20,
+    master: 25,
+    champion: 30
+};
+
 export class Character {
     constructor({ id, ownerId, ownerName, pokemonId, nickname = null }) {
-        moves: [];
-        const MAX_MOVES = 4;
-
         this.id = id;
         this.ownerId = ownerId;
         this.ownerName = ownerName;
@@ -64,13 +71,22 @@ export class Character {
 
         // moves
         this.moves = {
-            active: [],
-            learned: []
+            learned: [],
+            active: []
         };
+
+        // starter moves (species-defined)
+        const starterMoves = this.species.moves?.starter || [];
+
+        // learn starters permanently
+        this.moves.learned = [...starterMoves];
+
+        // slot starters by default
+        this.moves.active = [...starterMoves];
 
         // items
         this.items = [];
-        thjis.accessories = [];
+        this.accessories = [];
 
         // conditions
         this.conditions = ["Healthy"];
@@ -91,7 +107,7 @@ export class Character {
         this.derived = {
             maxHp: this.stats.HP * 3,
             will: this.stats.insight + 2,
-            initiative: this.statis.dexterity + this.skills.alert,
+            initiative: this.stats.dexterity + this.skills.alert,
             defense: this.stats.vitality,
             spDefense: this.stats.insight
         };
@@ -191,7 +207,7 @@ export class Character {
         this.stats[stat]++;
         this.exp -= cost;
         this.level++;
-        this.racalculateDerived();
+        this.recalculateDerived();
 
         return true;
     }
@@ -215,4 +231,76 @@ export class Character {
         pro: 20,
         master: 25
     };
+
+    canLearnMove(moveId) {
+        return !this.moves.learned.includes(moveId);
+    }
+
+    learnMove(moveId, moveRank, { gmOverride = false } = {}) {
+        if(this.moves.learned.includes(moveId)) {
+            return {
+                ok: false,
+                reason: "known"
+            };
+        }
+
+        const cost = MOVE_EXP_COST[moveRank] ?? null;
+        if(cost === null) {
+            return {
+                ok: false,
+                reason: "invalid-rank"
+            };
+        }
+
+        if(!gmOverride) {
+            if(!this.spendExp(cost)) {
+                return {
+                    ok: false,
+                    reason: "exp"
+                };
+            }
+        }
+
+        this.moves.learned.push(moveId);
+
+        // auto-slot if space available
+        if(Character.MAX_ACTIVE_MOVES === null || this.moves.active.length < Character.MAX_ACTIVE_MOVES) {
+            this.moves.active.push(moveId);
+        }
+
+        return {
+            ok: true
+        };
+    }
+
+    activateMove(moveId) {
+        if(!this.moves.learned.includes(moveId)) {
+            return false;
+        }
+        if(this.moves.active.includes(moveId)) {
+            return false;
+        }
+        if(Character.MAX_ACTIVE_MOVES !== null && this.moves.active.length >= Character.MAX_ACTIVE_MOVES) {
+            return false;
+        }
+
+        this.moves.active.push(moveId);
+        return true;
+    }
+
+    deactivateMove(moveId) {
+        this.moves.active = this.moves.active.filter(id => id !== moveId);
+    }
+
+    spendExp(amount) {
+        if(this.exp < amount) {
+            return false;
+        }
+        this.exp -= amount;
+        this.level += 1;
+        return true;
+    }
 }
+
+// number of total active move slots. set to null for unlimited
+Character.MAX_ACTIVE_MOVES = 4;
