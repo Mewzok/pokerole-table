@@ -54,7 +54,7 @@ export class Character {
         // attributes
         this.attributes = {
             logic: 1,
-            instrinct: 1,
+            instinct: 1,
             primal: 0
         };
 

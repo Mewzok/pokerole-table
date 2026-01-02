@@ -1,5 +1,3741 @@
 [
     {
+        "id": "wring-out",
+        "name": "Wring Out",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon literally squeezes the life out of its target, as life is fading, the squeezing will be harder.",
+        "image": "https://imgur.com/WFWgQRM.png"
+    },
+    {
+        "id": "wrap",
+        "name": "Wrap",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon traps its foe with its body or vines, causing some damage.",
+        "image": "https://imgur.com/LBjf87H.png"
+    },
+    {
+        "id": "weather-ball",
+        "name": "Weather Ball",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Nature",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user creates a ball of energy that will use the climate around it to grow in size and power.",
+        "image": "https://imgur.com/LSdLZha.png"
+    },
+    {
+        "id": "vice-grip",
+        "name": "Vice Grip",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon traps the foe with its pincers or jaws and applies pressure that will leave a nasty bruise.",
+        "image": "https://imgur.com/9FiY5xC.png"
+    },
+    {
+        "id": "techno-blast",
+        "name": "Techno Blast",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A laser briefly beams away from the Pokémon, whatever it hits explodes a second later. This move can be modified with the right programming of a computer.",
+        "image": "https://imgur.com/Tozb8Kt.png"
+    },
+    {
+        "id": "thrash",
+        "name": "Thrash",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Random",
+        "effects": [],
+        "description": "The Pokémon rampages and starts to attack and destroy everything on its path.",
+        "image": "https://imgur.com/2aB3Lmt.png"
+    },
+    {
+        "id": "tri-attack",
+        "name": "Tri Attack",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user shoots three beams. Each one is charged with a different kind of energy.",
+        "image": "https://imgur.com/Ko3zaC1.png"
+    },
+    {
+        "id": "trump-card",
+        "name": "Trump Card",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The more exhausted the user is, the stronger this attack will become. When the Pokémon is at the last of its strength this move can be devastating.",
+        "image": "https://imgur.com/P4up0R9.png"
+    },
+    {
+        "id": "uproar",
+        "name": "Uproar",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Random",
+        "effects": [],
+        "description": "The Pokémon shouts and screams and squeaks so hard the noise really hurts the ears. Nobody could get a full night of sleep with all that ruckus.",
+        "image": "https://imgur.com/vyBbYCE.png"
+    },
+    {
+    "id": "take-down",
+    "name": "Take Down",
+    "type": "Normal",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [
+        {
+                "type": "recoil"
+        }
+    ],
+    "description": "The Pokémon recklessly grapples the foe to smash it on the ground.",
+    "image": "https://imgur.com/NLaDBhv.png"
+    },
+    {
+    "id": "tail-slap",
+    "name": "Tail Slap",
+    "type": "Normal",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 1,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon slaps the foe's face with its strong tail.",
+    "image": "https://imgur.com/ME5Jpc3.png"
+    },
+    {
+        "id": "tackle",
+        "name": "Tackle",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A basic attack that consists on charging at an enemy.",
+        "image": "https://imgur.com/9rytyCJ.png"
+    },
+    {
+        "id": "swift",
+        "name": "Swift",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "All",
+        "effects": [],
+        "description": "The user shoots a star shaped light beam that hits the target at blinding speed.",
+        "image": "https://imgur.com/fZMNzCU.png"
+    },
+    {
+        "id": "strength",
+        "name": "Strength",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon strains its muscles to go beyond their own limits.",
+        "image": "https://imgur.com/eFFiH3w.png"
+    },
+    {
+        "id": "stomp",
+        "name": "Stomp",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon steps and stomps the foe, the weight may leave the target squished on the floor.",
+        "image": "https://imgur.com/qsFPusy.png"
+    },
+    {
+        "id": "spit-up",
+        "name": "Spit Up",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "After storing power, the Pokémon spits that energy at the foe. The user returns to its original size.",
+        "image": "https://imgur.com/63RJHPq.png"
+    },
+    {
+        "id": "spike-cannon",
+        "name": "Spike Cannon",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon shoots a wave of pointy projectiles at the foe.",
+        "image": "https://imgur.com/eWrbrAY.png"
+    },
+    {
+        "id": "skull-bash",
+        "name": "Skull Bash",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon withdraws to its shell then charges against the foe.",
+        "image": "https://imgur.com/tNe12qF.png"
+    },
+    {
+        "id": "slam",
+        "name": "Slam",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user slams the foe with its tail, vines, etc. to deal a decent amount of damage.",
+        "image": "https://imgur.com/94e3iFY.png"
+    },
+    {
+        "id": "slash",
+        "name": "Slash",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Using parts of its body as a blade the Pokémon pierces and tears the foe with a vicious force.",
+        "image": "https://imgur.com/KOT0ByR.png"
+    },
+    {
+        "id": "smelling-salts",
+        "name": "Smelling Salts",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon throws some volatile salts onto the foe's face, a paralyzed Pokémon will get a strong smell.",
+        "image": "https://imgur.com/7u1rN5U.png"
+    },
+    {
+        "id": "snore",
+        "name": "Snore",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Perform",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "After falling asleep the user lets out a powerful snore, disrupting any focus the foe had.",
+        "image": "https://imgur.com/xOJj27a.png"
+    },
+    {
+        "id": "self-destruct",
+        "name": "Self Destruct",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 8,
+                "scaling": "Strength"
+        },
+        "targets": "Near",
+        "effects": [],
+        "description": "The Pokémon makes use of its ability to blow up parts of its own body in an impressive display of power.",
+        "image": "https://imgur.com/o1Yf1v9.png"
+    },
+    {
+        "id": "secret-power",
+        "name": "Secret Power",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "This move absorbs the energy around the user. It may unleash that power in unexpected ways.",
+        "image": "https://imgur.com/gFq3jzQ.png"
+    },
+    {
+        "id": "revelation-dance",
+        "name": "Revelation Dance",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Perform",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon performs a dance, the dance's engery influences the type of this move.",
+        "image": "https://imgur.com/Ajn53qX.png"
+    },
+    {
+        "id": "rock-climb",
+        "name": "Rock Climb",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user climbes on top of the foe. This may be confusing for the Pokémon.",
+        "image": "https://imgur.com/PuL8vUZ.png"
+    },
+    {
+        "id": "round",
+        "name": "Round",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Perform",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user attacks the foe with a song, if a teammate joins the song the attack will be stronger.",
+        "image": "https://imgur.com/KGIBs5n.png"
+    },
+    {
+        "id": "scratch",
+        "name": "Scratch",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its sharp claws to scratch the enemy.",
+        "image": "https://imgur.com/SKAJx2A.png"
+    },
+    {
+        "id": "retaliate",
+        "name": "Retaliate",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "A powerful attack. It will be even stronger if the user just suffered a great loss.",
+        "image": "https://imgur.com/OPyLIK4.png"
+    },
+    {
+        "id": "relic-song",
+        "name": "Relic Song",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Perform",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Special"
+            },
+        "targets": "All",
+        "effects": [],
+        "description": "The user sings and dances to a melody so beautiful you won't notice you were crying while listening to it.",
+        "image": "https://imgur.com/Aa3x9Na.png"
+    },
+    {
+        "id": "quick-attack",
+        "name": "Quick Attack",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "An attack as fast as lightning.",
+        "image": "https://imgur.com/5QtGX0P.png"
+    },
+    {
+        "id": "rage",
+        "name": "Rage",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user gets angry and throws a tantrum at the foe. If the attacker keeps on fighting, it will make the user rage even harder.",
+        "image": "https://imgur.com/KnuGvVM.png"
+    },
+    {
+        "id": "rapid-spin",
+        "name": "Rapid Spin",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon spins swiftly to strike the foe, anything near will be scattered around.",
+        "image": "https://imgur.com/8fTE9Ly.png"
+    },
+    {
+        "id": "razor-wind",
+        "name": "Razor Wind",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "All",
+        "effects": [],
+        "description": "A sharp wind current is unleashed against anyone standing against this Pokémon.",
+        "image": "https://imgur.com/hMxjbH1.png"
+    },
+    {
+        "id": "pound",
+        "name": "Pound",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A decent hit to smash the foes.",
+        "image": "https://imgur.com/agpXvbf.png"
+    },
+    {
+        "id": "pay-day",
+        "name": "Pay Day",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "This move grants good fortune, making it more likely to get more money after each battle.",
+        "image": "https://imgur.com/PAhCB3c.png"
+    },
+    {
+        "id": "multi-attack",
+        "name": "Multi Attack",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A weird-looking Pokémon charges against its foes, the same attack releases different kinds of energy depending on the disk it is holding.",
+        "image": "https://imgur.com/IhWMk1T.png"
+    },
+    {
+        "id": "natural-gift",
+        "name": "Natural Gift",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user throws its berry at the foe, the results can be quite surprising.",
+        "image": "https://imgur.com/hxYUK8L.png"
+    },
+    {
+        "id": "nature-power",
+        "name": "Nature Power",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon makes use of the terrain and asks nature for aid in battle.",
+        "image": "https://imgur.com/3UgvR0n.png"
+    },
+    {
+        "id": "mega-punch",
+        "name": "Mega Punch",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon throws a mega potent hook towards the foe's face.",
+        "image": "https://imgur.com/LlQaXWs.png"
+    },
+    {
+        "id": "mega-kick",
+        "name": "Mega Kick",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon throws a mega powered kick to the foe's face.",
+        "image": "https://imgur.com/6CE6On9.png"
+    },
+    {
+        "id": "last-resort",
+        "name": "Last Resort",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "When everything else fails, the Pokémon gives everything in a last resort attack.",
+        "image": "https://imgur.com/SZLNxrL.png"
+    },
+    {
+        "id": "hyper-voice",
+        "name": "Hyper Voice",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "All",
+        "effects": [],
+        "description": "The user emits a horrible echoing sound that could burst the ears.",
+        "image": "https://imgur.com/kblSNlJ.png"
+    },
+    {
+        "id": "hyper-fang",
+        "name": "Hyper Fang",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon bites hardly into the foe with its powerful fangs.",
+        "image": "https://imgur.com/NaWrq9x.png"
+    },
+    {
+        "id": "hyper-beam",
+        "name": "Hyper Beam",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon casts an incredible beam that leaves a giant trail of destruction behind. The user is left exhausted.",
+        "image": "https://imgur.com/7v0ZYq1.png"
+    },
+    {
+        "id": "horn-attack",
+        "name": "Horn Attack",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon attacks the foe with its horns, this strike is very painful.",
+        "image": "https://imgur.com/eaoBlL1.png"
+    },
+    {
+        "id": "head-charge",
+        "name": "Head Charge",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon clashes against the foe using its head as a boulder.",
+        "image": "https://imgur.com/13vVUZ4.png"
+    },
+    {
+        "id": "headbutt",
+        "name": "Headbutt",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user strikes the foe with its hard head. Perfect for taking down fruits from trees or shake Pokémon out of their nests on treetops.",
+        "image": "https://imgur.com/kyBeL3D.png"
+    },
+    {
+        "id": "giga-impact",
+        "name": "Giga Impact",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon strikes with a brutal force using all its body. The impact leaves the user somewhat stunned.",
+        "image": "https://imgur.com/ovaU9zl.png"
+    },
+    {
+        "id": "fury-swipes",
+        "name": "Fury Swipes",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user swiftly uses its claws to strike the foe multiple times.",
+        "image": "https://imgur.com/czf0XNM.png"
+    },
+    {
+        "id": "fury-attack",
+        "name": "Fury Attack",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon goes at it with everything its got in a rather disordered way.",
+        "image": "https://imgur.com/9HAk2hw.png"
+    },
+    {
+        "id": "extreme-speed",
+        "name": "Extreme Speed",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user charges at a blinding speed against the target.",
+        "image": "https://imgur.com/wwLdSww.png"
+    },
+    {
+        "id": "facade",
+        "name": "Facade",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon will make an upfront attack, if the user is suffering the attack will be stronger.",
+        "image": "https://imgur.com/lO3RjCO.png"
+    },
+    {
+        "id": "fake-out",
+        "name": "Fake Out",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "While still preparing for battle, the user will suddenly attack the foe.",
+        "image": "https://imgur.com/pUIW7fo.png"
+    },
+    {
+        "id": "false-swipe",
+        "name": "False Swipe",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user strikes the foe but lowers the power of the blow at the last second.",
+        "image": "https://imgur.com/IqWXM4Z.png"
+    },
+    {
+        "id": "feint",
+        "name": "Feint",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon feints a strike, then hits for real even if the foe attempts to protect itself.",
+        "image": "https://imgur.com/ChklSYs.png"
+    },
+    {
+        "id": "flail",
+        "name": "Flail",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user flails and struggles to survive, the more weakened it is the stronger this attack will be.",
+        "image": "https://imgur.com/Sz5vCeR.png"
+    },
+    {
+        "id": "explosion",
+        "name": "Explosion",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 10,
+            "scaling": "Strength"
+        },
+        "targets": "Near",
+        "effects": [],
+        "description": "The user focuses on exploding its body, the explosion deals a massive wave of damage. A very dangerous move.",
+        "image": "https://imgur.com/lkpSXfw.png"
+    },
+    {
+        "id": "egg-bomb",
+        "name": "Egg Bomb",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user throws a big egg with great force against its foe.",
+        "image": "https://imgur.com/DTS4xhW.png"
+    },
+    {
+        "id": "echoed-voice",
+        "name": "Echoed Voice",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user shouts loudly and the echo answers back, it will yell louder every time the echo talks back.",
+        "image": "https://imgur.com/5NWLR8Z.png"
+    },
+    {
+        "id": "double-edge",
+        "name": "Double Edge",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 5,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [
+            {
+                "type": "recoil"
+            }
+        ],
+        "description": "The user recklessly slams its foe to deal a lot of damage, but it may also hurt itself in the process.",
+        "image": "https://imgur.com/M2TpuGi.png"
+    },
+    {
+        "id": "crush-grip",
+        "name": "Crush Grip",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 1,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon grips the foe and starts crushing it. Small targets are difficult to grasp but larger bodies will not be released until they break.",
+        "image": "https://imgur.com/6vmRPb7.png"
+    },
+    {
+        "id": "cut",
+        "name": "Cut",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "A slim but precise cut that may slice through anything.",
+        "image": "https://imgur.com/jKMtx8U.png"
+    },
+    {
+        "id": "dizzy-punch",
+        "name": "Dizzy Punch",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "A swift punch to the jaw that spins the target and may leave it quite dizzy and disoriented.",
+        "image": "https://imgur.com/ypyhl6Y.png"
+    },
+    {
+        "id": "double-hit",
+        "name": "Double Hit",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses the classic \"One-Two\" to attack the foe.",
+        "image": "https://imgur.com/rYgMBq8.png"
+    },
+    {
+        "id": "double-slap",
+        "name": "Double Slap",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 1,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user attacks its foe with two or more slaps in the face.",
+        "image": "https://imgur.com/BzqltrJ.png"
+    },
+    {
+        "id": "crush-claw",
+        "name": "Crush Claw",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user crushes its claws against the foe, it may pierce the skin of the foe.",
+        "image": "https://imgur.com/ryzzs8c.png"
+    },
+    {
+        "id": "covet",
+        "name": "Covet",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Clever + Stealth",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user approaches with caution, deals a quick strike and takes the chance to steal the target's item.",
+        "image": "https://imgur.com/uuBYtaR.png"
+    },
+    {
+        "id": "constrict",
+        "name": "Constrict",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 1,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its body to hold and constrict the foe. It won't let go easily.",
+        "image": "https://imgur.com/qBxav4y.png"
+    },
+    {
+        "id": "bind",
+        "name": "Bind",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 1,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its body to bind the foe, restraining and squeezing it.",
+        "image": "https://imgur.com/0Ty6Ah8.png"
+    },
+    {
+        "id": "body-slam",
+        "name": "Body Slam",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user charges against the foe using its body to knock it down, leaving the target stunned.",
+        "image": "https://imgur.com/dr8vllO.png"
+    },
+    {
+        "id": "boomburst",
+        "name": "Boomburst",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+                "base": 6,
+                "scaling": "Special"
+            },
+        "targets": "Near",
+        "effects": [],
+        "description": "The user creates an explosive sound that deafens everyone in the battlefield.",
+        "image": "https://imgur.com/AM4dcKn.png"
+    },
+    {
+        "id": "chip-away",
+        "name": "Chip Away",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user looks for an opening and strikes directly there. It nibbles bit by bit even the toughest of surfaces.",
+        "image": "https://imgur.com/d5S3KAD.png"
+    },
+    {
+        "id": "comet-punch",
+        "name": "Comet Punch",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user throws a quick series of punches at the foe.",
+        "image": "https://imgur.com/qSa8iJy.png"
+    },
+    {
+        "id": "barrage",
+        "name": "Barrage",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 1,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon throws many round objects at the target, one after the other.",
+        "image": "https://imgur.com/0He7G2C.png"
+    },
+    {
+        "id": "veevee-volley",
+        "name": "Veevee Volley",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 0,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "Long sessions playing volley ball with your Pokémon make it very happy. During battle, it just replaces the ball with its foe.",
+        "image": "https://imgur.com/BKdecjK.png"
+    },
+    {
+        "id": "super-fang",
+        "name": "Super Fang",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon jumps at the foe to crush it with an awful bite.",
+        "image": "https://imgur.com/W2EbpX2.png"
+    },
+    {
+        "id": "sonic-boom",
+        "name": "Sonic Boom",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon attacks with a small destructive shock that can go through armor, thick hide or walls to deal some damage.",
+        "image": "https://imgur.com/2s231x3.png"
+    },
+    {
+        "id": "metronome",
+        "name": "Metronome",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Perform",
+            "modifier": 0
+        },
+        "power": {
+            "base": 0,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon waves its hands with rhythm. The energy around follows the cadence and manifests with an impressive attack.",
+        "image": "https://imgur.com/cIAkhWj.png"
+    },
+    {
+        "id": "return",
+        "name": "Return",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 0,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "If the Pokémon is treated with care and love, it will return that affection by giving all its got in battle.",
+        "image": "https://imgur.com/vgGOUcS.png"
+    },
+    {
+        "id": "present",
+        "name": "Present",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Cute + Allure",
+            "modifier": 0
+        },
+        "power": {
+            "base": 0
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user approaches its foe and gives it a lovely present that may be nice or may be a prank.",
+        "image": "https://imgur.com/eLDCOFM.png"
+    },
+    {
+        "id": "me-first",
+        "name": "Me First",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 0
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user anticipates the next attack so it can hit the target with an astounding speed.",
+        "image": "https://imgur.com/XJgde6A.png"
+    },
+    {
+        "id": "judgment",
+        "name": "Judgment",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Intimidate",
+            "modifier": 0
+        },
+        "power": {
+            "base": 0,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Eventually, everyone gets what they deserve.",
+        "image": "https://imgur.com/qVeFNU9.png"
+    },
+    {
+        "id": "horn-drill",
+        "name": "Horn Drill",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user stabs the target with a horn used like a drill, the foe is often left in a critical condition. A move to be wary of.",
+        "image": "https://imgur.com/mhlDkoO.png"
+    },
+    {
+        "id": "hidden-power",
+        "name": "Hidden Power",
+        "type": "Normal",
+        "category": "Special",
+        "accuracy": {},
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "Every Pokémon has an unknown power that can be released with surprising results.",
+        "image": "https://imgur.com/uixs5u0.png"
+    },
+    {
+        "id": "frustration",
+        "name": "Frustration",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 0,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A move that relies on how badly a Pokémon has been treated to make it vicious and uncaring.",
+        "image": "https://imgur.com/LpSb8dX.png"
+    },
+    {
+        "id": "guillotine",
+        "name": "Guillotine",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses the sharpest part of its body to almost snap the neck of its foe. It is a devastating attack. The foe must be lucky to get out of it alive.",
+        "image": "https://imgur.com/FStcqNZ.png"
+    },
+    {
+        "id": "endeavor",
+        "name": "Endeavor",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "With pure willpower, the user struggles with its foe despite the pain.",
+        "image": "https://imgur.com/Rl9ZHLg.png"
+    },
+    {
+        "id": "bide",
+        "name": "Bide",
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user endures the hit then unleashes an attack even greater.",
+        "image": "https://imgur.com/5rAqFOR.png"
+    },
+    {
+        "id": "yawn",
+        "name": "Yawn",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user lets out an infectious yawn that will make anyone drowzy enough to fall asleep pretty soon.",
+        "image": "https://imgur.com/RZZdzYZ.png"
+    },
+    {
+        "id": "work-up",
+        "name": "Work Up",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Strength + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon exercises with vigor to be physically and mentally prepared for battle.",
+        "image": "https://imgur.com/3mVpi7z.png"
+    },
+    {
+        "id": "wish",
+        "name": "Wish",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon makes a wish with all its might and somehow it becomes true.",
+        "image": "https://imgur.com/hB38iAt.png"
+    },
+    {
+        "id": "whirlwind",
+        "name": "Whirlwind",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon creates a powerful wind current that swirls the enemy around and sends it flying away.",
+        "image": "https://imgur.com/d961n8H.png"
+    },
+    {
+        "id": "transform",
+        "name": "Transform",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user modifies its own DNA structure to become an identical clone of any Pokémon or object it can see.",
+        "image": "https://imgur.com/v8i6jnB.png"
+    },
+    {
+        "id": "tickle",
+        "name": "Tickle",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon tickles the foe. The laughter really disturbs the foe's fighting stance.",
+        "image": "https://imgur.com/Id60H2q.png"
+    },
+    {
+        "id": "teeter-dance",
+        "name": "Teeter Dance",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Near",
+        "effects": [],
+        "description": "The user starts dancing around with woobly movements. Friends and foes will get dizzy by trying to follow it.",
+        "image": "https://imgur.com/iu1hqsk.png"
+    },
+    {
+        "id": "teatime",
+        "name": "Teatime",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Etiquette",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Near",
+        "effects": [],
+        "description": "The Pokémon gathers everyone for a cup of delicious tea, not eating a snack along with it would be a waste.",
+        "image": "https://imgur.com/7A0qwli.png"
+    },
+    {
+        "id": "tearful-look",
+        "name": "Tearful Look",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon's eyes start watering as if it were about to cry, its foe is moved by the tears and loses its will to fight.",
+        "image": "https://imgur.com/EKJLniO.png"
+    },
+    {
+        "id": "tail-whip",
+        "name": "Tail Whip",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "All",
+        "effects": [],
+        "description": "The Pokémon moves its tail in such a cute way that the foe will easily let its guard down.",
+        "image": "https://imgur.com/Pq8c6QD.png"
+    },
+    {
+        "id": "swords-dance",
+        "name": "Swords Dance",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon makes a dance that raises its battle spirit.",
+        "image": "https://imgur.com/HLvRTjn.png"
+    },
+    {
+        "id": "sweet-scent",
+        "name": "Sweet Scent",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "All",
+        "effects": [],
+        "description": "The Pokémon releases an aroma that its enemies will love.",
+        "image": "https://imgur.com/ngHzHH5.png"
+    },
+    {
+        "id": "swallow",
+        "name": "Swallow",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon swallows the energy it was storing to restore some damage, it recovers its normal size afterwards.",
+        "image": "https://imgur.com/Wac6e1o.png"
+    },
+    {
+        "id": "swagger",
+        "name": "Swagger",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon enrages the foe with its arrogant demeanor, making it lose focus in battle.",
+        "image": "https://imgur.com/onj04r3.png"
+    },
+    {
+        "id": "supersonic",
+        "name": "Supersonic",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon emits a series of ultrasonic waves that make the foe dizzy and disoriented.",
+        "image": "https://imgur.com/kmpkZs6.png"
+    },
+    {
+        "id": "substitute",
+        "name": "Substitute",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Stealth",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon disappears in a poof of smoke. When the smoke vanishes, an object identical to the user remains in its place to shield it from harm. It looks amazingly real.",
+        "image": "https://imgur.com/j0ACpW2.png"
+    },
+    {
+        "id": "stuff-cheeks",
+        "name": "Stuff Cheeks",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon munches its berry but it keeps part of it in its cheeks. Looks adorable but it is actually a survival tactic to survive harsh winters.",
+        "image": "https://imgur.com/1bygDGZ.png"
+    },
+    {
+        "id": "stockpile",
+        "name": "Stockpile",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon swells up by storing power with its mouth, this makes the user a little more resistant to damage.",
+        "image": "https://imgur.com/Nhnl9p7.png"
+    },
+    {
+        "id": "spotlight",
+        "name": "Spotlight",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cool + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The user points a focused light onto one of its allies as if it were on a stage, the ally can't help but catch everyone's attention onto itself.",
+        "image": "https://imgur.com/9DIO6Ie.png"
+    },
+    {
+        "id": "splash",
+        "name": "Splash",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user just flops splashing some water, this has no effect at all...",
+        "image": "https://imgur.com/fPDVd4M.png"
+    },
+    {
+        "id": "soft-boiled",
+        "name": "Soft Boiled",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user boils a freshly layed egg and restored health with the energy stored within.",
+        "image": "https://imgur.com/aP7jvaV.png"
+    },
+    {
+        "id": "smokescreen",
+        "name": "Smokescreen",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user covers its foe with a cloud of smoke. Some Pokémon hide inside this screen while others use it as cover to escape.",
+        "image": "https://imgur.com/IzqiTVy.png"
+    },
+    {
+        "id": "sleep-talk",
+        "name": "Sleep Talk",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {},
+        "power": {},
+        "targets": "Random",
+        "effects": [],
+        "description": "After falling asleep, the Pokémon is still dreaming about the fight.",
+        "image": "https://imgur.com/ovUtw7D.png"
+    },
+    {
+        "id": "slack-off",
+        "name": "Slack Off",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon gets lazy and loafs around instead of fighting. This makes up for a short rest.",
+        "image": "https://imgur.com/xP6b9WB.png"
+    },
+    {
+        "id": "sketch",
+        "name": "Sketch",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon draws its foe performing a move, it learns how to perform that move in the process.",
+        "image": "https://imgur.com/CZ6UGcm.png"
+    },
+    {
+        "id": "sing",
+        "name": "Sing",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "With a charming song, the user lulls its foe to sleep.",
+        "image": "https://imgur.com/KjncNqa.png"
+    },
+    {
+        "id": "simple-beam",
+        "name": "Simple Beam",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon sends a small psychic wave to its target, giving it a simpler point of view about the world.",
+        "image": "https://imgur.com/RGeFrx9.png"
+    },
+    {
+        "id": "shell-smash",
+        "name": "Shell Smash",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "By breaking its own shell, the user sacrifices defense in exchange of being free to fight with all its power.",
+        "image": "https://imgur.com/xPtvlH9.png"
+    },
+    {
+        "id": "sharpen",
+        "name": "Sharpen",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user cuts down the rough edges of its body to make it as sharp as a razor.",
+        "image": "https://imgur.com/SDxm3ZR.png"
+    },
+    {
+        "id": "screech",
+        "name": "Screech",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user disrupts the fighting stance of its foe by sending a sharp sound to the foe's ears.",
+        "image": "https://imgur.com/4uzvNA1.png"
+    },
+    {
+        "id": "scary-face",
+        "name": "Scary Face",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "By making a frightening face, the Pokémon makes others think twice about coming near.",
+        "image": "https://imgur.com/n8mwftr.png"
+    },
+    {
+        "id": "safeguard",
+        "name": "Safeguard",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The Pokémon creates an energy shield that protects everyone from harm.",
+        "image": "https://imgur.com/R5qiwUG.png"
+    },
+    {
+        "id": "roar",
+        "name": "Roar",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "A mighty roar that scares the foe.",
+        "image": "https://imgur.com/fWPv5Jf.png"
+    },
+    {
+        "id": "refresh",
+        "name": "Refresh",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon takes a few seconds to cool down and get back in the game.",
+        "image": "https://imgur.com/wjjXCN0.png"
+    },
+    {
+        "id": "reflect-type",
+        "name": "Reflect Type",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon appears to change its own physiology. This effect changes the type of the user to match another Pokémon in sight.",
+        "image": "https://imgur.com/t0kvjpg.png"
+    },
+    {
+        "id": "recycle",
+        "name": "Recycle",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "One Pokémon's trash is another one's tresure.",
+        "image": "https://imgur.com/s3SypuY.png"
+    },
+    {
+        "id": "recover",
+        "name": "Recover",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon's concentrates on restoring its own cells faster than anything imaginable.",
+        "image": "https://imgur.com/uzyupeV.png"
+    },
+    {
+        "id": "psych-up",
+        "name": "Psych Up",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon's mentalizes itself stronger than anyone. They feel good. They can win. They. Can. Do. This.",
+        "image": "https://imgur.com/eD9faxF.png"
+    },
+    {
+        "id": "protect",
+        "name": "Protect",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user creates an energy shield to deflect a blow. Some Pokémon may even perform an amazing parry to block the incoming attack.",
+        "image": "https://imgur.com/yJBo9cA.png"
+    },
+    {
+        "id": "play-nice",
+        "name": "Play Nice",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user starts playing with the foe in a friendly way. This makes the foe reconsider its aggressive demeanor.",
+        "image": "https://imgur.com/4rv6kau.png"
+    },
+    {
+        "id": "perish-song",
+        "name": "Perish Song",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Beauty + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Near",
+        "effects": [],
+        "description": "A song of mourning and despair that resonates on the minds of anyone who listens. Makes you feel like you are on your death bed.",
+        "image": "https://imgur.com/gXIMDcL.png"
+    },
+    {
+        "id": "pain-split",
+        "name": "Pain Split",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user shares its pain with the foe. After a short while it becomes excruciating for the target.",
+        "image": "https://imgur.com/5JWpPWr.png"
+    },
+    {
+        "id": "odor-sleuth",
+        "name": "Odor Sleuth",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Alert",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its keen smell to detect the foe.",
+        "image": "https://imgur.com/WiWSsd2.png"
+    },
+    {
+        "id": "noble-roar",
+        "name": "Noble Roar",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon makes a roar that commands respect and authority over anyone listening.",
+        "image": "https://imgur.com/TWZ7gpX.png"
+    },
+    {
+        "id": "morning-sun",
+        "name": "Morning Sun",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The sun shines brightly on the Pokémon and makes it feel rejuvenated like early in the morning.",
+        "image": "https://imgur.com/ngB0E0F.png"
+    },
+    {
+        "id": "minimize",
+        "name": "Minimize",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon compacts its body, appearing smaller than its normal size.",
+        "image": "https://imgur.com/tnF9M1p.png"
+    },
+    {
+        "id": "mind-reader",
+        "name": "Mind Reader",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user reads the foe's mind. It knows exactly what to do next.",
+        "image": "https://imgur.com/KqPYuVf.png"
+    },
+    {
+        "id": "mimic",
+        "name": "Mimic",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "Making use of its acting talents, the Pokémon imitates what the target just did.",
+        "image": "https://imgur.com/JRhgI27.png"
+    },
+    {
+        "id": "milk-drink",
+        "name": "Milk Drink",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon drinks a glass of its own milk, the rich taste and nutrients revitalize it.",
+        "image": "https://imgur.com/da1nRjP.png"
+    },
+    {
+        "id": "mean-look",
+        "name": "Mean Look",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon gives a menacing look that freezes the foe on the spot with intense fear.",
+        "image": "https://imgur.com/rGD4CHT.png"
+    },
+    {
+        "id": "lucky-chant",
+        "name": "Lucky Chant",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The user chants an incantation to the skies, the beautiful performance grants this Pokémon and its allies divine protection.",
+        "image": "https://imgur.com/C9bZGsI.png"
+    },
+    {
+        "id": "lovely-kiss",
+        "name": "Lovely Kiss",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "-Beauty + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon approaches the foe with a skiss. Its ugly face and awful smooch make the poor creature faint in terror.",
+        "image": "https://imgur.com/WG3oQT8.png"
+    },
+    {
+        "id": "lock-on",
+        "name": "Lock-On",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Alert",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon's eyes zoom at a moving target to ensure that the next attack will be dealt with precision.",
+        "image": "https://imgur.com/mLkxOik.png"
+    },
+    {
+        "id": "leer",
+        "name": "Leer",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Enemies",
+        "effects": [],
+        "description": "A vicious glare that will make any opponent doubt its own strength in battle.",
+        "image": "https://imgur.com/wMkeByt.png"
+    },
+    {
+        "id": "laser-focus",
+        "name": "Laser Focus",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Alert",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "Through its incredible awareness the Pokémon finds a straight path into a weak point of the foe. The attack that follows is usually devastating.",
+        "image": "https://imgur.com/tWKpGHr.png"
+    },
+    {
+        "id": "howl",
+        "name": "Howl",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cool + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon let's out an impressive howl, making it appear a lot more menacing.",
+        "image": "https://imgur.com/KiIPsnk.png"
+    },
+    {
+        "id": "helping-hand",
+        "name": "Helping Hand",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The Pokémon assists an ally. Together they are stronger.",
+        "image": "https://imgur.com/akAMIsU.png"
+    },
+    {
+        "id": "heal-bell",
+        "name": "Heal Bell",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The Pokémon chimes a magical bell, legend says the soothing sound has healing properties.",
+        "image": "https://imgur.com/XHIDIEK.png"
+    },
+    {
+        "id": "harden",
+        "name": "Harden",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user stiffens its body and prepares for any incoming attack.",
+        "image": "https://imgur.com/emCMlxi.png"
+    },
+    {
+        "id": "growth",
+        "name": "Growth",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon expands its body, it grows bigger and stronger.",
+        "image": "https://imgur.com/yiU4QOa.png"
+    },
+    {
+        "id": "growl",
+        "name": "Growl",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough/Cute + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "All",
+        "effects": [
+            {
+                    "type": "stat-stage",
+                    "stat": "Strength",
+                    "amount": -1,
+                    "duration": "battle"
+            }
+        ],
+        "description": "Either by a mancing attitude or cute demeanor, the foe will be unsure about attacking the user with full force.",
+        "image": "https://imgur.com/HQy6SOk.png"
+    },
+    {
+        "id": "glare",
+        "name": "Glare",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its intimidating glare to paralyze the foe with sheer terror.",
+        "image": "https://imgur.com/QesoKrd.png"
+    },
+    {
+        "id": "foresight",
+        "name": "Foresight",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Alert",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its developed senses and mental ability to foresee the immediate future.",
+        "image": "https://imgur.com/PS7jBZy.png"
+    },
+    {
+        "id": "follow-me",
+        "name": "Follow Me",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cool + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon will draw everyone's attention. All foes are taunted to do their worst.",
+        "image": "https://imgur.com/1De0m9P.png"
+    },
+    {
+        "id": "focus-energy",
+        "name": "Focus Energy",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon's energy is raised to make all strikes much more precise.",
+        "image": "https://imgur.com/WxGYs9b.png"
+    },
+    {
+        "id": "flash",
+        "name": "Flash",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user suddenly emits a blinding light around its body, dazing its opponent in the process.",
+        "image": "https://imgur.com/uQsFurx.png"
+    },
+    {
+        "id": "entrainment",
+        "name": "Entrainment",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cool + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon dances with a catchy rhythm. The target starts dancing too and both connect to a very personal level through this performance.",
+        "image": "https://imgur.com/p1aJJJH.png"
+    },
+    {
+        "id": "endure",
+        "name": "Endure",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user gets prepared to receive a fatal blow. It resists the pain despite being seriously hurt.",
+        "image": "https://imgur.com/MT2W7EV.png"
+    },
+    {
+        "id": "encore",
+        "name": "Encore",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cool + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user claps and cheers at the target to encourage it to repeat what it just did.",
+        "image": "https://imgur.com/jXywcSZ.png"
+    },
+    {
+        "id": "double-team",
+        "name": "Double Team",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Evasion",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user moves rapidly around the foe, creating illusory copies of itself.",
+        "image": "https://imgur.com/xtJDPRY.png"
+    },
+    {
+        "id": "disable",
+        "name": "Disable",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user hits a nerve on the foe, impeding it from performing its previous action for a short while.",
+        "image": "https://imgur.com/NJnJtS8.png"
+    },
+    {
+        "id": "defense-curl",
+        "name": "Defense Curl",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user curls like a ball to protect against most threats.",
+        "image": "https://imgur.com/PDK1cFa.png"
+    },
+    {
+        "id": "court-change",
+        "name": "Court Change",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Etiquette",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The Pokémon signals the referee for half-time, the referee complies and both parties swap their sides of the field. Wait. Did we forget something?",
+        "image": "https://imgur.com/XgseKaG.png"
+    },
+    {
+        "id": "copycat",
+        "name": "Copycat",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {},
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user will closely watch the movements of the target and will imitate them to perfection.",
+        "image": "https://imgur.com/jARNgxS.png"
+    },
+    {
+        "id": "conversion-2",
+        "name": "Conversion 2",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon downloads the data of a move that was used against it. Change the code of the user to a type resistant to that move.",
+        "image": "https://imgur.com/kdVYm3t.png"
+    },
+    {
+        "id": "conversion",
+        "name": "Conversion",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon downloads the data of a move to add it to its code.",
+        "image": "https://imgur.com/X19HziD.png"
+    },
+    {
+        "id": "confide",
+        "name": "Confide",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon tells a secret to the target. The foe loses its ability to concentrate.",
+        "image": "https://imgur.com/CJyf44n.png"
+    },
+    {
+        "id": "captivate",
+        "name": "Captivate",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Beauty + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The Pokémon shows off its attractiveness and even flirts with the opponents, those who fall for its charms can't focus on the battle.",
+        "image": "https://imgur.com/B2jbHhG.png"
+    },
+    {
+        "id": "camouflage",
+        "name": "Camouflage",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user mimics the environment, it becomes one with the surroundings.",
+        "image": "https://imgur.com/pAHyS4T.png"
+    },
+    {
+        "id": "block",
+        "name": "Block",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user moves swiftly, blocking the escape routes of the foe.",
+        "image": "https://imgur.com/jmVGWWq.png"
+    },
+    {
+        "id": "bestow",
+        "name": "Bestow",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cool + Etiquette",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon respectfully offers an item, the target will take it and keep it to be polite.",
+        "image": "https://imgur.com/ZFZAesU.png"
+    },
+    {
+        "id": "belly-drum",
+        "name": "Belly Drum",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon roars a war cry while hitting its belly.",
+        "image": "https://imgur.com/MmEOZEm.png"
+    },
+    {
+        "id": "baton-pass",
+        "name": "Baton Pass",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user stores part of its power on a twig or a stick, anyone who touches the item will recieve its might.",
+        "image": "https://imgur.com/XP62KTo.png"
+    },
+    {
+        "id": "attract",
+        "name": "Attract",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Beauty + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user makes use of its good looks and attitude to infatuate its foe.",
+        "image": "https://imgur.com/7IhoiF7.png"
+    },
+    {
+        "id": "assist",
+        "name": "Assist",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The Pokémon hurriedly remembers one action performed by a partner. Some Pokémon can even do what a human does and assist him with any tasks.",
+        "image": "https://imgur.com/kJl7HJS.png"
+    },
+    {
+        "id": "after-you",
+        "name": "After You",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cool + Etiquette",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The user bows and courteously lets an ally or foe use their action first.",
+        "image": "https://imgur.com/cQmG432.png"
+    },
+    {
+        "id": "accupressure",
+        "name": "Accupressure",
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user starts pushing its pressure points, releasing the energy that was stored in its body.",
+        "image": "https://imgur.com/U1XMqJc.png"
+    },
+    {
+        "id": "wake-up-slap",
+        "name": "Wake-up Slap",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A powerful slap that makes even the laziest Pokémon be well awake.",
+        "image": "https://imgur.com/tbKRWG5.png"
+    },
+    {
+        "id": "vital-throw",
+        "name": "Vital Throw",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon awaits for the perfect moment to strike the foe.",
+        "image": "https://imgur.com/HbTVCho.png"
+    },
+    {
+        "id": "vacuum-wave",
+        "name": "Vacuum Wave",
+        "type": "Fighting",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user pulls the enemy closer using the power of its ki. This traction has a lot of strength and may break anything it pulls.",
+        "image": "https://imgur.com/RBYxz9w.png"
+    },
+    {
+        "id": "triple-kick",
+        "name": "Triple Kick",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user throws three or more kicks, leaving the harder blow for the end.",
+        "image": "https://imgur.com/YhxAIqc.png"
+    },
+    {
+        "id": "superpower",
+        "name": "Superpower",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon makes use of all its force to deliver a crushing strike to the foe, this demands a lot from the user.",
+        "image": "https://imgur.com/xORVDwj.png"
+    },
+    {
+        "id": "submission",
+        "name": "Submission",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user recklessly struggles with the foe to pin it to the ground.",
+        "image": "https://imgur.com/zB6ZZEk.png"
+    },
+    {
+        "id": "storm-throw",
+        "name": "Storm Throw",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user impacts a weak spot with a powerful blow.",
+        "image": "https://imgur.com/M04zeqv.png"
+    },
+    {
+        "id": "sky-uppercut",
+        "name": "Sky Uppercut",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user attacks with an uppercut, throwing the foe skyward with lots of force.",
+        "image": "https://imgur.com/YoxJqii.png"
+    },
+    {
+        "id": "quick-guard",
+        "name": "Quick Guard",
+        "type": "Fighting",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The user reacts instinctively and defends itself and its teammates, nullifying the effects of the fastest attacks.",
+        "image": "https://imgur.com/Ss5ReFO.png"
+    },
+    {
+        "id": "revenge",
+        "name": "Revenge",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon fights ruthlessly and may retaliate fiercely against a foe that has hurt the user.",
+        "image": "https://imgur.com/LKda3fv.png"
+    },
+    {
+        "id": "reversal",
+        "name": "Reversal",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user gathers its mettle to block away the pain and focus only on hitting harder.",
+        "image": "https://imgur.com/PZTNi4Z.png"
+    },
+    {
+        "id": "rock-smash",
+        "name": "Rock Smash",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A powerful hit that can crush rocks. Used against a foe it is sure to leave an awful bruise and a crack on its armor.",
+        "image": "https://imgur.com/IoD8IQD.png"
+    },
+    {
+        "id": "rolling-kick",
+        "name": "Rolling Kick",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user spins in the air landing an impressive kick that may daze the target.",
+        "image": "https://imgur.com/hdKCPZo.png"
+    },
+    {
+        "id": "sacred-sword",
+        "name": "Sacred Sword",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user slashes its target with a mighty blade that no armor can stop.",
+        "image": "https://imgur.com/aevgjTi.png"
+    },
+    {
+        "id": "secret-sword",
+        "name": "Secret Sword",
+        "type": "Fighting",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "An invisible wave cuts through the target, you can feel its sharp edge but you cannot see it.",
+        "image": "https://imgur.com/LGOOzQD.png"
+    },
+    {
+        "id": "seismic-toss",
+        "name": "Seismic Toss",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The target gets launched up then falls face first into the ground, the stronger the user the higher the foe will be thrown.",
+        "image": "https://imgur.com/ROr0VcK.png"
+    },
+    {
+        "id": "power-up-punch",
+        "name": "Power-up Punch",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses this punch to test the surface of an object. The user toughens up to deal better blows.",
+        "image": "https://imgur.com/RtTJDn8.png"
+    },
+    {
+        "id": "octolock",
+        "name": "Octolock",
+        "type": "Fighting",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user wraps its tenctacles to immobilize the foe. Being so close enables the user to find weak spots.",
+        "image": "https://imgur.com/YXBztNK.png"
+    },
+    {
+        "id": "no-retreat",
+        "name": "No Retreat",
+        "type": "Fighting",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "No surrender. No retreat. Until victory always.",
+        "image": "https://imgur.com/3lGWSVN.png"
+    },
+    {
+        "id": "meteor-assault",
+        "name": "Meteor Assault",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon will make an incredible jump to the sky, then lunge towards the foe at a staggering speed, crashing the ground upon impact. The user is left very tired.",
+        "image": "https://imgur.com/byg43nM.png"
+    },
+    {
+        "id": "mat-block",
+        "name": "Mat Block",
+        "type": "Fighting",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The Pokémon uses a mat or something similar as a shield.",
+        "image": "https://imgur.com/1PMSK7E.png"
+    },
+    {
+        "id": "mach-punch",
+        "name": "Mach Punch",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user launches a punch so quickly that it's barely seen.",
+        "image": "https://imgur.com/j6hWvz5.png"
+    },
+    {
+        "id": "low-sweep",
+        "name": "Low Sweep",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon strikes the foe's legs, leaving it unable to walk normally or run.",
+        "image": "https://imgur.com/ZIXeWyG.png"
+    },
+    {
+        "id": "low-kick",
+        "name": "Low Kick",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user kicks the target making it fall, the bigger the foe the harder the fall.",
+        "image": "https://imgur.com/eNo5Qj3.png"
+    },
+    {
+        "id": "flying-press",
+        "name": "Flying Press",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user flies towards the foe from the sky in pure Lucha Libre style.",
+        "image": "https://imgur.com/ftWqQyb.png"
+    },
+    {
+        "id": "focus-blast",
+        "name": "Focus Blast",
+        "type": "Fighting",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user concentrates and releases a blast of energy.",
+        "image": "https://imgur.com/y4ObU40.png"
+    },
+    {
+        "id": "focus-punch",
+        "name": "Focus Punch",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A brutal punch that requires calm and concentration.",
+        "image": "https://imgur.com/LjBYtmZ.png"
+    },
+    {
+        "id": "force-palm",
+        "name": "Force Palm",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A powerful open palm hit that knocks the foe away and may leave him unable to move.",
+        "image": "https://imgur.com/JdcJYZC.png"
+    },
+    {
+        "id": "hammer-arm",
+        "name": "Hammer Arm",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A mighty arm thrust that leaves the user quite tired.",
+        "image": "https://imgur.com/6lkdnhh.png"
+    },
+    {
+        "id": "high-jump-kick",
+        "name": "High Jump Kick",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user launches itself up and falls down with a brutal kick. It might hurt the user if it doesn't hit the target.",
+        "image": "https://imgur.com/In7uuhT.png"
+    },
+    {
+        "id": "jump-kick",
+        "name": "Jump Kick",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon jumps and delivers a powerful kick. It might hurt the user if it doesn't hit the target.",
+        "image": "https://imgur.com/sWMedae.png"
+    },
+    {
+        "id": "karate-chop",
+        "name": "Karate Chop",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A basic fighting chop that has been practiced and mastered.",
+        "image": "https://imgur.com/eprpvEW.png"
+    },
+    {
+        "id": "final-gambit",
+        "name": "Final Gambit",
+        "type": "Fighting",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Will + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its last strength into an all-or-nothing attack, after that, it faints.",
+        "image": "https://imgur.com/5ebgiDZ.png"
+    },
+    {
+        "id": "dynamic-punch",
+        "name": "Dynamic Punch",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A punch that hits a small pressure point. It leaves the foe disoriented.",
+        "image": "https://imgur.com/a1ZL6fm.png"
+    },
+    {
+        "id": "drain-punch",
+        "name": "Drain Punch",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon strikes with a powerful punch. Through contact, it absorbs some vital energy.",
+        "image": "https://imgur.com/96aMKmM.png"
+    },
+    {
+        "id": "double-kick",
+        "name": "Double Kick",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user throws two powerful kicks.",
+        "image": "https://imgur.com/J8s7BGx.png"
+    },
+    {
+        "id": "detect",
+        "name": "Detect",
+        "type": "Fighting",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Alert",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user detects the intentions of the attacker and acts out to minimize the damage.",
+        "image": "https://imgur.com/nTrhxyb.png"
+    },
+    {
+        "id": "cross-chop",
+        "name": "Cross Chop",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user delivers a chop with its arms crossed trying to hit a weak spot.",
+        "image": "https://imgur.com/pb5URTZ.png"
+    },
+    {
+        "id": "counter",
+        "name": "Counter",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Insight + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user prepares to receive damage, then returns that same damage and more.",
+        "image": "https://imgur.com/HOjuXb5.png"
+    },
+    {
+        "id": "close-combat",
+        "name": "Close Combat",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user attacks at a close distance to deal lots of damage. The foe is also close enough to attack.",
+        "image": "https://imgur.com/IenwT5y.png"
+    },
+    {
+        "id": "arm-thrust",
+        "name": "Arm Thrust",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user quickly throws blows of open-palmed thrusts against the foe.",
+        "image": "https://imgur.com/oC0tobK.png"
+    },
+    {
+        "id": "aura-sphere",
+        "name": "Aura Sphere",
+        "type": "Fighting",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user channels its aura and launches this power in the form of a sphere. The foe's aura is hit, leaving the target unscratched but deeply hurt.",
+        "image": "https://imgur.com/bJqxPND.png"
+    },
+    {
+        "id": "body-press",
+        "name": "Body Press",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Physical"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon makes a judo maneuver, using its body mass instead of its strength against the target.",
+        "image": "https://imgur.com/5rEFkn2.png"
+    },
+    {
+        "id": "brick-break",
+        "name": "Brick Break",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Physical"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its palm or claws to perform a one-armed chop that shatters even invisible barriers.",
+        "image": "https://imgur.com/uXcVrOm.png"
+    },
+    {
+        "id": "bulk-up",
+        "name": "Bulk Up",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Vitality + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon shows its muscles with intimidating poses to look bigger and stronger.",
+        "image": "https://imgur.com/1wEAzU6.png"
+    },
+    {
+        "id": "cricle-throw",
+        "name": "Circle Throw",
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user throws the target 60 feet out the battlefield.",
+        "image": "https://imgur.com/dPOkkMl.png"
+    },
+    {
+        "id": "bite",
+        "name": "Bite",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user lands a vicious bite that may leave an ugly bruise.",
+        "image": "https://imgur.com/QyPKNLj.png"
+    },
+    {
+        "id": "string-shot",
+        "name": "String Shot",
+        "type": "Bug",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "All",
+        "effects": [],
+        "description": "The user shoots a silk string that ties and limits the movement of its foe.",
+        "image": "https://imgur.com/k6RBeiq.png"
+    },
+    {
+        "id": "bug-bite",
+        "name": "But Bite",
+        "type": "Bug",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon nibbles its foe, if it finds anything tasty it will eat it in an instant. It may try to eat almost anything.",
+        "image": "https://imgur.com/rHxF5jc.png"
+    },
+    {
         "id": "vine-whip",
         "name": "Vine Whip",
         "type": "Grass",
@@ -57,47 +3793,6 @@
         "description": "The user plants some seeds on the target, the seeds sprout and restore the user's health by absorbing the foe's vital energy.",
         "image": "https://imgur.com/BL5ZAdw.png"
     },
-        {
-        "id": "tackle",
-        "name": "Tackle",
-        "type": "Normal",
-        "category": "Physical",
-        "accuracy": {
-            "formula": "Dexterity + Brawl",
-            "modifier": 0
-        },
-        "power": {
-            "base": 2,
-            "scaling": "Strength"
-        },
-        "targets": "Single",
-        "effects": [],
-        "description": "A basic attack that consists on charging at an enemy.",
-        "image": "https://imgur.com/9rytyCJ.png"
-    },
-    {
-    "id": "growl",
-    "name": "Leech Seed",
-    "type": "Grass",
-    "category": "Status",
-    "accuracy": {
-        "formula": "Tough/Cute + Perform",
-        "modifier": 0
-    },
-    "power": {},
-    "targets": "All",
-    "effects": [
-        {
-                "type": "stat-stage",
-                "stat": "Strength",
-                "amount": -1,
-                "duration": "battle",
-                "sound-based": true
-        }
-    ],
-    "description": "Either by a mancing attitude or cute demeanor, the foe will be unsure about attacking the user with full force.",
-    "image": "https://imgur.com/HQy6SOk.png"
-    },
     {
         "id": "bone-club",
         "name": "Bone Club",
@@ -146,5 +3841,1052 @@
         ],
         "description": "The Pokémon recklessly slams the foe with a part of its rugged body, the user also gets hurt in the process.",
         "image": "https://imgur.com/pG63AfX.png"
+    },
+    {
+        "id": "spark",
+        "name": "Spark",
+        "type": "Electric",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user tackles the foe, releasing a powerful spark on contact.",
+        "image": "https://imgur.com/jtMhMgi.png"
+    },
+    {
+    "id": "poison-powder",
+    "name": "Poison Powder",
+    "type": "Poison",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Special + Channel",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Single",
+    "effects": [
+        {
+                "type": "status-condition",
+                "condition": "poison"
+        },
+        {
+            "type": "self-accuracy-mod",
+            "amount": -2
+        }
+    ],
+    "description": "The user scatters a small cloud of venemous dust that immediately causes coughing and fever.",
+    "image": "https://imgur.com/uBDI5WV.png"
+    },
+    {
+    "id": "sleep-powder",
+    "name": "Sleep Powder",
+    "type": "Grass",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Special + Nature",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Single",
+    "effects": [
+        {
+                "type": "status-condition",
+                "condition": "sleep"
+        },
+        {
+            "type": "self-accuracy-mod",
+            "amount": -2
+        }
+    ],
+    "description": "The user scatters powder around, anyone who comes in contact with it will fall asleep.",
+    "image": "https://imgur.com/mVNo1pG.png"
+    },
+    {
+    "id": "razor-leaf",
+    "name": "Razor Leaf",
+    "type": "Grass",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 2,
+        "scaling": "Strength"
+    },
+    "targets": "Near",
+    "effects": [],
+    "description": "The Pokémon recklessly grapples the foe to smash it on the ground.",
+    "image": "https://imgur.com/NLaDBhv.png"
+    },    
+    {
+    "id": "sweet-scent",
+    "name": "Sweet Scent",
+    "type": "Normal",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Special + Nature",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "All",
+    "effects": [],
+    "description": "The Pokémon releases an aroma that its enemies will love.",
+    "image": "https://imgur.com/ngHzHH5.png"
+    },
+    {
+    "id": "worry-seed",
+    "name": "Worry Seed",
+    "type": "Grass",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Special + Nature",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Single",
+    "effects": [],
+    "description": "The user plants a seed in its foe. It causes a restless preoccupation that won't let it sleep at night.",
+    "image": "https://imgur.com/nRfYy6l.png"
+    },
+    {
+    "id": "synthesis",
+    "name": "Synthesis",
+    "type": "Grass",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Special + Nature",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Self",
+    "effects": [],
+    "description": "The Pokémon uses the sunlight as energy to regain its vitality.",
+    "image": "https://imgur.com/RyGhH9B.png"
+    },
+    {
+    "id": "solar-beam",
+    "name": "Solar Beam",
+    "type": "Grass",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Special + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 5,
+        "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The user focuses the sunlight it has absorbed into a powerful and devastating beam of light.",
+    "image": "https://imgur.com/s9h7n7Y.png"
+    },
+    {
+    "id": "grassy-terrain",
+    "name": "Grassy Terrain",
+    "type": "Grass",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Special + Nature",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Self",
+    "effects": [],
+    "description": "The Pokémon calls upon the healing power of nature to grow a patch of miraculous grass on its side of the battlefield.",
+    "image": "https://imgur.com/c3BjDsX.png"
+    },
+    {
+    "id": "amnesia",
+    "name": "Amnesia",
+    "type": "Psychic",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Insight + Alert",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Self",
+    "effects": [],
+    "description": "As a fine example of mind over matter, the user temporarily empties its mind to make it more resilient.",
+    "image": "https://imgur.com/JoRFp8b.png"
+    },
+    {
+    "id": "grass-pledge",
+    "name": "Grass Pledge",
+    "type": "Grass",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 2,
+        "scaling": "Special"
+    },
+    "targets": "Near",
+    "effects": [],
+    "description": "The Pokémon chants to invoke the power of Grass. Its pledge is heard then the soil trembles and the ground crumbles as vegetation rises to grapple anyone in the field.",
+    "image": "https://imgur.com/N12l7DT.png"
+    },
+    {
+    "id": "petal-dance",
+    "name": "Petal Dance",
+    "type": "Grass",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Special + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 5,
+        "scaling": "Special"
+    },
+    "targets": "Random",
+    "effects": [],
+    "description": "The Pokémon starts swirling petals around in a true display of nature's power, the petals are guided by the wind to strike the foe.",
+    "image": "https://imgur.com/j9zyauk.png"
+    },
+    {
+    "id": "petal-blizzard",
+    "name": "Petal Blizzard",
+    "type": "Grass",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Strength"
+    },
+    "targets": "Near",
+    "effects": [],
+    "description": "The Pokémon showers the battlefield with a raging blizzard of petals and leaves, anyone close to the user will suffer the consequences.",
+    "image": "https://imgur.com/PWTxnTt.png"
+    },
+    {
+    "id": "outrage",
+    "name": "Outrage",
+    "type": "Dragon",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Strength + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 5,
+        "scaling": "Strength"
+    },
+    "targets": "Random",
+    "effects": [],
+    "description": "The user awakens their primal instinct as a dragon and unleashes its uncontrollable fury, destroying everything in its path. After that, the Pokémon is left disoriented and confused.",
+    "image": "https://imgur.com/pCur74m.png"
+    },
+    {
+    "id": "hydro-cannon",
+    "name": "Hydro Cannon",
+    "type": "Water",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Special + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 6,
+        "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon blasts the foe with a water surge that could bring down a house. The user needs to rest afterwards.",
+    "image": "https://imgur.com/ljW29x3.png"
+    },
+    {
+    "id": "curse-non-ghost",
+    "name": "Curse",
+    "type": "Ghost",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Will + Channel",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Self",
+    "effects": [],
+    "description": "The Pokémon prepares to deal and receive damage by muttering something not appropriate for kids.",
+    "image": "https://imgur.com/ycNPB9I.png"
+    },
+    {
+    "id": "thunder-shock",
+    "name": "Thunder Shock",
+    "type": "Electric",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 2,
+        "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "A small electric attack that shocks the foe and may leave it with muscular cramps. Some electric devices hit by this attack will malfunction.",
+    "image": "https://imgur.com/GscSzwb.png"
+    },
+    {
+    "id": "volt-tackle",
+    "name": "Volt Tackle",
+    "type": "Electric",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Strength + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 5,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The user surrounds itself with big bolts of electricity, then it crashes against the foe.",
+    "image": "https://imgur.com/DsAgMiP.png"
+    },
+    {
+    "id": "discharge",
+    "name": "Discharge",
+    "type": "Electric",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Special"
+    },
+    "targets": "Near",
+    "effects": [],
+    "description": "The user releases its stored electricity in all directions.",
+    "image": "https://imgur.com/X23Vwmr.png"
+    },
+    {
+    "id": "fake-out",
+    "name": "Fake Out",
+    "type": "Normal",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 2,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "While still preparing for battle, the user will suddenly attack the foe.",
+    "image": "https://imgur.com/pUIW7fo.png"
+    },
+    {
+    "id": "thunderbolt",
+    "name": "Thunderbolt",
+    "type": "Electric",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "A strong electric attack that shocks and harms the foe. It can destroy most kinds of electric equipment.",
+    "image": "https://imgur.com/LgbgWfc.png"
+    },
+    {
+    "id": "thunder",
+    "name": "Thunder",
+    "type": "Electric",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Special + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 5,
+        "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon commands a tremendous lightning to strike a specific point on the ground. It's quite dangerous.",
+    "image": "https://imgur.com/fBLDAxT.png"
+    },
+    {
+    "id": "wild-charge",
+    "name": "Wild Charge",
+    "type": "Electric",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon surrounds itself with wild bolts of lightning, then tackles recklessly.",
+    "image": "https://imgur.com/JRYNzCR.png"
+    },
+    {
+    "id": "thunder-wave",
+    "name": "Thunder Wave",
+    "type": "Electric",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Insight + Nature",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Single",
+    "effects": [],
+    "description": "A tide of bright lightning streams from the floor onto the foe. The target's body will be cramped for hours.",
+    "image": "https://imgur.com/j24zfv5.png"
+    },
+    {
+    "id": "light-screen",
+    "name": "Light Screen",
+    "type": "Psychic",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Special + Channel",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Allies",
+    "effects": [],
+    "description": "The user manifests its mental power on the world, creating walls and floors of light that help prevent the passing of energies.",
+    "image": "https://imgur.com/nMZaVLq.png"
+    },
+    {
+    "id": "electro-ball",
+    "name": "Electro Ball",
+    "type": "Electric",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 2,
+        "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon creates a small electricity orb that is hurled at the target. If the user is faster, the impact will be bigger.",
+    "image": "https://imgur.com/kCyBkAO.png"
+    },
+    {
+    "id": "nuzzle",
+    "name": "Nuzzle",
+    "type": "Electric",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 1,
+        "scaling": "Physical"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon rubs its electrified cheeks against the foe, it looks very cute but it can be dangerous.",
+    "image": "https://imgur.com/jNCm5om.png"
+    },
+    {
+    "id": "frenzy-plant",
+    "name": "Frenzy Plant",
+    "type": "Grass",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Special + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 6,
+        "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "User roots down and calls the plants to grow in a frenzy around the foe, though it leaves the user exhausted.",
+    "image": "https://imgur.com/Qai5bgl.png"
+    },
+    {
+        "id": "ember",
+        "name": "Ember",
+        "type": "Fire",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Special"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user shoots a small flame against the target that may cause a first-degree burn.",
+        "image": "https://imgur.com/x1GsC00.png"
+    },
+    {
+        "id": "dragon-rage",
+        "name": "Dragon Rage",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "A dual colored flame that always leaves the same burn marks on everything it touches.",
+        "image": "https://imgur.com/zI84Yn6.png"
+    },
+    {
+        "id": "fire-fang",
+        "name": "Fire Fang",
+        "type": "Fire",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Strength"
+            },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user breathes fire from its mouth while biting the target.",
+        "image": "https://imgur.com/5Soc4kI.png"
+    },
+    {
+        "id": "flame-burst",
+        "name": "Flame Burst",
+        "type": "Fire",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A concentrated flameball that bursts on contact with the foe, scattering smaller flames around.",
+        "image": "https://imgur.com/5Soc4kI.png"
+    },
+    {
+        "id": "fire-spin",
+        "name": "Fire Spin",
+        "type": "Fire",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+                "base": 2,
+                "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user creates a vortex of fire that remains spinning in the battlefield, trapping the foe within.",
+        "image": "https://imgur.com/trROGML.png"
+    },
+    {
+        "id": "flamethrower",
+        "name": "Flamethrower",
+        "type": "Fire",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+                "base": 3,
+                "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user lets out a powerful fire stream that leaves a scorched trail.",
+        "image": "https://imgur.com/Zz2mK0Y.png"
+    },
+    {
+    "id": "inferno",
+    "name": "Inferno",
+    "type": "Fire",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+            "base": 4,
+            "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon sets the foe on fire. These flames rise up to 6 feet. A very dangerous move.",
+    "image": "https://imgur.com/bElj97j.png"
+    },
+    {
+    "id": "metal-claw",
+    "name": "Metal Claw",
+    "type": "Steel",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+            "base": 2,
+            "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon attacks using its sharp claws, the friction may leave them even sharper.",
+    "image": "https://imgur.com/19ZEWx8.png"
+    },
+    {
+    "id": "dragon-dance",
+    "name": "Dragon Dance",
+    "type": "Dragon",
+    "category": "Status",
+    "accuracy": {
+        "formula": "Tough + Perform",
+        "modifier": 0
+    },
+    "power": {},
+    "targets": "Self",
+    "effects": [],
+    "description": "The user performs a vigourous dance that boosts the fighting spirit and reflexes.",
+    "image": "https://imgur.com/1f9Dvy3.png"
+    },
+    {
+    "id": "fire-pledge",
+    "name": "Fire Pledge",
+    "type": "Fire",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 2,
+        "scaling": "Special"
+    },
+    "targets": "Near",
+    "effects": [],
+    "description": "The Pokémon chants to invoke the power of fire. Its pledge is heard, then the flames consume everything around.",
+    "image": "https://imgur.com/K048FzD.png"
+    },
+    {
+    "id": "air-slash",
+    "name": "Air Slash",
+    "type": "Flying",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Special"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The user will surround the foe with razor-like wind that may knock it down.",
+    "image": "https://imgur.com/tIuenkN.png"
+    },
+    {
+    "id": "wing-attack",
+    "name": "Wing Attack",
+    "type": "Flying",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 2,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The user flies towards the foe and strikes with its wings.",
+    "image": "https://imgur.com/cBu04uE.png"
+    },
+    {
+    "id": "dragon-claw",
+    "name": "Dragon Claw",
+    "type": "Dragon",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The Pokémon uses its strong claws to deliver a fierce tearing blow.",
+    "image": "https://imgur.com/sDMnbSP.png"
+    },
+    {
+    "id": "shadow-claw",
+    "name": "Shadow Claw",
+    "type": "Ghost",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Dexterity + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "Claws become semi-ethereal and are able to briefly pierce armor, hide, skin and objects so it can strike the target on any weak spot.",
+    "image": "https://imgur.com/yrCzgUA.png"
+    },
+    {
+    "id": "flare-blitz",
+    "name": "Flare Blitz",
+    "type": "Fire",
+    "category": "Physical",
+    "accuracy": {
+        "formula": "Strength + Brawl",
+        "modifier": 0
+    },
+    "power": {
+        "base": 5,
+        "scaling": "Strength"
+    },
+    "targets": "Single",
+    "effects": [],
+    "description": "The user sets itself on fire, recklessly charging against the target with a brutal strike.",
+    "image": "https://imgur.com/cCcuayA.png"
+    },
+    {
+    "id": "heat-wave",
+    "name": "Heat Wave",
+    "type": "Fire",
+    "category": "Special",
+    "accuracy": {
+        "formula": "Dexterity + Channel",
+        "modifier": 0
+    },
+    "power": {
+        "base": 3,
+        "scaling": "Special"
+    },
+    "targets": "All",
+    "effects": [],
+    "description": "The user breathes a giant wave of incansescent air that might set fire to whatever it touches.",
+    "image": "https://imgur.com/C2tg4d0.png"
+    },
+    {
+        "id": "water-gun",
+        "name": "Water Gun",
+        "type": "Water",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user learns to shoot water with enough force to hurt the foe.",
+        "image": "https://imgur.com/DIRIBRZ.png"
+    },
+    {
+        "id": "bubble",
+        "name": "Bubble",
+        "type": "Water",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "All",
+        "effects": [],
+        "description": "A spray of bubbles flies around the enemies, some of the bubbles stick to their bodies hindering their movement.",
+        "image": "https://imgur.com/dZ7UMrq.png"
+    },
+    {
+        "id": "water-pulse",
+        "name": "Water Pulse",
+        "type": "Water",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon attacks with a pulsing blast of water, this leaves the foe feeling dizzy.",
+        "image": "https://imgur.com/KNejB9n.png"
+    },
+    {
+        "id": "aqua-tail",
+        "name": "Aqua Tail",
+        "type": "Water",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user swings its tail as if it were a vicious wave in a raging storm.",
+        "image": "https://imgur.com/Mc5Qqu0.png"
+    },
+    {
+        "id": "agility",
+        "name": "Agility",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user relaxes and lightens its body to move faster.",
+        "image": "https://imgur.com/Nrz2tMa.png"
+    },
+    {
+        "id": "withdraw",
+        "name": "Withdraw",
+        "type": "Water",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user hides inside its hard shell to protect itself from incoming attacks.",
+        "image": "https://imgur.com/L2niwqp.png"
+    },
+    {
+        "id": "iron-defense",
+        "name": "Iron Defense",
+        "type": "Steel",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon hardens its body surface as if it was made from the strongest iron around.",
+        "image": "https://imgur.com/bL5CwyL.png"
+    },
+    {
+        "id": "rain-dance",
+        "name": "Rain Dance",
+        "type": "Water",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The user performs a curious mystic dance that summons a heavy rainfall.",
+        "image": "https://imgur.com/8nO1A1p.png"
+    },
+    {
+        "id": "hydro-pump",
+        "name": "Hydro Pump",
+        "type": "Water",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user builds up pressure inside its body and then releases a tremendous amount of water at the target.",
+        "image": "https://imgur.com/rz1SkPs.png"
+    },
+    {
+        "id": "surf",
+        "name": "Surf",
+        "type": "Water",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Near",
+        "effects": [],
+        "description": "A giant wave of water sweeps the area while the user swims on top of it.",
+        "image": "https://imgur.com/0W6Zzxh.png"
+    },
+    {
+        "id": "aqua-jet",
+        "name": "Aqua Jet",
+        "type": "Water",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user propels itself with a blast of water and strikes at high speed.",
+        "image": "https://imgur.com/R8yQ32Z.png"
+    },
+    {
+        "id": "water-pledge",
+        "name": "Water Pledge",
+        "type": "Water",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Near",
+        "effects": [],
+        "description": "The Pokémon chants to invoke the power of water. Moisture in the air bends the light to create an inspiring rainbow. Everyone in the field is sure to give its best.",
+        "image": "https://imgur.com/cYu1KQf.png"
+    },
+    {
+        "id": "icy-wind",
+        "name": "Icy Wind",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "All",
+        "effects": [],
+        "description": "A breeze so cold that it chills you to the bone, making it harder to move.",
+        "image": "https://imgur.com/mNiVA9A.png"
+    },
+    {
+        "id": "mud-sport",
+        "name": "Mud Sport",
+        "type": "Ground",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The user covers everything with mud, reducing the effectiveness of electric attacks made on the field.",
+        "image": "https://imgur.com/m0IA77f.png"
+    },
+    {
+        "id": "flash-cannon",
+        "name": "Flash Cannon",
+        "type": "Steel",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Field",
+        "effects": [],
+        "description": "The user covers everything with mud, reducing the effectiveness of electric attacks made on the field.",
+        "image": "https://imgur.com/m0IA77f.png"
+    },
+    {
+        "id": "zap-cannon",
+        "name": "Zap Cannon",
+        "type": "Electric",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user hurls a dreadful bombardment of electric explosions. Anyone hit won't be able to move for a very long time.",
+        "image": "https://imgur.com/2TJMe2R.png"
     }
 ]
