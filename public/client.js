@@ -7,6 +7,9 @@ const eventLog = document.getElementById("eventLog");
 
 // dev tools
 const DEV_BYPASS = false;
+const RULES = {
+    RANK_LOCKING: true
+}
 
 // player variables
 const nameInput = document.getElementById("nameInput");
@@ -688,38 +691,37 @@ document.getElementById("ability-random").onclick = () => {
 
 // --------------------------------------------------------------------------- move functions ---------------------------------------------------------------------------
 function renderActiveMoves(character) {
+    normalizeMoves(character);
+
     const grid = document.getElementById("active-moves-grid");
     grid.innerHTML = "";
 
-    const active = character?.moves?.active || [];
-
-    if(active.length === 0) {
+    if(character.moves.active.length === 0) {
         grid.innerHTML = "<em>No active moves</em>";
         return;
     }
 
-    active.forEach(moveId => {
+    character.moves.active.forEach(moveId => {
         const move = MOVES[moveId];
         if(!move) {
             return;
         }
 
         const card = createMoveCard(move, { 
-            active: true,
-            ok: true
+            action: "deactivate",
         });
+
         grid.appendChild(card);
     });
 }
 
 function renderKnownMoves(character) {
+    normalizeMoves(character);
+
     const grid = document.getElementById("known-moves-grid");
     grid.innerHTML = "";
 
-    const learned = character?.moves?.learned || [];
-    const active = character?.moves?.active || [];
-
-    const inactive = learned.filter(m => !active.includes(m));
+    const inactive = character.moves.learned.filter(m => !character.moves.active.includes(m));
 
     if(inactive.length === 0) {
         grid.innerHTML = "<em>No known moves</em>";
@@ -733,9 +735,7 @@ function renderKnownMoves(character) {
         }
 
         const card = createMoveCard(move, {
-            ok: true,
-            action: "activate",
-            moveId
+            action: "activate"
         });
 
         grid.appendChild(card);
@@ -832,12 +832,13 @@ function canLearnMove(species, moveId, moveRank, character) {
         return { ok: false, reason: "Known" };
     }
 
-    // rank locked?
-    const speciesRankIndex = RANK_ORDER.indexOf(species.rank.toLowerCase());
-    const moveRankIndex = RANK_ORDER.indexOf(moveRank);
-
-    if(moveRankIndex > speciesRankIndex) {
-        return { ok: false, reason: "Rank Locked" };
+    // rank locked? (toggleable)
+    if(RULES.RANK_LOCKING) {
+        const speciesRankIndex = RANK_ORDER.indexOf(species.rank.toLowerCase());
+        const moveRankIndex = RANK_ORDER.indexOf(moveRank);
+        if(moveRankIndex > speciesRankIndex) {
+            return { ok: false, reason: "Rank Locked" };
+        }
     }
 
     // exp check
@@ -887,6 +888,7 @@ function activateMove(moveId) {
 
 function deactiveMove(moveId) {
     socket.emit("character-deactivate-move", {
+        characterId: editingCharacterId,
         moveId
     });
 }

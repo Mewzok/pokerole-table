@@ -256,6 +256,77 @@ io.on("connection", socket => {
             io.emit("characterListUpdated", listCharacters());
         }
     });
+
+    // character move handler
+    socket.on("character-learn-move", ({ characterId, moveId, moveRank }) => {
+        const char = characters.get(characterId)
+        if(!char) {
+            return;
+        }
+
+        if(!char.moves) {
+            char.moves = { learned: [], active: [] };
+        }
+
+        // already learned
+        if(char.moves.learned.includes(moveId)) {
+            return;
+        }
+
+        // rank lock
+        if(RULES.RANK_LOCKING) {
+            const species = POKEMON.find(p => p.id === char.pokemonId);
+            const speciesRankIndex = RANK_ORDER.indexOf(species.rank.toLowerCase());
+            const moveRankIndex = RANK_ORDER.indexOf(moveRank);
+            if(moveRankIndex > speciesRankIndex) {
+                return;
+            }
+        }
+
+        const cost = MOVE_EXP_COST[moveRank];
+        if(char.exp < cost) {
+            return;
+        }
+
+        // spend exp
+        char.exp -= cost;
+
+        // learn move
+        char.moves.learned.push(moveId);
+
+        broadcastCharacterList();
+    });
+
+    // move activation handler
+    socket.on("character-activate-move", ({ characterId, moveId }) => {
+        const char = characters.get(characterId);
+        if(!char) {
+            return;
+        }
+
+        if(!char.moves.learned.includes(moveId)) {
+            return;
+        }
+        if(char.moves.active.includes(moveId)) {
+            return;
+        }
+
+        char.moves.active.push(moveId);
+
+        broadcastCharacterList();
+    });
+
+    // move deactivation handler
+    socket.on("character-deactivate-move", ({ characterId, moveId }) => {
+        const char = characters.get(characterId);
+        if(!char) {
+            return;
+        }
+
+        char.moves.active = char.moves.active.filter(m => m !== moveId);
+
+        broadcastCharacterList();
+    });
 });
 
 // start server on port 3000
