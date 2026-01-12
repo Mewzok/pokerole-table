@@ -9349,6 +9349,1770 @@
         "image": "https://imgur.com/Nrz2tMa.png"
     },
     {
+        "id": "ally-switch",
+        "name": "Ally Switch",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The user teleports, switching its place with someone.",
+        "image": "https://imgur.com/HWQsYQQ.png"
+    },
+    {
+        "id": "amnesia",
+        "name": "Amnesia",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Alert",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "As a fine example of mind over matter, the user temporarily empties its mind to make it more resilient.",
+        "image": "https://imgur.com/JoRFp8b.png"
+    },
+    {
+        "id": "barrier",
+        "name": "Barrier",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user casts a protective field around itself.",
+        "image": "https://imgur.com/xbcwRKE.png"
+    },
+    {
+        "id": "calm-mind",
+        "name": "Calm Mind",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user quietly calms its spirit to strengthen its mind and body.",
+        "image": "https://imgur.com/sDXEZgz.png"
+    },
+    {
+        "id": "confusion",
+        "name": "Confusion",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The target's mind is hit by a weak psychic force that leaves them wondering if they were hit by an invisible enemy. Sometimes the foe is left seeing things that aren't really there.",
+        "image": "https://imgur.com/6LNCHqi.png"
+    },
+    {
+        "id": "cosmic-power",
+        "name": "Cosmic Power",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user absorbs power from space. This Pokémon glows faintly with energy afterwards.",
+        "image": "https://imgur.com/kgeU03h.png"
+    },
+    {
+        "id": "dream-eater",
+        "name": "Dream Eater",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user eats the dreams of a sleeping target. When the foe wakes up it will feel weak and empty.",
+        "image": "https://imgur.com/S4N4dUQ.png"
+    },
+    {
+        "id": "extrasensory",
+        "name": "Extrasensory",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user attacks with an odd, almost invisible power.",
+        "image": "https://imgur.com/Ecj0CXV.png"
+    },
+    {
+        "id": "future-sight",
+        "name": "Future Sight",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon foresees something terrible happening to the target. It may see images from its own future without any risk.",
+        "image": "https://imgur.com/UcwItDp.png"
+    },
+    {
+        "id": "glitzy-glow",
+        "name": "Glitzy Glow",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user surrounds itself with a glamorous light, releasing it as a psychic blast. The soft glowing particles remain in the field protecting its fabulousness.",
+        "image": "https://imgur.com/8x8g6sK.png"
+    },
+    {
+        "id": "gravity",
+        "name": "Gravity",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The gravity is intensified, bringing everyone to their knees. Flying Pokémon are slammed to the ground.",
+        "image": "https://imgur.com/ik8re47.png"
+    },
+    {
+        "id": "guard-split",
+        "name": "Guard Split",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user employs its psychic power to average its resilience with the foe. They both feel like they're equals in terms of toughness.",
+        "image": "https://imgur.com/ta4K67g.png"
+    },
+    {
+        "id": "guard-swap",
+        "name": "Guard Swap",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon employs its psychic power to make the opponent feel like it got the user's frailty and make the user feel like it got the target's resilience.",
+        "image": "https://imgur.com/k1eIOWj.png"
+    },
+    {
+        "id": "heal-block",
+        "name": "Heal Block",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Near",
+        "effects": [],
+        "description": "The user forces everyone's wounds to stay open by using its immense psychic power.",
+        "image": "https://imgur.com/WVAID9x.png"
+    },
+    {
+        "id": "heal-pulse",
+        "name": "Heal Pulse",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The user emits a pulse of energy that heals the wounds of its allies.",
+        "image": "https://imgur.com/IaoosMj.png"
+    },
+    {
+        "id": "healing-wish",
+        "name": "Healing Wish",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The power of ultimate love and sacrifice. The user wishes to completely heal all injuries, diseases and ailments to save someone's life at the cost of one's own health.",
+        "image": "https://imgur.com/CnnE7wg.png"
+    },
+    {
+        "id": "heart-stamp",
+        "name": "Heart Stamp",
+        "type": "Psychic",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Insight + Allure",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "This move controls the emotions of the target making it feel loved and safe. The user may strike immediately.",
+        "image": "https://imgur.com/U0DelxT.png"
+    },
+    {
+        "id": "heart-swap",
+        "name": "Heart Swap",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user and the target swap their feelings of power and weakness, insecurity and courage, love and hate. Boosts are also swapped.",
+        "image": "https://imgur.com/3Jd13JI.png"
+    },
+    {
+        "id": "hyperspace-hole",
+        "name": "Hyperspace Hole",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user knows the laws of physics bind it from being in many places at once and forbit it from occupying the same space as other bodies. It just disreguards their authority.",
+        "image": "https://imgur.com/nhQngAo.png"
+    },
+    {
+        "id": "hypnosis",
+        "name": "Hypnosis",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "Employ a hypnotic suggestion to make the target feel drowsy and fall into a deep slumber. Works better on a target that is not in danger.",
+        "image": "https://imgur.com/YnNjVza.png"
+    },
+    {
+        "id": "imprison",
+        "name": "Imprison",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "This move blocks specific parts of the memory the user is well aware of. Be it moves, techniques, names, places, people or situations. The target won't be able to recall those memories.",
+        "image": "https://imgur.com/1C2Fx5G.png"
+    },
+    {
+        "id": "instruct",
+        "name": "Instruct",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon sends a psychic command to one of its allies or foes to enable them to repeat their last action.",
+        "image": "https://imgur.com/6Sdi2ay.png"
+    },
+    {
+        "id": "kinesis",
+        "name": "Kinesis",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "A basic psychic power to exert force on objects. You can touch, move, press and affect simple objects to create distractions.",
+        "image": "https://imgur.com/3rt3g0m.png"
+    },
+    {
+        "id": "light-screen",
+        "name": "Light Screen",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The user manifests its mental power on the world, creating walls and floors of light that help prevent the passing of energies.",
+        "image": "https://imgur.com/nMZaVLq.png"
+    },
+    {
+        "id": "lunar-dance",
+        "name": "Lunar Dance",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The moon shines at the darkest hours, reflecting the sun's lifebringing light on those who fell into the night, taking pity on their lost souls.",
+        "image": "https://imgur.com/UfSPR7L.png"
+    },
+    {
+        "id": "luster-purge",
+        "name": "Luster Purge",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user engulfs itself in a blinding light and shoots a beam at its foe. This light leaves the foe powerless to resist against anyone.",
+        "image": "https://imgur.com/VoZEylx.png"
+    },
+    {
+        "id": "magic-coat",
+        "name": "Magic Coat",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user quickly creates a barrier that reflects any minor attack, status condition, or dirty trick the foe might have wanted to use.",
+        "image": "https://imgur.com/SU9jFaB.png"
+    },
+    {
+        "id": "magic-powder",
+        "name": "Magic Powder",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon recites an enchantment and blows a cloud of pink dust on its target. Afterward, the target becomes especially good at guessing which card you got from a deck.",
+        "image": "https://imgur.com/JUPeDXy.png"
+    },
+    {
+        "id": "magic-room",
+        "name": "Magic Room",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "Inside the effects of Magic Room technology and manually activated tools and items do not work. Automated technology will function as normal.",
+        "image": "https://imgur.com/0qCMBd8.png"
+    },
+    {
+        "id": "meditate",
+        "name": "Meditate",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon meditates to unleash a power that's been sleeping deep inside the user.",
+        "image": "https://imgur.com/ptjspN9.png"
+    },
+    {
+        "id": "miracle-eye",
+        "name": "Miracle Eye",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Alert",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user's sight transcends the flesh and can look directly into the innermost mental presence of everyone around. Hidden enemies can be detected.",
+        "image": "https://imgur.com/6RknlGw.png"
+    },
+    {
+        "id": "mirror-coat",
+        "name": "Mirror Coat",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user canalizes the damage received by energies and bounce them back to their source.",
+        "image": "https://imgur.com/pdd0RqU.png"
+    },
+    {
+        "id": "mist-ball",
+        "name": "Mist Ball",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user engulds its foe with a cloud of mist. This soothing mist keeps evil intents from surfacing into the foe's mind.",
+        "image": "https://imgur.com/smuMcFk.png"
+    },
+    {
+        "id": "photon-geyser",
+        "name": "Photon Geyser",
+        "type": "Psychic",
+        "category": ["Physical","Special"],
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": ["Strength", "Special"]
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon attacks with a large pillar of light that comes out from where its foe is standing. Either the blazing energy or the crushing strike are enough to knock someone out.",
+        "image": "https://imgur.com/3fLF1B0.png"
+    },
+    {
+        "id": "power-split",
+        "name": "Power Split",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user employs its psychic power to average its capabilities with the foe. They both feel like they're equals in terms of strength.",
+        "image": "https://imgur.com/2khE5AS.png"
+    },
+    {
+        "id": "power-swap",
+        "name": "Power Swap",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon employs its psychic power to make the opponent feel like it got the user's weaknesses and make the user feel like it got the target's strengths.",
+        "image": "https://imgur.com/O1wiijz.png"
+    },
+    {
+        "id": "power-trick",
+        "name": "Power Trick",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user's mind is tricked into thinking that strength comes from their vitality and their vitality is their power.",
+        "image": "https://imgur.com/MTtwurV.png"
+    },
+    {
+        "id": "prismatic-laser",
+        "name": "Prismatic Laser",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Through a prism the user shoots a concentrated laser beam that pierces everything that comes in contact with it. The effort leaves the user mentally exhausted.",
+        "image": "https://imgur.com/iGK0pO7.png"
+    },
+    {
+        "id": "psybeam",
+        "name": "Psybeam",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Attack with a beam of psychic energy that hits the mind of the target.",
+        "image": "https://imgur.com/CDWRcVf.png"
+    },
+    {
+        "id": "psychic",
+        "name": "Psychic",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user's telekinetic force is enough to cause severe harm to their target. This telekinesis is not subtle.",
+        "image": "https://imgur.com/gDMzd5b.png"
+    },
+    {
+        "id": "psychic-fangs",
+        "name": "Psychic Fangs",
+        "type": "Psychic",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon bares its fangs to bite the foe. Psychic energy begins piercing before the actual fangs make contact.",
+        "image": "https://imgur.com/Tpq6p3d.png"
+    },
+    {
+        "id": "psychic-terrain",
+        "name": "Psychic Terrain",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The arena becomes radiated by psychic waves. Everyone begins to think slowly due to the buzz in their heads making all tasks take more time.",
+        "image": "https://imgur.com/hTzhgYw.png"
+    },
+    {
+        "id": "psycho-boost",
+        "name": "Psycho Boost",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon releases an explosion of all of its concentrated psychic power in a devastating explosion. Afterwards the user will be extremely tired.",
+        "image": "https://imgur.com/dlv9Ynt.png"
+    },
+    {
+        "id": "psycho-cut",
+        "name": "Psycho Cut",
+        "type": "Psychic",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Create blades of psychic energy to tear down foes.",
+        "image": "https://imgur.com/diS9j8X.png"
+    },
+    {
+        "id": "psycho-shift",
+        "name": "Psycho Shift",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "With psychic suggestion the target feels afflicted by the same status problems as the user.",
+        "image": "https://imgur.com/gL9qCwU.png"
+    },
+    {
+        "id": "psyshock",
+        "name": "Psyshock",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Materialize a psychic wave that pushes the target with real physical force.",
+        "image": "https://imgur.com/Grv9rk4.png"
+    },
+    {
+        "id": "psystrike",
+        "name": "Psystrike",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Through sheer psychic power the user materializes its energy to deal a heavy strike to its foe.",
+        "image": "https://imgur.com/MTNub9s.png"
+    },
+    {
+        "id": "psywave",
+        "name": "Psywave",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "Releases the inner power of the mind to emanate psychic waves that hurt the target.",
+        "image": "https://imgur.com/mEMWm8X.png"
+    },
+    {
+        "id": "reflect",
+        "name": "Reflect",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The user manifests its mental power on the world creating invisible walls and floors that prevent the passing of objects.",
+        "image": "https://imgur.com/xV35Vj6.png"
+    },
+    {
+        "id": "rest",
+        "name": "Rest",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Vitality + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user falls asleep. During this period the body benefits from a super accelerated healing process.",
+        "image": "https://imgur.com/epiUQXS.png"
+    },
+    {
+        "id": "role-play",
+        "name": "Role Play",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user mimics the target and takes on the most basic features from that character.",
+        "image": "https://imgur.com/pT5YYxg.png"
+    },
+    {
+        "id": "skill-swap",
+        "name": "Skill Swap",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user swaps its identity with the target making both feel like they are from each other's species.",
+        "image": "https://imgur.com/qCwzSbC.png"
+    },
+    {
+        "id": "speed-swap",
+        "name": "Speed Swap",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon employs its psychic power to make the opponent perceive events as if they were happening faster or slower according to the user's own speed.",
+        "image": "https://imgur.com/DYO3G8G.png"
+    },
+    {
+        "id": "stored-power",
+        "name": "Stored Power",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "This move allows the user to release its power. If the user has any boosts the damage is increased.",
+        "image": "https://imgur.com/eDw6rjo.png"
+    },
+    {
+        "id": "synchronoise",
+        "name": "Synchronoise",
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Perform",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Special"
+        },
+        "targets": "Near",
+        "effects": [],
+        "description": "The user vibrates with any particular energy Type he chooses. All nearby creatures and objects of that Type are hurt.",
+        "image": "https://imgur.com/1nkuexs.png"
+    },
+    {
+        "id": "telekinesis",
+        "name": "Telekinesis",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user can manipulate objects and creatures with his mind. Pokémon and humans become easier to hit because their movements are restrained.",
+        "image": "https://imgur.com/oJ2NwFU.png"
+    },
+    {
+        "id": "teleport",
+        "name": "Teleport",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "Teleport the user and one more creature to a place of tranquility and high psychic resonance such as Pokémon Centers. Ceilings and walls block this move from working.",
+        "image": "https://imgur.com/NJKLg8b.png"
+    },
+    {
+        "id": "trick",
+        "name": "Trick",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "Control the target's mind to perform a simple non-hostile action such as walking or handing an item.",
+        "image": "https://imgur.com/jgVm0La.png"
+    },
+    {
+        "id": "trick-room",
+        "name": "Trick Room",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "This reality altering move can manipulate time so slow creatures are fast and fast creatures are slow.",
+        "image": "https://imgur.com/u8Q3y9c.png"
+    },
+    {
+        "id": "wonder-room",
+        "name": "Wonder Room",
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "Inside the Wonder Room a strong mind makes a strong body and a resilient body makes a resilient mind. However, if the mind is weak, the body will be weak and vice versa.",
+        "image": "https://imgur.com/bXRPDjO.png"
+    },
+    {
+        "id": "zen-headbutt",
+        "name": "Zen Headbutt",
+        "type": "Psychic",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user focuses its will on its head to strike with a headbutt.",
+        "image": "https://imgur.com/VymFFwA.png"
+    },
+    {
+        "id": "aurora-beam",
+        "name": "Aurora Beam",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon shoots a beautiful rainbow colored beam that may leave the foe flabbergasted.",
+        "image": "https://imgur.com/PqvbkjS.png"
+    },
+    {
+        "id": "aurora-veil",
+        "name": "Aurora Veil",
+        "type": "Ice",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "Aurora lights and hail spin around the Pokémon and its allies deflecting attacks.",
+        "image": "https://imgur.com/Eu7EzC1.png"
+    },
+    {
+        "id": "avalanche",
+        "name": "Avalanche",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user builds up a lot of snow around itself. If anything disturbs the snow it will fall on the attacker like an avalanche.",
+        "image": "https://imgur.com/OfYulGd.png"
+    },
+    {
+        "id": "blizzard",
+        "name": "Blizzard",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Special"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The user swirles a violent gelid wind around the foes. This blizzard may not last long, but it's tremendously strong.",
+        "image": "https://imgur.com/KbUdcAN.png"
+    },
+    {
+        "id": "freeze-dry",
+        "name": "Freeze Dry",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user freezes all moisture in the environment. Water type Pokémon suffer greatly.",
+        "image": "https://imgur.com/RMnpNWp.png"
+    },
+    {
+        "id": "freeze-shock",
+        "name": "Freeze Shock",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user appears to become a block of ice, then it releases itself from the ice with a devastating discharge. The exploding ice shards and the lightning fly all over the battlefield.",
+        "image": "https://imgur.com/6xGKx5C.png"
+    },
+    {
+        "id": "freezy-frost",
+        "name": "Freezy Frost",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user touches its foe while playing \"Freeze!\", surprisingly, the foe becomes frozen on a block of ice. Once they realize they were just playing pretend the ice dissolves into haze.",
+        "image": "https://imgur.com/QEzZpwB.png"
+    },
+    {
+        "id": "frost-breath",
+        "name": "Frost Breath",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user shoots a gelid breath against the target that sends a chill through the spine. The sudden change of temperature can bring anyone to its knees.",
+        "image": "https://imgur.com/W4uh3ay.png"
+    },
+    {
+        "id": "glaciate",
+        "name": "Glaciate",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The air is so cold it hurts to move, to see, to breath. Escaping should be your top priority for every second you don't your life will be at peril.",
+        "image": "https://imgur.com/rmfjpB8.png"
+    },
+    {
+        "id": "hail",
+        "name": "Hail",
+        "type": "Ice",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The user summons a hailstorm that will stay on the battlefield for some time.",
+        "image": "https://imgur.com/AV6nGGD.png"
+    },
+    {
+        "id": "haze",
+        "name": "Haze",
+        "type": "Ice",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The user sends out a haze that disturbs all the Pokémon engaged in battle. It may conceal whoever is inside.",
+        "image": "https://imgur.com/haFWYQG.png"
+    },
+    {
+        "id": "ice-ball",
+        "name": "Ice Ball",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user curls into a snowball, rolling against the foe. The ball grows bigger as it rolls.",
+        "image": "https://imgur.com/yiHft7j.png"
+    },
+    {
+        "id": "ice-beam",
+        "name": "Ice Beam",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user shoots a freezing ray that greatly lowers the temperature of anything it hits.",
+        "image": "https://imgur.com/Ags2ZOI.png"
+    },
+    {
+        "id": "ice-burn",
+        "name": "Ice Burn",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user appears to become a block of ice, then it releases itself from the ice with a devastating explosion. The exploding ice shards and fire blow all over the battlefield.",
+        "image": "https://imgur.com/7fSynPz.png"
+    },
+    {
+        "id": "ice-fang",
+        "name": "Ice Fang",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user bites the foe and releases a gelid breath through its mouth.",
+        "image": "https://imgur.com/Ico0dMA.png"
+    },
+    {
+        "id": "ice-hammer",
+        "name": "Ice Hammer",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its powerful gelid arms and strikes the foe with a swing motion.",
+        "image": "https://imgur.com/PlMLpFY.png"
+    },
+    {
+        "id": "ice-punch",
+        "name": "Ice Punch",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon delivers a strike covered in ice. The user's hands can freeze anything they touch.",
+        "image": "https://imgur.com/nXN9EoI.png"
+    },
+    {
+        "id": "ice-shard",
+        "name": "Ice Shard",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user quickly freezes some bits of ice and throws them at the target.",
+        "image": "https://imgur.com/DwFugiy.png"
+    },
+    {
+        "id": "icicle-crash",
+        "name": "Icicle Crash",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user drops a big icicle over the foe. The impact may leave the opponent dazed.",
+        "image": "https://imgur.com/44c7iOC.png"
+    },
+    {
+        "id": "icicle-spear",
+        "name": "Icicle Spear",
+        "type": "Ice",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user launches a wave of small but pointy icicles towards the target.",
+        "image": "https://imgur.com/fvTgPuG.png"
+    },
+    {
+        "id": "icy-wind",
+        "name": "Icy Wind",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "A breeze so cold that it chills you to the bone making it harder to move.",
+        "image": "https://imgur.com/mNiVA9A.png"
+    },
+    {
+        "id": "mist",
+        "name": "Mist",
+        "type": "Ice",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Special + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The user cloaks itself and its allies within a cold mist with mystic properties. It may conceal whoever is nearby.",
+        "image": "https://imgur.com/Q2e7OcT.png"
+    },
+    {
+        "id": "powder-snow",
+        "name": "Powder Snow",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The user sends out a wind current full of snowflakes that freeze whatever they touch. This powder can easily turn into a room to ice.",
+        "image": "https://imgur.com/J2hYVXM.png"
+    },
+    {
+        "id": "sheer-cold",
+        "name": "Sheer Cold",
+        "type": "Ice",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user freezes the foe from the inside out. Victims of this attack will need urgent medical attention.",
+        "image": "https://imgur.com/w3KQJnS.png"
+    },
+    {
+        "id": "breaking-swipe",
+        "name": "Breaking Swipe",
+        "type": "Dragon",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The Pokémon will use its tail to make a long swipe at its foes. A few cracks are heard and the foes will limp afterwards.",
+        "image": "https://imgur.com/nEqAxxZ.png"
+    },
+    {
+        "id": "clanging-scales",
+        "name": "Clanging Scales",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Perform",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Special"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The Pokémon rattles the scales of its armor creating a frightening noise in the area. Some of its scales fall off as a result leaving some areas exposed.",
+        "image": "https://imgur.com/aczZPqb.png"
+    },
+    {
+        "id": "clangerous-soul",
+        "name": "Clangerous Soul",
+        "type": "Dragon",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon shakes its scales around to sharpen, shed and rearrange them. It's a bit rough but in the end the Pokémon feels more focused for battle.",
+        "image": "https://imgur.com/bppyGWy.png"
+    },
+    {
+        "id": "core-enforcer",
+        "name": "Core Enforcer",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user shoots a beam that fractures the target to its core rendering it unable to sustain even the most basic of its traits.",
+        "image": "https://imgur.com/xwEMbES.png"
+    },
+    {
+        "id": "draco-meteor",
+        "name": "Draco Meteor",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon calls a comet that falls from the sky to deal a brutal amount of damage. This feat demands a lot from the user.",
+        "image": "https://imgur.com/1DEhfNT.png"
+    },
+    {
+        "id": "dragon-rush",
+        "name": "Dragon Rush",
+        "type": "Dragon",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user charges rapidly against the foe. The strike may leave the target gasping for air.",
+        "image": "https://imgur.com/xL1zNJD.png"
+    },
+    {
+        "id": "dragon-rage",
+        "name": "Dragon Rage",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "A dual colored flame that always leaves the same burn marks on everything it touches.",
+        "image": "https://imgur.com/zI84Yn6.png"
+    },
+    {
+        "id": "dragon-pulse",
+        "name": "Dragon Pulse",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user opens its mouth and sends a powerful wave of energy.",
+        "image": "https://imgur.com/wgEq8UU.png"
+    },
+    {
+        "id": "dragon-hammer",
+        "name": "Dragon Hammer",
+        "type": "Dragon",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon swings its body as a hammer and leaves the foe nailed to the cracked ground.",
+        "image": "https://imgur.com/4W8Pc64.png"
+    },
+    {
+        "id": "dragon-darts",
+        "name": "Dragon Darts",
+        "type": "Dragon",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon's head is a nest for its less evolved forms. The younglings will sometimes be used as projectiles.",
+        "image": "https://imgur.com/JK3tpZi.png"
+    },
+    {
+        "id": "dragon-dance",
+        "name": "Dragon Dance",
+        "type": "Dragon",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user performs a vigorous and mystical dance that boosts the fighting spirit and reflexes.",
+        "image": "https://imgur.com/1f9Dvy3.png"
+    },
+    {
+        "id": "dragon-claw",
+        "name": "Dragon Claw",
+        "type": "Dragon",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its strong claws to deliver a fierce tearing blow.",
+        "image": "https://imgur.com/sDMnbSP.png"
+    },
+    {
+        "id": "dragon-breath",
+        "name": "Dragon Breath",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user lets out a mystical green breath that hinders the movement of anyone it touches.",
+        "image": "https://imgur.com/I4ndlsO.png"
+    },
+    {
+        "id": "dragon-tail",
+        "name": "Dragon Tail",
+        "type": "Dragon",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "This powerful tail strike can knock back anyone up to 100 feet away!",
+        "image": "https://imgur.com/CrbYHyU.png"
+    },
+    {
+        "id": "dual-chop",
+        "name": "Dual Chop",
+        "type": "Dragon",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon strikes the foe with two brutal blows.",
+        "image": "https://imgur.com/PkJxnL9.png"
+    },
+    {
+        "id": "dynamax-cannon",
+        "name": "Dynamax Cannon",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon shoots a heavy projectile. If the foe is under the effects of the Dynamax phenomenon all the energy will be concentrated and explode on the target.",
+        "image": "https://imgur.com/xgomGAK.png"
+    },
+    {
+        "id": "eternabeam",
+        "name": "Eternabeam",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 7,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon shoots an incredibly powerful beam towards the sky. The energy released might keep traveling through space thousands of years later.",
+        "image": "https://imgur.com/i8C0aJD.png"
+    },
+    {
+        "id": "outrage",
+        "name": "Outrage",
+        "type": "Dragon",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 5,
+            "scaling": "Strength"
+        },
+        "targets": "Random",
+        "effects": [],
+        "description": "The user awakens their primal instinct as a dragon and unleashes its uncontrollable fury destroying everything in its path. After that, the Pokémon is left disoriented and confused.",
+        "image": "https://imgur.com/pCur74m.png"
+    },
+    {
+        "id": "roar-of-time",
+        "name": "Roar of Time",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Through a terrifying roar the user bounds the forces of time on a single area. The unfortunate target will be trapped in a time warp, growing old in a matter of seconds.",
+        "image": "https://imgur.com/LjnKrM4.png"
+    },
+    {
+        "id": "spacial-rend",
+        "name": "Spacial Rend",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "With a flicker of its claws, the user defragments the space around its foe. Those who survive rarely do preserve their original shape.",
+        "image": "https://imgur.com/qzAJoVW.png"
+    },
+    {
+        "id": "twister",
+        "name": "Twister",
+        "type": "Dragon",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The Pokémon lets out a spiral current that surrounds the foes. They can't move until they free themselves from this terrible whirlwind.",
+        "image": "https://imgur.com/eH4bLhY.png"
+    },
+    {
         "id": "bite",
         "name": "Bite",
         "type": "Dark",
