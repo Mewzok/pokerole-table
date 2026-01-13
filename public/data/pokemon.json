@@ -6879,5 +6879,419 @@
             "Psychic": 0.5
         },
         "image": "https://imgur.com/2RrDjBA.png"
+    },
+    {
+        "id": "chikorita",
+        "name": "Chikorita",
+        "types": ["Grass"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 4,
+            "special": 4,
+            "insight": 4
+        },
+        "abilities": ["Overgrow"],
+        "moves": {
+            "starter": ["tackle", "growl"],
+            "beginner": ["razor-leaf", "poison-powder", "sweet-scent"],
+            "amateur": ["reflect", "synthesis", "natural-gift", "magical-leaf", "light-screen", "body-slam"],
+            "ace": ["safeguard", "aromatherapy", "solar-beam"],
+            "pro": ["heal-pulse", "grass-pledge", "grassy-terrain"],
+            "master": []
+        },
+        "rank": "starter",
+        "height": 0.9,
+        "weight": 6,
+        "weaknesses": {
+            "Flying": 2,
+            "Poison": 2,
+            "Bug": 2,
+            "Fire": 2,
+            "Ice": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Ground": 0.5,
+            "Water": 0.5,
+            "Grass": 0.5,
+            "Electric": 0.5
+        },
+        "image": "https://imgur.com/pZmjBLg.png"
+    },
+    {
+        "id": "bayleef",
+        "name": "Bayleef",
+        "types": ["Grass"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 5,
+            "special": 4,
+            "insight": 5
+        },
+        "abilities": ["Overgrow"],
+        "moves": {
+            "starter": ["tackle", "growl"],
+            "beginner": ["razor-leaf", "poison-powder", "sweet-scent"],
+            "amateur": ["reflect", "synthesis", "natural-gift", "magical-leaf", "light-screen", "body-slam"],
+            "ace": ["safeguard", "aromatherapy", "solar-beam"],
+            "pro": ["heal-pulse", "grass-pledge", "grassy-terrain"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.2,
+        "weight": 30,
+        "weaknesses": {
+            "Flying": 2,
+            "Poison": 2,
+            "Bug": 2,
+            "Fire": 2,
+            "Ice": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Ground": 0.5,
+            "Water": 0.5,
+            "Grass": 0.5,
+            "Electric": 0.5
+        },
+        "image": "https://imgur.com/eAazrxg.png"
+    },
+    {
+        "id": "meganium",
+        "name": "Meganium",
+        "types": ["Grass"],
+        "baseStats": {
+            "HP": 5,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 3,
+            "special": 2,
+            "insight": 3
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 5,
+            "vitality": 6,
+            "special": 5,
+            "insight": 6
+        },
+        "abilities": ["Overgrow"],
+        "moves": {
+            "starter": ["growl", "tackle"],
+            "beginner": ["poison-powder", "razor-leaf", "sweet-scent"],
+            "amateur": ["synthesis", "reflect", "magical-leaf", "natural-gift", "light-screen", "body-slam"],
+            "ace": ["petal-blizzard", "petal-dance", "aromatherapy", "solar-beam"],
+            "pro": ["frenzy-plant", "ancient-power", "grassy-terrain"],
+            "master": []
+        },
+        "rank": "ace",
+        "height": 1.8,
+        "weight": 200,
+        "weaknesses": {
+            "Flying": 2,
+            "Poison": 2,
+            "Bug": 2,
+            "Fire": 2,
+            "Ice": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Ground": 0.5,
+            "Water": 0.5,
+            "Grass": 0.5,
+            "Electric": 0.5
+        },
+        "image": "https://imgur.com/cHL4Whc.png"
+    },
+    {
+        "id": "cyndaquil",
+        "name": "Cyndaquil",
+        "types": ["Fire"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 1,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 3,
+            "special": 4,
+            "insight": 4
+        },
+        "abilities": ["Blaze"],
+        "moves": {
+            "starter": ["tackle", "leer"],
+            "beginner": ["smokescreen", "ember", "quick-attack"],
+            "amateur": ["flame-wheel", "defense-curl", "flame-charge", "swift", "lava-plume", "flamethrower", "rollout"],
+            "ace": ["inferno", "double-edge", "eruption", "burn-up"],
+            "pro": ["howl", "double-kick", "fire-pledge"],
+            "master": []
+        },
+        "rank": "starter",
+        "height": 0.5,
+        "weight": 8,
+        "weaknesses": {
+            "Ground": 2,
+            "Rock": 2,
+            "Water": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Bug": 0.5,
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Grass": 0.5,
+            "Ice": 0.5,
+            "Fairy": 0.5
+        },
+        "image": "https://imgur.com/EXKtAc3.png"
+    },
+    {
+        "id": "quilava",
+        "name": "Quilava",
+        "types": ["Fire"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 5,
+            "vitality": 4,
+            "special": 5,
+            "insight": 4
+        },
+        "abilities": ["Blaze"],
+        "moves": {
+            "starter": ["tackle", "leer"],
+            "beginner": ["smokescreen", "ember", "quick-attack"],
+            "amateur": ["flame-wheel", "defense-curl", "swift", "flame-charge", "lava-plume", "flamethrower", "rollout"],
+            "ace": ["inferno", "double-edge", "eruption", "burn-up"],
+            "pro": ["howl", "double-kick", "fire-pledge"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 0.9,
+        "weight": 19,
+        "weaknesses": {
+            "Ground": 2,
+            "Rock": 2,
+            "Water": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Bug": 0.5,
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Grass": 0.5,
+            "Ice": 0.5,
+            "Fairy": 0.5
+        },
+        "image": "https://imgur.com/PiVmgzG.png"
+    },
+    {
+        "id": "typhlosion",
+        "name": "Typhlosion",
+        "types": ["Fire"],
+        "baseStats": {
+            "HP": 5,
+            "strength": 2,
+            "dexterity": 3,
+            "vitality": 2,
+            "special": 3,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 6,
+            "vitality": 5,
+            "special": 6,
+            "insight": 5
+        },
+        "abilities": ["Blaze"],
+        "moves": {
+            "starter": ["leer", "tackle"],
+            "beginner": ["smokescreen","quick-attack", "ember"],
+            "amateur": ["defense-curl", "flame-wheel", "flame-charge", "swift", "flamethrower", "lava-plume", "rollout", "gyro-ball"],
+            "ace": ["inferno", "double-edge", "eruption", "burn-up"],
+            "pro": ["blast-burn", "extrasensory", "thunder-punch"],
+            "master": []
+        },
+        "rank": "ace",
+        "height": 1.7,
+        "weight": 79,
+        "weaknesses": {
+            "Ground": 2,
+            "Rock": 2,
+            "Water": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Bug": 0.5,
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Grass": 0.5,
+            "Ice": 0.5,
+            "Fairy": 0.5
+        },
+        "image": "https://imgur.com/lhtJU72.png"
+    },
+    {
+        "id": "totodile",
+        "name": "Totodile",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 2,
+            "dexterity": 1,
+            "vitality": 2,
+            "special": 1,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 3,
+            "vitality": 4,
+            "special": 3,
+            "insight": 4
+        },
+        "abilities": ["Torrent"],
+        "moves": {
+            "starter": ["scratch", "leer"],
+            "beginner": ["water-gun", "rage", "bite"],
+            "amateur": ["scary-face", "ice-fang", "flail", "crunch", "chip-away", "slash", "screech", "aqua-tail"],
+            "ace": ["thrash", "superpower", "hydro-pump"],
+            "pro": ["aqua-jet", "fake-tears", "water-pledge"],
+            "master": []
+        },
+        "rank": "starter",
+        "height": 0.6,
+        "weight": 9,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/tyfeEsh.png"
+    },
+    {
+        "id": "croconaw",
+        "name": "Croconaw",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 4,
+            "vitality": 5,
+            "special": 4,
+            "insight": 4
+        },
+        "abilities": ["Torrent"],
+        "moves": {
+            "starter": ["scratch", "leer"],
+            "beginner": ["water-gun", "rage", "bite"],
+            "amateur": ["scary-face", "ice-fang", "flail", "crunch", "chip-away", "slash", "screech", "aqua-tail"],
+            "ace": ["thrash", "superpower", "hydro-pump"],
+            "pro": ["aqua-jet", "fake-tears", "water-pledge"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.1,
+        "weight": 25,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/G7nMOr2.png"
+    },
+    {
+        "id": "feraligatr",
+        "name": "Feraligatr",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 5,
+            "strength": 3,
+            "dexterity": 2,
+            "vitality": 3,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 6,
+            "dexterity": 5,
+            "vitality": 6,
+            "special": 5,
+            "insight": 5
+        },
+        "abilities": ["Torrent"],
+        "moves": {
+            "starter": ["scratch", "leer"],
+            "beginner": ["water-gun", "rage", "bite"],
+            "amateur": ["scary-face", "ice-fang", "flail", "agility", "crunch", "chip-away", "slash", "screech", "aqua-tail"],
+            "ace": ["thrash", "superpower", "hydro-pump"],
+            "pro": ["dragon-dance", "hydro-cannon", "metal-claw"],
+            "master": []
+        },
+        "rank": "ace",
+        "height": 2.3,
+        "weight": 176,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/cuhjtKa.png"
     }
 ]

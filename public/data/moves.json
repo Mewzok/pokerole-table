@@ -11113,6 +11113,60 @@
         "image": "https://imgur.com/eH4bLhY.png"
     },
     {
+        "id": "assurance",
+        "name": "Assurance",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user retaliates against the foe. The rush of adrenaline allows it to hit harder.",
+        "image": "https://imgur.com/WwHTh2u.png"
+    },
+    {
+        "id": "baddy-bad",
+        "name": "Baddy Bad",
+        "type": "Dark",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon acts like a thug and channels its own dark aura as protection for itself and its allies.",
+        "image": "https://imgur.com/SbfbuwC.png"
+    },
+    {
+        "id": "beat-up",
+        "name": "Beat Up",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user calls other Pokémon to aid it in battle. Together they give a beating to the foe.",
+        "image": "https://imgur.com/SQSJ4VB.png"
+    },
+    {
         "id": "bite",
         "name": "Bite",
         "type": "Dark",
@@ -11129,5 +11183,1001 @@
         "effects": [],
         "description": "The user lands a vicious bite that may leave an ugly bruise.",
         "image": "https://imgur.com/QyPKNLj.png"
+    },
+    {
+        "id": "brutal-swing",
+        "name": "Brutal Swing",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The Pokémon starts attacking at full force with its claws. Anyone unfortunate enough to be in its path will end up severely wounded.",
+        "image": "https://imgur.com/YxsWPl1.png"
+    },
+    {
+        "id": "crunch",
+        "name": "Crunch",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses its fangs to viciously tear whatever it is biting.",
+        "image": "https://imgur.com/DyLtVBm.png"
+    },
+    {
+        "id": "dark-pulse",
+        "name": "Dark Pulse",
+        "type": "Dark",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Random",
+        "effects": [],
+        "description": "The Pokémon sends a wave of dark feelings that affect those who are most vulnerable, hurting the foe and leaving it unable to act.",
+        "image": "https://imgur.com/XVxxsnY.png"
+    },
+    {
+        "id": "dark-void",
+        "name": "Dark Void",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Enemies",
+        "effects": [],
+        "description": "A portal opens and transports all foes to a world of darkness. Inside they can't see or feel anything, it's like they are trapped in an eternal slumber.",
+        "image": "https://imgur.com/sXPzKuO.png"
+    },
+    {
+        "id": "foul-play",
+        "name": "Foul Play",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user feints attacks then tricks the foe who ends up hurting itself.",
+        "image": "https://imgur.com/7wap7pQ.png"
+    },
+    {
+        "id": "fling",
+        "name": "Fling",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user takes its held item and throws it at the opponent. You may get it back after the fight.",
+        "image": "https://imgur.com/x9t3k2S.png"
+    },
+    {
+        "id": "flatter",
+        "name": "Flatter",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cool + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user starts flattering and admiring its opponent. It sure makes it feel good about itself, but why?",
+        "image": "https://imgur.com/WcdiFam.png"
+    },
+    {
+        "id": "feint-attack",
+        "name": "Feint Attack",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon approaches the foe disarmingly then attacks suddenly without giving any time to react.",
+        "image": "https://imgur.com/W9WL7Hq.png"
+    },
+    {
+        "id": "false-surrender",
+        "name": "False Surrender",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Insight + Allure",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon bows in defeat, begging for forgiveness, then backstabs its gullible foe.",
+        "image": "https://imgur.com/LbpQMSQ.png"
+    },
+    {
+        "id": "fake-tears",
+        "name": "Fake Tears",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Perform",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user stops battling and feigns to be crying, disrupting the foe's mood to battle and making it lower its guard.",
+        "image": "https://imgur.com/z2XZwJ2.png"
+    },
+    {
+        "id": "embargo",
+        "name": "Embargo",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user quickly takes out the held item of a Pokémon. It also empties the bag of the trainer and forces everyone to stay away from their own properties. Evil doers master this move.",
+        "image": "https://imgur.com/wWgPAbA.png"
+    },
+    {
+        "id": "darkest-lariat",
+        "name": "Darkest Lariat",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user swings both of its arms against the target. There's no armor thick enough to stop the strike.",
+        "image": "https://imgur.com/jlCDtHn.png"
+    },
+    {
+        "id": "hone-claws",
+        "name": "Hone Claws",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon sharpens its claws to perform more precise attacks.",
+        "image": "https://imgur.com/vUshzEn.png"
+    },
+    {
+        "id": "hyperspace-fury",
+        "name": "Hyperspace Fury",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 4,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon opens portals to attack with each one of its arms bypassing all defenses and making it impossible to escape. However, the user's defense also gets neglected.",
+        "image": "https://imgur.com/uVVvEwM.png"
+    },
+    {
+        "id": "jaw-lock",
+        "name": "Jaw Lock",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user will capture its foe in a crushing jaw grip. It won't let go no matter how much you try to separate them. The only way it will release its victim is by fainting.",
+        "image": "https://imgur.com/eqIORF2.png"
+    },
+    {
+        "id": "knock-off",
+        "name": "Knock Off",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon makes a quick tackle that knocks off anything the foe was holding.",
+        "image": "https://imgur.com/TDJop2d.png"
+    },
+    {
+        "id": "memento",
+        "name": "Memento",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Will + Channel",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user unleashes all its remaining power to send a wave of hopeless thoughts to haunt the foe's mind and soul. The target will be left in grief.",
+        "image": "https://imgur.com/NkrW7JH.png"
+    },
+    {
+        "id": "nasty-plot",
+        "name": "Nasty Plot",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Alert",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The Pokémon starts plotting on how to defeat the enemy. Its evil laugh reveals the bad intentions.",
+        "image": "https://imgur.com/qg9uqAU.png"
+    },
+    {
+        "id": "night-daze",
+        "name": "Night Daze",
+        "type": "Dark",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user forms a pitch black wave that hurts the foe. This darkness may remain, obstructing the target's vision.",
+        "image": "https://imgur.com/f7o8Aq2.png"
+    },
+    {
+        "id": "night-slash",
+        "name": "Night Slash",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user quickly slashes through the target as soon as it gets the chance. The intent to end the target's life is frightening.",
+        "image": "https://imgur.com/MJ8ee0T.png"
+    },
+    {
+        "id": "snarl",
+        "name": "Snarl",
+        "type": "Dark",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Perform",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon viciously snarls showing its teeth. Its menacing look will make the foe cower in fear.",
+        "image": "https://imgur.com/a0TgLY3.png"
+    },
+    {
+        "id": "quash",
+        "name": "Quash",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user represses the foe with intimidation so it has to think twice before acting.",
+        "image": "https://imgur.com/2XkuZYA.png"
+    },
+    {
+        "id": "pursuit",
+        "name": "Pursuit",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon chases the foe to deliver a final blow before it escapes.",
+        "image": "https://imgur.com/zPx3Lkv.png"
+    },
+    {
+        "id": "punishment",
+        "name": "Punishment",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "User takes advantage of its foe's strength to use them against it.",
+        "image": "https://imgur.com/NGaHfqt.png"
+    },
+    {
+        "id": "power-trip",
+        "name": "Power Trip",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 1,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "In the heat of the battle the Pokémon gets carried away, relishing in its own power.",
+        "image": "https://imgur.com/PTUPwfp.png"
+    },
+    {
+        "id": "payback",
+        "name": "Payback",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon tackles the target with hatred and vengeance.",
+        "image": "https://imgur.com/5WCdSAf.png"
+    },
+    {
+        "id": "parting-shot",
+        "name": "Parting Shot",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user threatens the foe leaving it too scared to pursue the user or overwhelm the ally that just switched into the battlefield.",
+        "image": "https://imgur.com/j7ZiLmW.png"
+    },
+    {
+        "id": "obstruct",
+        "name": "Obstruct",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Dexterity + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "In a reckless action, the user charges against the foe to stop its momentum and block its incoming attack. Being so close allows the user to reach for weak spots.",
+        "image": "https://imgur.com/YwwoIX7.png"
+    },
+    {
+        "id": "snatch",
+        "name": "Snatch",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Clever + Stealth",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user analyzes the advantages of the foe then makes them their own.",
+        "image": "https://imgur.com/RFyrT4S.png"
+    },
+    {
+        "id": "sucker-punch",
+        "name": "Sucker Punch",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "While the foe is preparing its attack the user takes advantage and strikes.",
+        "image": "https://imgur.com/9OCjL67.png"
+    },
+    {
+        "id": "switcheroo",
+        "name": "Switcheroo",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Stealth",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user quickly switches the held items before the foe can realize what happened.",
+        "image": "https://imgur.com/ZDodvmN.png"
+    },
+    {
+        "id": "taunt",
+        "name": "Taunt",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user mocks and teases the target to make it attack in a raging fury.",
+        "image": "https://imgur.com/uGYY1OU.png"
+    },
+    {
+        "id": "thief",
+        "name": "Thief",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon strikes its foe and takes the opportunity to steal whatever the target was holding.",
+        "image": "https://imgur.com/t5egZw5.png"
+    },
+    {
+        "id": "throat-chop",
+        "name": "Throat Chop",
+        "type": "Dark",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A heinous attack to a Pokémon's throat that will leave them unable to make a sound for hours.",
+        "image": "https://imgur.com/nUKuGzA.png"
+    },
+    {
+        "id": "topsy-turvy",
+        "name": "Topsy Turvy",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user changes the nature of its target, bad things become good and good things become bad.",
+        "image": "https://imgur.com/fSUbuQV.png"
+    },
+    {
+        "id": "torment",
+        "name": "Torment",
+        "type": "Dark",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Tough + Intimidate",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The user torments and enrages the foe making it unable to keep using its strategy.",
+        "image": "https://imgur.com/FkS1MI0.png"
+    },
+    {
+        "id": "light-of-ruin",
+        "name": "Light of Ruin",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "By drawing energy from the Eternal Flower the Pokémon unleashes all of its hurt. A beautiful light surrounds the area, yet the pain inside of its heart remains.",
+        "image": "https://imgur.com/q9wzzYf.png"
+    },
+    {
+        "id": "geomancy",
+        "name": "Geomancy",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "Through a mystical connection this Pokémon absorbs the life force of the earth itself to increase its power.",
+        "image": "https://imgur.com/FAMfZuV.png"
+    },
+    {
+        "id": "flower-shield",
+        "name": "Flower Shield",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The Pokémon uses a mysterious power that causes flowers to bloom beneath every Grass Pokémon nearby. Flora in this field is more resilient and beautiful.",
+        "image": "https://imgur.com/dDTjsMK.png"
+    },
+    {
+        "id": "floral-healing",
+        "name": "Floral Healing",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The user creates a flower crown that heals and relaxes its wearer. Under the right conditions this move also creates a flower patch around its target.",
+        "image": "https://imgur.com/Fjhb3xA.png"
+    },
+    {
+        "id": "fleur-cannon",
+        "name": "Fleur Cannon",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 6,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "A light beam pierces the battlefield. It deals devastating damage but leaves newly grown flowers instead of scorched earth. The user is left feeling very tired.",
+        "image": "https://imgur.com/Hz2CUFP.png"
+    },
+    {
+        "id": "fairy-wind",
+        "name": "Fairy Wind",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon strikes with a wind covered in fairy dust. It causes itching.",
+        "image": "https://imgur.com/4I48Toe.png"
+    },
+    {
+        "id": "fairy-lock",
+        "name": "Fairy Lock",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The user moves as if locking a door. It takes a few moments before everyone realizes they are not really trapped.",
+        "image": "https://imgur.com/2lxq4Vj.png"
+    },
+    {
+        "id": "draining-kiss",
+        "name": "Draining Kiss",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user sends a kiss with a flirty intention. The foe catches the kiss but it ends up draining the target's energy.",
+        "image": "https://imgur.com/jDfa9A9.png"
+    },
+    {
+        "id": "aromatic-mist",
+        "name": "Aromatic Mist",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "The Pokémon showers an ally in a mist with a revitalizing aroma.",
+        "image": "https://imgur.com/lJwssuP.png"
+    },
+    {
+        "id": "baby-doll-eyes",
+        "name": "Baby-Doll Eyes",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "Before anyone acts in battle, the user looks at the foe with the cutest eyes.",
+        "image": "https://imgur.com/V4DxNq2.png"
+    },
+    {
+        "id": "charm",
+        "name": "Charm",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon uses a cute and harmless attitude to make the foe less wary and aggressive.",
+        "image": "https://imgur.com/r7egdtK.png"
+    },
+    {
+        "id": "crafty-shield",
+        "name": "Crafty Shield",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Allies",
+        "effects": [],
+        "description": "The Pokémon creates a magic shield to protect everyone from the bad tricks a foe might have under its sleeve. Under this shield everyone can see dishonesty and bad intentions.",
+        "image": "https://imgur.com/5eaZnV3.png"
+    },
+    {
+        "id": "dazzling-gleam",
+        "name": "Dazzling Gleam",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "The user shines like a powerful flash that hurts the eyes of everyone watching it.",
+        "image": "https://imgur.com/yLqaH6y.png"
+    },
+    {
+        "id": "decorate",
+        "name": "Decorate",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Beauty + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Ally",
+        "effects": [],
+        "description": "Using some frosting the Pokémon decorates their target to look bigger, more powerful and incredibly delicious!",
+        "image": "https://imgur.com/WLWu2pC.png"
+    },
+    {
+        "id": "disarming-voice",
+        "name": "Disarming Voice",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Perform",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Special"
+        },
+        "targets": "Enemies",
+        "effects": [],
+        "description": "With a charming and manipulative cry, the user deals emotional damage to its opponent. This move always makes the targets feel bad.",
+        "image": "https://imgur.com/JqXIxk8.png"
+    },
+    {
+        "id": "sweet-kiss",
+        "name": "Sweet Kiss",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Cute + Allure",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon moves towards the foe and plants a delicate kiss on the cheek, then leaves playfully. The foe struggles to know what it meant.",
+        "image": "https://imgur.com/JdLZb18.png"
+    },
+    {
+        "id": "strange-steam",
+        "name": "Strange Steam",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user releases an addictive sweet-smelling steam. Do not be fooled as it is toxic and has nasty side-effects.",
+        "image": "https://imgur.com/o3JuOUd.png"
+    },
+    {
+        "id": "spirit-break",
+        "name": "Spirit Break",
+        "type": "Fairy",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Insight + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 2,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Sometimes words hurt a lot more than blows. With this move the Pokémon deals both.",
+        "image": "https://imgur.com/9EcF48H.png"
+    },
+    {
+        "id": "sparkly-swirl",
+        "name": "Sparkly Swirl",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Dexterity + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The Pokémon unleashes a swirling and glittery energy that releases a pleasant aroma that soothes the body and has healing properties.",
+        "image": "https://imgur.com/rL4PpXZ.png"
+    },
+    {
+        "id": "play-rough",
+        "name": "Play Rough",
+        "type": "Fairy",
+        "category": "Physical",
+        "accuracy": {
+            "formula": "Dexterity + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Strength"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "The user and the foe start a playful wrestle. It soon escalates into something not so pretty.",
+        "image": "https://imgur.com/pSsXjX1.png"
+    },
+    {
+        "id": "natures-madness",
+        "name": "Nature's Madness",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Single",
+        "effects": [],
+        "description": "The forces of nature attack as if they had a will of their own. Water will try to drown you, plants will trap you, lightning will come out of nowhere and even your own body will fail you.",
+        "image": "https://imgur.com/A5kWR3Q.png"
+    },
+    {
+        "id": "moonlight",
+        "name": "Moonlight",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Self",
+        "effects": [],
+        "description": "The user gathers power from the light of the moon. The energy absorbed can heal most injuries.",
+        "image": "https://imgur.com/taAk9jI.png"
+    },
+    {
+        "id": "moonblast",
+        "name": "Moonblast",
+        "type": "Fairy",
+        "category": "Special",
+        "accuracy": {
+            "formula": "Special + Channel",
+            "modifier": 0
+        },
+        "power": {
+            "base": 3,
+            "scaling": "Special"
+        },
+        "targets": "Single",
+        "effects": [],
+        "description": "Summon power directly from the moon. The Pokémon blasts the foe with light.",
+        "image": "https://imgur.com/CM2wshO.png"
+    },
+    {
+        "id": "misty-terrain",
+        "name": "Misty Terrain",
+        "type": "Fairy",
+        "category": "Status",
+        "accuracy": {
+            "formula": "Insight + Nature",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "Field",
+        "effects": [],
+        "description": "The user surrounds the battlefield with a mystical mist that feels protective. Mythical Pokémon find something eerie about it.",
+        "image": "https://imgur.com/nHiipvc.png"
     }
 ]
