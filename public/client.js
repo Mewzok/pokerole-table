@@ -696,6 +696,15 @@ function renderActiveMoves(character) {
     const grid = document.getElementById("active-moves-grid");
     grid.innerHTML = "";
 
+    if(RULES?.MAX_ACTIVE_MOVES) {
+        grid.insertAdjacentHTML(
+            "beforebegin",
+            `<div class="move-limit">
+                Active Moves: ${character.moves.active.length} / ${RULES.MAX_ACTIVE_MOVES}
+                </div>`
+        );
+    }
+
     if(character.moves.active.length === 0) {
         grid.innerHTML = "<em>No active moves</em>";
         return;
@@ -774,29 +783,41 @@ function renderLearnableMoves(character, species) {
 
 function createMoveCard(move, state) {
     const card = document.createElement("div");
+    const detailsId = `move-details-${move.id}-${Math.random()}`;
     card.classList.add("move-card");
 
     card.innerHTML = `
-        <div class="move-header">
+        <div class="move-header" onclick="toggleMoveDetails('${detailsId}')">
             <span class="move-name">${move.name}</span>
             <span class="move-type ${move.type.toLowerCase()}">${move.type}</span>
         </div>
 
-        <div class="move-meta">
-            <span>${move.category}</span>
-            <span>Power: ${move.power.base} + ${move.power.scaling}</span>
-            <span>Accuracy: ${move.accuracy.formula}</span>
-        </div>
+        <div class="move-details" id="${detailsId}" hidden>
+            <div class="move-meta">
+                <span>${move.category}</span>
+                <span>Power: ${move.power.base} + ${move.power.scaling}</span>
+                <span>Accuracy: ${move.accuracy.formula}</span>
+            </div>
 
-        <p class="move-desc">${move.description}</p>
+            <p class="move-desc">${move.description}</p>
 
-        <div class="move-actions">
-            ${renderMoveActionButton(state, move)}
+            <div class="move-actions">
+                ${renderMoveActionButton(state, move)}
+            </div>
         </div>
     `;
 
     return card;
 }
+
+// move toggle helper
+window.toggleMoveDetails = function(id) {
+    const el = document.getElementById(id);
+    if(!el) {
+        return;
+    }
+    el.hidden = !el.hidden;
+};
 
 function renderMoveActionButton(state, move) {
     if(state.action === "activate") {

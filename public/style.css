@@ -299,3 +299,43 @@ button:hover {
 .tabView.active {
     display: block;
 }
+
+/* --- Move Cards --- */
+.move-card {
+    border: 1px solid #444;
+    padding: 6px;
+    margin-bottom: 6px;
+    background: #111;
+}
+
+.mover-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.move-type {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.move-details {
+    margin-top: 6px;
+    font-size: 0.9em;
+}
+
+.move-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 0.85em;
+    opacity: 0.85;
+}
+
+/* --- Active Move Limit --- */
+.move-limit {
+    font-size: 0.85em;
+    margin-bottom: 4px;
+    opacity: 0.8;
+}

@@ -216,7 +216,7 @@
         },
         "targets": "Single",
         "effects": [],
-        "description": "A basic attack that consists on charging at an enemy.",
+        "description": "A basic attack that consists of charging at an enemy.",
         "image": "https://imgur.com/9rytyCJ.png"
     },
     {

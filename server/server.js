@@ -19,6 +19,10 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
+const RULES = {
+    MAX_ACTIVE_MOVES: 4 // set to null for unlimited
+};
+
 let lastSeen = new Map();
 let players = new Map();
 // key: socket.id
@@ -304,15 +308,18 @@ io.on("connection", socket => {
             return;
         }
 
-        if(!char.moves.learned.includes(moveId)) {
+        if(!char.moves?.learned.includes(moveId)) {
             return;
         }
         if(char.moves.active.includes(moveId)) {
             return;
         }
 
-        char.moves.active.push(moveId);
+        if(RULES.MAX_ACTIVE_MOVES !== null && char.moves.active.length >= RULES.MAX_ACTIVE_MOVES) {
+            return;
+        }
 
+        char.moves.active.push(moveId);
         broadcastCharacterList();
     });
 
