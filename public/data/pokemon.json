@@ -3991,6 +3991,17 @@
         "rank": "amateur",
         "height": 1.7,
         "weight": 120,
+        "weaknesses": {
+            "Fighting": 2,
+            "Rock": 2,
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Water": 0.5,
+            "Ice": 0.25
+        },
         "image": "https://imgur.com/XdluXGX.png"
     },
     {
@@ -15312,5 +15323,1532 @@
             "Fairy": 0.5
         },
         "image": "https://imgur.com/VdUsKDg.png"
+    },
+    {
+        "id": "lunatone",
+        "name": "Lunatone",
+        "types": ["Rock", "Psychic"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 3,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 5,
+            "vitality": 4,
+            "special": 6,
+            "insight": 5
+        },
+        "abilities": ["Levitate"],
+        "moves": {
+            "starter": ["harden", "tackle", "moonblast"],
+            "beginner": ["confusion", "hypnosis", "rock-throw"],
+            "amateur": ["power-gem", "rock-polish", "psyshock", "embargo", "psywave", "cosmic-power", "rock-slide", "heal-block", "psychic"],
+            "ace": ["stone-edge", "explosion", "future-sight", "magic-room"],
+            "pro": ["trick-room", "magic-coat", "skill-swap"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1,
+        "weight": 168,
+        "weaknesses": {
+            "Ground": 2,
+            "Bug": 2,
+            "Ghost": 2,
+            "Steel": 2,
+            "Water": 2,
+            "Grass": 2,
+            "Dark": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Normal": 0.5,
+            "Flying": 0.5,
+            "Poison": 0.5,
+            "Fire": 0.5,
+            "Psychic": 0.5
+        },
+        "image": "https://imgur.com/mTGuWDt.png"
+    },
+    {
+        "id": "solrock",
+        "name": "Solrock",
+        "types": ["Rock", "Psychic"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 3,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 6,
+            "dexterity": 5,
+            "vitality": 5,
+            "special": 4,
+            "insight": 4
+        },
+        "abilities": ["Levitate"],
+        "moves": {
+            "starter": ["tackle", "harden", "solar-beam"],
+            "beginner": ["fire-spin", "confusion", "rock-throw"],
+            "amateur": ["rock-polish", "psywave", "embargo", "rock-slide", "cosmic-power", "psychic", "heal-block"],
+            "ace": ["stone-edge", "flare-blitz", "explosion", "wonder-room"],
+            "pro": ["magic-coat", "sunny-day", "skill-swap"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.2,
+        "weight": 154,
+        "weaknesses": {
+            "Ground": 2,
+            "Bug": 2,
+            "Ghost": 2,
+            "Steel": 2,
+            "Water": 2,
+            "Grass": 2,
+            "Dark": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Normal": 0.5,
+            "Flying": 0.5,
+            "Poison": 0.5,
+            "Fire": 0.5,
+            "Psychic": 0.5
+        },
+        "image": "https://imgur.com/ca5ch8W.png"
+    },
+    {
+        "id": "barboach",
+        "name": "Barboach",
+        "types": ["Water", "Ground"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 1,
+            "special": 2,
+            "insight": 1
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 3,
+            "special": 4,
+            "insight": 3
+        },
+        "abilities": ["Oblivious", "Anticipation"],
+        "moves": {
+            "starter": ["mud-slap"],
+            "beginner": ["mud-sport", "water-sport", "water-gun"],
+            "amateur": ["mud-bomb", "amnesia", "water-pulse", "magnitude", "rest", "snore", "aqua-tail"],
+            "ace": ["earthquake", "muddy-water", "future-sight", "fissure"],
+            "pro": ["dive", "flail", "mud-shot"],
+            "master": []
+        },
+        "rank": "starter",
+        "height": 0.4,
+        "weight": 2,
+        "weaknesses": {
+            "Grass": 4
+        },
+        "immunities": {
+            "Electric": 0
+        },
+        "resistances": {
+            "Poison": 0.5,
+            "Rock": 0.5,
+            "Steel": 0.5,
+            "Fire": 0.5
+        },
+        "image": "https://imgur.com/SuL4ZAv.png"
+    },
+    {
+        "id": "whiscash",
+        "name": "Whiscash",
+        "types": ["Water", "Ground"],
+        "baseStats": {
+            "HP": 5,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 4,
+            "vitality": 5,
+            "special": 5,
+            "insight": 5
+        },
+        "abilities": ["Oblivious", "Anticipation"],
+        "moves": {
+            "starter": ["mud-slap", "tickle"],
+            "beginner": ["mud-sport", "water-sport", "water-gun"],
+            "amateur": ["belch", "mud-bomb", "amnesia", "water-pulse", "magnitude", "rest", "snore", "aqua-tail"],
+            "ace": ["thrash", "zen-headbutt", "earthquake", "muddy-water", "future-sight", "fissure"],
+            "pro": ["dragon-dance", "bounce", "spark"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 0.9,
+        "weight": 46,
+        "weaknesses": {
+            "Grass": 4
+        },
+        "immunities": {
+            "Electric": 0
+        },
+        "resistances": {
+            "Poison": 0.5,
+            "Rock": 0.5,
+            "Steel": 0.5,
+            "Fire": 0.5
+        },
+        "image": "https://imgur.com/ZMZWKlF.png"
+    },
+    {
+        "id": "corphish",
+        "name": "Corphish",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 2,
+            "dexterity": 1,
+            "vitality": 2,
+            "special": 2,
+            "insight": 1
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 3,
+            "vitality": 4,
+            "special": 4,
+            "insight": 3
+        },
+        "abilities": ["Hyper Cutter", "Shell Armor"],
+        "moves": {
+            "starter": ["bubble", "leer"],
+            "beginner": ["vice-grip", "harden"],
+            "amateur": ["bubble-beam", "protect", "double-hit", "knock-off", "taunt", "night-slash", "crab-hammer"],
+            "ace": ["razor-shell", "swords-dance", "crunch", "guillotine"],
+            "pro": ["metal-claw", "endeavor", "chip-away"],
+            "master": []
+        },
+        "rank": "beginner",
+        "height": 0.6,
+        "weight": 11,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/MUtFWoh.png"
+    },
+    {
+        "id": "crawdaunt",
+        "name": "Crawdaunt",
+        "types": ["Water", "Dark"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 3,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 7,
+            "dexterity": 4,
+            "vitality": 5,
+            "special": 5,
+            "insight": 4
+        },
+        "abilities": ["Hyper Cutter", "Shell Armor"],
+        "moves": {
+            "starter": ["bubble", "leer"],
+            "beginner": ["vice-grip", "harden"],
+            "amateur": ["bubble-beam", "protect", "double-hit", "knock-off", "taunt", "night-slash", "crab-hammer"],
+            "ace": ["razor-shell", "swords-dance", "crunch", "guillotine"],
+            "pro": ["superpower", "dragon-dance", "mud=sport"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.1,
+        "weight": 33,
+        "weaknesses": {
+            "Fighting": 2,
+            "Bug": 2,
+            "Grass": 2,
+            "Electric": 2,
+            "Fairy": 2
+        },
+        "immunities": {
+            "Psychic": 0
+        },
+        "resistances": {
+            "Ghost": 0.5,
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5,
+            "Dark": 0.5
+        },
+        "image": "https://imgur.com/TBIvSYq.png"
+    },
+    {
+        "id": "baltoy",
+        "name": "Baltoy",
+        "types": ["Psychic", "Ground"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 1,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 1,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 3,
+            "dexterity": 4,
+            "vitality": 4,
+            "special": 3,
+            "insight": 5
+        },
+        "abilities": ["Levitate"],
+        "moves": {
+            "starter": ["confusion", "harden"],
+            "beginner": ["rapid-spin", "mud-slap", "rock-tomb"],
+            "amateur": ["heal-block", "psybeam", "power-trick", "ancient-power", "self-destruct", "guard-split", "cosmic-power", "power-split"],
+            "ace": ["extrasensory", "earth-power", "sandstorm", "explosion"],
+            "pro": ["gravity", "signal-beam", "trick"],
+            "master": []
+        },
+        "rank": "beginner",
+        "height": 0.5,
+        "weight": 21,
+        "weaknesses": {
+            "Bug": 2,
+            "Ghost": 2,
+            "Water": 2,
+            "Grass": 2,
+            "Ice": 2,
+            "Dark": 2
+        },
+        "immunities": {
+            "Electric": 0
+        },
+        "resistances": {
+            "Fighting": 0.5,
+            "Poison": 0.5,
+            "Rock": 0.5,
+            "Psychic": 0.5
+        },
+        "image": "https://imgur.com/PD5U5cN.png"
+    },
+    {
+        "id": "claydol",
+        "name": "Claydol",
+        "types": ["Psychic", "Ground"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 3,
+            "special": 2,
+            "insight": 3
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 5,
+            "vitality": 6,
+            "special": 5,
+            "insight": 6
+        },
+        "abilities": ["Levitate"],
+        "moves": {
+            "starter": ["confusion", "harden"],
+            "beginner": ["rapid-spin", "teleport", "mud-slap", "rock-tomb"],
+            "amateur": ["heal-block", "psybeam", "power-trick", "ancient-power", "self-destruct", "extrasensory", "cosmic-power", "guard-split", "power-split"],
+            "ace": ["hyper-beam", "earth-power", "sandstorm", "imprison", "explosion"],
+            "pro": ["telekinesis", "stealth-rock", "wonder-room"],
+            "master": []
+        },
+        "rank": "ace",
+        "height": 1.5,
+        "weight": 108,
+        "weaknesses": {
+            "Bug": 2,
+            "Ghost": 2,
+            "Water": 2,
+            "Grass": 2,
+            "Ice": 2,
+            "Dark": 2
+        },
+        "immunities": {
+            "Electric": 0
+        },
+        "resistances": {
+            "Fighting": 0.5,
+            "Poison": 0.5,
+            "Rock": 0.5,
+            "Psychic": 0.5
+        },
+        "image": "https://imgur.com/uC4SAIm.png"
+    },
+    {
+        "id": "lileep",
+        "name": "Lileep",
+        "types": ["Rock", "Grass"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 1,
+            "dexterity": 1,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 3,
+            "dexterity": 3,
+            "vitality": 5,
+            "special": 4,
+            "insight": 5
+        },
+        "abilities": ["Suction Cups"],
+        "moves": {
+            "starter": ["astonish", "constrict"],
+            "beginner": ["acid"],
+            "amateur": ["ingrain", "brine", "confuse-ray", "giga-drain", "amnesia", "gastro-acid", "ancient-power", "energy-ball"],
+            "ace": ["spit-up", "stockpile", "swallow", "wring-out"],
+            "pro": ["earth-power", "stealth-rock", "tickle"],
+            "master": []
+        },
+        "rank": "beginner",
+        "height": 1,
+        "weight": 23,
+        "weaknesses": {
+            "Fighting": 2,
+            "Bug": 2,
+            "Steel": 2,
+            "Ice": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Normal": 0.5,
+            "Electric": 0.5
+        },
+        "image": "https://imgur.com/iTdCMdS.png"
+    },
+    {
+        "id": "cradily",
+        "name": "Cradily",
+        "types": ["Rock", "Grass"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 1,
+            "vitality": 3,
+            "special": 2,
+            "insight": 3
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 3,
+            "vitality": 6,
+            "special": 5,
+            "insight": 6
+        },
+        "abilities": ["Suction Cups"],
+        "moves": {
+            "starter": ["constrict", "astonish"],
+            "beginner": ["acid"],
+            "amateur": ["ingrain", "spit-up", "stockpile", "swallow", "wring-out", "brine", "confuse-ray", "giga-drain"],
+            "ace": ["amnesia", "ancient-power", "gastro-acid", "energy-ball"],
+            "pro": ["worry-seed", "stealth-rock", "seed-bomb"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.5,
+        "weight": 60,
+        "weaknesses": {
+            "Fighting": 2,
+            "Bug": 2,
+            "Steel": 2,
+            "Ice": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Normal": 0.5,
+            "Electric": 0.5
+        },
+        "image": "https://imgur.com/SEmDMCC.png"
+    },
+    {
+        "id": "anorith",
+        "name": "Anorith",
+        "types": ["Rock", "Bug"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 3,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 1,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 6,
+            "dexterity": 5,
+            "vitality": 4,
+            "special": 3,
+            "insight": 4
+        },
+        "abilities": ["Battle Armor"],
+        "moves": {
+            "starter": ["harden", "scratch"],
+            "beginner": ["mud-sport"],
+            "amateur": ["water-gun", "smack-down", "metal-claw", "protect", "ancient-power", "fury-cutter", "bug-bite", "slash"],
+            "ace": ["brine", "rock-blast", "crush-claw", "x-scissor"],
+            "pro": ["knock-off", "rapid-spin", "aqua-jet"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 0.7,
+        "weight": 12,
+        "weaknesses": {
+            "Rock": 2,
+            "Steel": 2,
+            "Water": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Normal": 0.5,
+            "Poison": 0.5
+        },
+        "image": "https://imgur.com/2fQHIr3.png"
+    },
+    {
+        "id": "armaldo",
+        "name": "Armaldo",
+        "types": ["Rock", "Bug"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 3,
+            "dexterity": 2,
+            "vitality": 3,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 7,
+            "dexterity": 4,
+            "vitality": 6,
+            "special": 5,
+            "insight": 5
+        },
+        "abilities": ["Battle Armor"],
+        "moves": {
+            "starter": ["scratch", "harden"],
+            "beginner": ["mud-sport"],
+            "amateur": ["metal-claw", "water-gun", "ancient-power", "protect", "slash", "fury-cutter"],
+            "ace": ["crush-claw", "smack-down", "brine", "rock-blast", "x-scissor"],
+            "pro": ["cross-poison", "aqua-tail", "iron-defense"],
+            "master": []
+        },
+        "rank": "ace",
+        "height": 1.5,
+        "weight": 68,
+        "weaknesses": {
+            "Rock": 2,
+            "Steel": 2,
+            "Water": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Normal": 0.5,
+            "Poison": 0.5
+        },
+        "image": "https://imgur.com/Wzn3URa.png"
+    },
+    {
+        "id": "feebas",
+        "name": "Feebas",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 1,
+            "dexterity": 2,
+            "vitality": 1,
+            "special": 1,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 2,
+            "dexterity": 5,
+            "vitality": 3,
+            "special": 2,
+            "insight": 4
+        },
+        "abilities": ["Swift Swim"],
+        "moves": {
+            "starter": ["splash"],
+            "beginner": [],
+            "amateur": ["tackle", "flail"],
+            "ace": ["brine"],
+            "pro": ["mud-sport", "dive"],
+            "master": []
+        },
+        "rank": "starter",
+        "height": 0.6,
+        "weight": 7,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/8oH0sEF.png"
+    },
+    {
+        "id": "milotic",
+        "name": "Milotic",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 7,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 3,
+            "insight": 3
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 5,
+            "vitality": 5,
+            "special": 6,
+            "insight": 6
+        },
+        "abilities": ["Competitive", "Marvel Scale"],
+        "moves": {
+            "starter": ["water-gun", "wrap"],
+            "beginner": ["water-sport", "refresh"],
+            "amateur": ["disarming-voice", "twister", "water-pulse", "aqua-ring", "captivate", "dragon-tail", "attract"],
+            "ace": ["safeguard", "coil", "hydro-pump", "rain-dance"],
+            "pro": ["dragon-pulse", "hypnosis", "magic-coat"],
+            "master": []
+        },
+        "rank": "ace",
+        "height": 6.2,
+        "weight": 162,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/qrUy0Hc.png"
+    },
+    {
+        "id": "castform",
+        "name": "Castform",
+        "types": ["Normal"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 5,
+            "vitality": 5,
+            "special": 5,
+            "insight": 5
+        },
+        "abilities": ["Forecast"],
+        "moves": {
+            "starter": ["tackle"],
+            "beginner": ["ember", "powder-snow", "water-gun"],
+            "amateur": ["headbutt", "hail", "rain-dance", "sunny-day", "weather-ball"],
+            "ace": ["blizzard", "fire-blast", "hydro-pump", "hurricane"],
+            "pro": ["last-resort", "future-sight", "reflect-type"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 0.3,
+        "weight": 1,
+        "weaknesses": {
+            "Fighting": 2
+        },
+        "immunities": {
+            "Ghost": 0
+        },
+        "resistances": {},
+        "image": "https://imgur.com/beaR7hf.png"
+    },
+    {
+        "id": "kecleon",
+        "name": "Kecleon",
+        "types": ["Normal"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 1,
+            "vitality": 2,
+            "special": 2,
+            "insight": 3
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 3,
+            "vitality": 5,
+            "special": 4,
+            "insight": 7
+        },
+        "abilities": ["Color Change"],
+        "moves": {
+            "starter": ["tail-whip", "astonish", "thief"],
+            "beginner": ["lick", "scratch", "bind", "feint"],
+            "amateur": ["shadow-sneak", "fury-swipes", "feint-attack", "psybeam", "ancient-power", "screech", "camouflage"],
+            "ace": ["substitute", "shadow-claw", "synchronoise", "sucker-punch"],
+            "pro": ["snatch", "fake-out", "trick"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1,
+        "weight": 22,
+        "weaknesses": {
+            "Fighting": 2
+        },
+        "immunities": {
+            "Ghost": 0
+        },
+        "resistances": {},
+        "image": "https://imgur.com/J8x3iYF.png"
+    },
+    {
+        "id": "shuppet",
+        "name": "Shuppet",
+        "types": ["Ghost"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 1,
+            "special": 2,
+            "insight": 1
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 4,
+            "vitality": 3,
+            "special": 4,
+            "insight": 3
+        },
+        "abilities": ["Frisk", "Insomnia"],
+        "moves": {
+            "starter": ["knock-off"],
+            "beginner": ["screech", "night-shade", "spite"],
+            "amateur": ["will-o-wisp", "shadow-sneak", "curse", "feint-attack", "hex", "shadow-ball", "snatch", "embargo"],
+            "ace": ["sucker-punch", "grudge", "trick", "phantom-force"],
+            "pro": ["icy-wind", "role-play", "destiny-bond"],
+            "master": []
+        },
+        "rank": "beginner",
+        "height": 0.6,
+        "weight": 2,
+        "weaknesses": {
+            "Ghost": 2,
+            "Dark": 2
+        },
+        "immunities": {
+            "Normal": 0,
+            "Fighting": 0
+        },
+        "resistances": {
+            "Poison": 0.5,
+            "Bug": 0.5
+        },
+        "image": "https://imgur.com/B0mALVi.png"
+    },
+    {
+        "id": "banette",
+        "name": "Banette",
+        "types": ["Ghost"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 3,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 6,
+            "dexterity": 4,
+            "vitality": 4,
+            "special": 5,
+            "insight": 5
+        },
+        "abilities": ["Frisk", "Insomnia"],
+        "moves": {
+            "starter": ["knock-off"],
+            "beginner": ["spite", "night-shade", "screech"],
+            "amateur": ["curse", "will-o-wisp", "shadow-sneak", "curse", "feint-attack", "hex", "shadow-ball", "snatch", "embargo"],
+            "ace": ["sucker-punch", "grudge", "trick", "phantom-force"],
+            "pro": ["role-play", "destiny-bond", "icy-wind"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.1,
+        "weight": 12,
+        "weaknesses": {
+            "Ghost": 2,
+            "Dark": 2
+        },
+        "immunities": {
+            "Normal": 0,
+            "Fighting": 0
+        },
+        "resistances": {
+            "Poison": 0.5,
+            "Bug": 0.5
+        },
+        "image": "https://imgur.com/B0vhCXu.png"
+    },
+    {
+        "id": "duskull",
+        "name": "Duskull",
+        "types": ["Ghost"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 1,
+            "dexterity": 1,
+            "vitality": 2,
+            "special": 1,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 3,
+            "dexterity": 3,
+            "vitality": 5,
+            "special": 3,
+            "insight": 5
+        },
+        "abilities": ["Levitate"],
+        "moves": {
+            "starter": ["leer", "night-shade"],
+            "beginner": ["disable", "foresight"],
+            "amateur": ["astonish", "confuse-ray", "shadow-sneak", "pursuit", "curse", "will-o-wisp", "hex"],
+            "ace": ["mean-look", "shadow-ball", "payback", "future-sight"],
+            "pro": ["icy-wind", "spite", "wonder-room"],
+            "master": []
+        },
+        "rank": "beginner",
+        "height": 0.8,
+        "weight": 15,
+        "weaknesses": {
+            "Ghost": 2,
+            "Dark": 2
+        },
+        "immunities": {
+            "Normal": 0,
+            "Fighting": 0
+        },
+        "resistances": {
+            "Poison": 0.5,
+            "Bug": 0.5
+        },
+        "image": "https://imgur.com/sh8NYr5.png"
+    },
+    {
+        "id": "dusclops",
+        "name": "Dusclops",
+        "types": ["Ghost"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 1,
+            "vitality": 3,
+            "special": 2,
+            "insight": 3
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 3,
+            "vitality": 7,
+            "special": 4,
+            "insight": 7
+        },
+        "abilities": ["Pressure"],
+        "moves": {
+            "starter": ["night-shade", "leer"],
+            "beginner": ["bind", "disable", "foresight"],
+            "amateur": ["fire-punch", "ice-punch", "astonish", "thunder-punch", "shadow-sneak", "confuse-ray", "curse", "pursuit", "shadow-punch", "will-o-wisp", "hex"],
+            "ace": ["gravity", "shadow-ball", "mean-look", "payback", "future-sight"],
+            "pro": ["dark-pulse", "memento", "pain-split"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.6,
+        "weight": 30,
+        "weaknesses": {
+            "Ghost": 2,
+            "Dark": 2
+        },
+        "immunities": {
+            "Normal": 0,
+            "Fighting": 0
+        },
+        "resistances": {
+            "Poison": 0.5,
+            "Bug": 0.5
+        },
+        "image": "https://imgur.com/PJRe158.png"
+    },
+    {
+        "id": "tropius",
+        "name": "Tropius",
+        "types": ["Grass", "Flying"],
+        "baseStats": {
+            "HP": 5,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 5,
+            "special": 5,
+            "insight": 5
+        },
+        "abilities": ["Chlorophyll", "Solar Power"],
+        "moves": {
+            "starter": ["bestow", "gust", "leer"],
+            "beginner": ["natural-gift", "growth"],
+            "amateur": ["razor-leaf", "stomp", "sweet-scent", "whirlwind", "magical-leaf", "body-slam", "synthesis"],
+            "ace": ["leaf-tornado", "air-slash", "solar-beam", "leaf-storm"],
+            "pro": ["tailwind", "twister", "outrage"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 2,
+        "weight": 200,
+        "weaknesses": {
+            "Flying": 2,
+            "Poison": 2,
+            "Rock": 2,
+            "Fire": 2,
+            "Ice": 4
+        },
+        "immunities": {
+            "Ground": 0
+        },
+        "resistances": {
+            "Fighting": 0.5,
+            "Water": 0.5,
+            "Grass": 0.25
+        },
+        "image": "https://imgur.com/9wCG9gC.png"
+    },
+    {
+        "id": "chimecho",
+        "name": "Chimecho",
+        "types": ["Psychic"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 3,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 5,
+            "special": 6,
+            "insight": 5
+        },
+        "abilities": ["Levitate"],
+        "moves": {
+            "starter": ["wrap"],
+            "beginner": ["astonish", "growl"],
+            "amateur": ["uproar", "confusion", "yawn", "take-down", "safeguard", "psywave", "healing-wish", "heal-bell"],
+            "ace": ["double-edge", "extrasensory", "heal-pulse", "synchronoise"],
+            "pro": ["recover", "cosmic-power", "stored-power"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 0.6,
+        "weight": 1,
+        "weaknesses": {
+            "Bug": 2,
+            "Ghost": 2,
+            "Dark": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Fighting": 0.5,
+            "Psychic": 0.5
+        },
+        "image": "https://imgur.com/Dnhk67V.png"
+    },
+    {
+        "id": "absol",
+        "name": "Absol",
+        "types": ["Dark"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 3,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 7,
+            "dexterity": 5,
+            "vitality": 4,
+            "special": 5,
+            "insight": 4
+        },
+        "abilities": ["Pressure", "Super Luck"],
+        "moves": {
+            "starter": ["detect", "taunt", "scratch"],
+            "beginner": ["quick-attack", "leer", "razor-wind"],
+            "amateur": ["me-first", "feint", "pursuit", "bite", "double-team", "slash", "swords-dance", "future-sight"],
+            "ace": ["night-slash", "psycho-cut", "sucker-punch", "perish-song"],
+            "pro": ["hex", "play-rough", "spite"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.2,
+        "weight": 47,
+        "weaknesses": {
+            "Fighting": 2,
+            "Bug": 2,
+            "Fairy": 2
+        },
+        "immunities": {
+            "Psychic": 0
+        },
+        "resistances": {
+            "Ghost": 0.5,
+            "Dark": 0.5
+        },
+        "image": "https://imgur.com/CBRejyH.png"
+    },
+    {
+        "id": "wynaut",
+        "name": "Wynaut",
+        "types": ["Psychic"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 1,
+            "dexterity": 1,
+            "vitality": 2,
+            "special": 1,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 3,
+            "dexterity": 3,
+            "vitality": 4,
+            "special": 3,
+            "insight": 4
+        },
+        "abilities": ["Shadow Tag"],
+        "moves": {
+            "starter": ["charm", "encore", "splash"],
+            "beginner": [],
+            "amateur": ["counter", "destiny-bond", "mirror-coat", "safeguard"],
+            "ace": [],
+            "pro": [],
+            "master": []
+        },
+        "rank": "starter",
+        "height": 0.6,
+        "weight": 14,
+        "weaknesses": {
+            "Bug": 2,
+            "Ghost": 2,
+            "Dark": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Fighting": 0.5,
+            "Psychic": 0.5
+        },
+        "image": "https://imgur.com/J36FN1K.png"
+    },
+    {
+        "id": "snorunt",
+        "name": "Snorunt",
+        "types": ["Ice"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 4,
+            "special": 4,
+            "insight": 4
+        },
+        "abilities": ["Icy Body", "Inner Focus"],
+        "moves": {
+            "starter": ["leer", "powder-snow"],
+            "beginner": ["double-team", "bite"],
+            "amateur": ["icy-wind", "headbutt", "protect", "ice-fang", "frost-breath"],
+            "ace": ["crunch", "ice-shard", "hail", "blizzard"],
+            "pro": ["weather-ball", "water-pulse", "fake-tears"],
+            "master": []
+        },
+        "rank": "beginner",
+        "height": 0.7,
+        "weight": 17,
+        "weaknesses": {
+            "Fighting": 2,
+            "Rock": 2,
+            "Steel": 2,
+            "Fire": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/jU43WPz.png"
+    },
+    {
+        "id": "glalie",
+        "name": "Glalie",
+        "types": ["Ice"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 5,
+            "vitality": 5,
+            "special": 5,
+            "insight": 5
+        },
+        "abilities": ["Icy Body", "Inner Focus"],
+        "moves": {
+            "starter": ["leer", "powder-snow"],
+            "beginner": ["bite", "double-team"],
+            "amateur": ["ice-shard", "icy-wind", "headbutt", "protect", "ice-fang", "ice-beam","frost-breath"],
+            "ace": ["hail", "crunch", "blizzard", "sheer-cold"],
+            "pro": ["weather-ball", "rollout", "iron-head"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.5,
+        "weight": 256,
+        "weaknesses": {
+            "Fighting": 2,
+            "Rock": 2,
+            "Steel": 2,
+            "Fire": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/BdKkv4G.png"
+    },
+    {
+        "id": "spheal",
+        "name": "Spheal",
+        "types": ["Ice", "Water"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 1,
+            "dexterity": 1,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 3,
+            "dexterity": 3,
+            "vitality": 4,
+            "special": 4,
+            "insight": 4
+        },
+        "abilities": ["Icy Body", "Thick Fat"],
+        "moves": {
+            "starter": ["defense-curl", "growl", "powder-snow"],
+            "beginner": ["water-gun", "encore"],
+            "amateur": ["ice-ball", "body-slam", "brine", "aurora-beam", "hail"],
+            "ace": ["rest", "snore", "blizzard", "sheer-cold"],
+            "pro": ["dive", "rollout", "endure"],
+            "master": []
+        },
+        "rank": "starter",
+        "height": 0.8,
+        "weight": 39,
+        "weaknesses": {
+            "Fighting": 2,
+            "Rock": 2,
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Water": 0.5,
+            "Ice": 0.25
+        },
+        "image": "https://imgur.com/HM8gLKd.png"
+    },
+    {
+        "id": "sealeo",
+        "name": "Sealeo",
+        "types": ["Ice", "Water"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 5,
+            "special": 5,
+            "insight": 5
+        },
+        "abilities": ["Icy Body", "Thick Fat"],
+        "moves": {
+            "starter": ["defense-curl", "growl", "powder-snow"],
+            "beginner": ["water-gun", "encore"],
+            "amateur": ["ice-ball", "body-slam", "brine", "aurora-beam", "hail", "swagger"],
+            "ace": ["rest", "snore", "blizzard", "sheer-cold"],
+            "pro": ["water-pulse", "aqua-ring", "super-fang"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.1,
+        "weight": 87,
+        "weaknesses": {
+            "Fighting": 2,
+            "Rock": 2,
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Water": 0.5,
+            "Ice": 0.25
+        },
+        "image": "https://imgur.com/cr1LMEd.png"
+    },
+    {
+        "id": "walrein",
+        "name": "Walrein",
+        "types": ["Ice", "Water"],
+        "baseStats": {
+            "HP": 6,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 3,
+            "special": 3,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 4,
+            "vitality": 6,
+            "special": 6,
+            "insight": 5
+        },
+        "abilities": ["Icy Body", "Thick Fat"],
+        "moves": {
+            "starter": ["growl", "powder-snow"],
+            "beginner": ["water-gun", "encore"],
+            "amateur": ["crunch", "ice-ball", "body-slam", "brine", "aurora-beam", "hail", "swagger", "ice-fang"],
+            "ace": ["snore", "sheer-cold", "blizzard", "rest"],
+            "pro": ["belly-drum", "fissure", "aqua-tail"],
+            "master": []
+        },
+        "rank": "ace",
+        "height": 1.4,
+        "weight": 300,
+        "weaknesses": {
+            "Fighting": 2,
+            "Rock": 2,
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Water": 0.5,
+            "Ice": 0.25
+        },
+        "image": "https://imgur.com/uVbuiDg.png"
+    },
+    {
+        "id": "clamperl",
+        "name": "Clamperl",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 3,
+            "strength": 2,
+            "dexterity": 1,
+            "vitality": 2,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 3,
+            "vitality": 5,
+            "special": 5,
+            "insight": 4
+        },
+        "abilities": ["Shell Armor"],
+        "moves": {
+            "starter": ["clamp"],
+            "beginner": ["water-gun"],
+            "amateur": ["iron-defense", "whirlpool"],
+            "ace": ["shell-smash"],
+            "pro": ["refresh", "endure", "mud-sport"],
+            "master": []
+        },
+        "rank": "beginner",
+        "height": 0.4,
+        "weight": 52,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/xYq3Wzu.png"
+    },
+    {
+        "id": "huntail",
+        "name": "Huntail",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 3,
+            "dexterity": 2,
+            "vitality": 3,
+            "special": 3,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 6,
+            "dexterity": 4,
+            "vitality": 6,
+            "special": 6,
+            "insight": 5
+        },
+        "abilities": ["Swift Swim"],
+        "moves": {
+            "starter": ["whirlpool", "bite"],
+            "beginner": ["screech", "feint-attack"],
+            "amateur": ["water-pulse", "scary-face", "ice-fang", "brine", "baton-pass", "crunch", "dive"],
+            "ace": ["sucker-punch", "aqua-tail", "coil", "hydro-pump"],
+            "pro": ["muddy-water", "bind", "super-fang"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.8,
+        "weight": 27,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/4Pt3XIy.png"
+    },
+    {
+        "id": "gorebyss",
+        "name": "Gorebyss",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 3,
+            "special": 3,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 4,
+            "vitality": 6,
+            "special": 6,
+            "insight": 5
+        },
+        "abilities": ["Swift Swim"],
+        "moves": {
+            "starter": ["whirlpool", "water-sport"],
+            "beginner": ["confusion", "agility"],
+            "amateur": ["draining-kiss", "water-pulse", "amnesia", "aqua-ring", "captivate", "baton-pass", "dive"],
+            "ace": ["psychic", "aqua-tail", "coil", "hydro-pump"],
+            "pro": ["confuse-ray", "bind", "muddy-water"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1.8,
+        "weight": 22,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/CCPfBa1.png"
+    },
+    {
+        "id": "relicanth",
+        "name": "Relicanth",
+        "types": ["Water", "Rock"],
+        "baseStats": {
+            "HP": 5,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 3,
+            "special": 2,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 5,
+            "dexterity": 4,
+            "vitality": 7,
+            "special": 4,
+            "insight": 4
+        },
+        "abilities": ["Rock Head", "Swift Swim"],
+        "moves": {
+            "starter": ["harden", "tackle", "mud-sport"],
+            "beginner": ["flail", "water-gun"],
+            "amateur": ["rock-tomb", "yawn", "take-down", "ancient-power", "rest", "dive"],
+            "ace": ["double-edge", "head-smash", "hydro-pump"],
+            "pro": ["magnitude", "skull-bash", "aqua-tail"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1,
+        "weight": 23,
+        "weaknesses": {
+            "Fighting": 2,
+            "Ground": 2,
+            "Grass": 4,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Normal": 0.5,
+            "Flying": 0.5,
+            "Poison": 0.5,
+            "Fire": 0.25,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/jV00dRq.png"
+    },
+    {
+        "id": "luvdisc",
+        "name": "Luvdisc",
+        "types": ["Water"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 1,
+            "dexterity": 3,
+            "vitality": 2,
+            "special": 1,
+            "insight": 2
+        },
+        "maxStats": {
+            "strength": 3,
+            "dexterity": 6,
+            "vitality": 4,
+            "special": 3,
+            "insight": 4
+        },
+        "abilities": ["Swift Swim"],
+        "moves": {
+            "starter": ["tackle", "charm"],
+            "beginner": ["water-gun", "agility"],
+            "amateur": ["take-down", "draining-kiss", "lucky-chant", "water-pulse", "heart-stamp", "attract", "flail", "sweet-kiss"],
+            "ace": ["hydro-pump", "aqua-ring", "captivate", "safeguard"],
+            "pro": ["swift", "heal-pulse"],
+            "master": []
+        },
+        "rank": "beginner",
+        "height": 0.6,
+        "weight": 8,
+        "weaknesses": {
+            "Grass": 2,
+            "Electric": 2
+        },
+        "immunities": {},
+        "resistances": {
+            "Steel": 0.5,
+            "Fire": 0.5,
+            "Water": 0.5,
+            "Ice": 0.5
+        },
+        "image": "https://imgur.com/bvQ9swU.png"
     }
 ]
