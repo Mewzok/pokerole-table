@@ -1462,7 +1462,7 @@
         "id": "me-first",
         "name": "Me First",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Brawl",
             "modifier": 0
@@ -1587,7 +1587,7 @@
         "id": "yawn",
         "name": "Yawn",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -1602,7 +1602,7 @@
         "id": "work-up",
         "name": "Work Up",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Strength + Athletic",
             "modifier": 0
@@ -1617,7 +1617,7 @@
         "id": "wish",
         "name": "Wish",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -1632,7 +1632,7 @@
         "id": "whirlwind",
         "name": "Whirlwind",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Nature",
             "modifier": 0
@@ -1647,7 +1647,7 @@
         "id": "transform",
         "name": "Transform",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -1662,7 +1662,7 @@
         "id": "tickle",
         "name": "Tickle",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Brawl",
             "modifier": 0
@@ -1677,7 +1677,7 @@
         "id": "teeter-dance",
         "name": "Teeter Dance",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Perform",
             "modifier": 0
@@ -1692,7 +1692,7 @@
         "id": "teatime",
         "name": "Teatime",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Etiquette",
             "modifier": 0
@@ -1707,7 +1707,7 @@
         "id": "tearful-look",
         "name": "Tearful Look",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Allure",
             "modifier": 0
@@ -1722,7 +1722,7 @@
         "id": "tail-whip",
         "name": "Tail Whip",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Perform",
             "modifier": 0
@@ -1737,7 +1737,7 @@
         "id": "swords-dance",
         "name": "Swords Dance",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Perform",
             "modifier": 0
@@ -1752,7 +1752,7 @@
         "id": "sweet-scent",
         "name": "Sweet Scent",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -1767,7 +1767,7 @@
         "id": "swallow",
         "name": "Swallow",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Nature",
             "modifier": 0
@@ -1782,7 +1782,7 @@
         "id": "swagger",
         "name": "Swagger",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -1797,7 +1797,7 @@
         "id": "supersonic",
         "name": "Supersonic",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Channel",
             "modifier": 0
@@ -1812,7 +1812,7 @@
         "id": "substitute",
         "name": "Substitute",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Stealth",
             "modifier": 0
@@ -1827,7 +1827,7 @@
         "id": "stuff-cheeks",
         "name": "Stuff Cheeks",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Nature",
             "modifier": 0
@@ -1842,7 +1842,7 @@
         "id": "stockpile",
         "name": "Stockpile",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -1857,7 +1857,7 @@
         "id": "spotlight",
         "name": "Spotlight",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cool + Perform",
             "modifier": 0
@@ -1872,7 +1872,7 @@
         "id": "splash",
         "name": "Splash",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Brawl",
             "modifier": 0
@@ -1887,7 +1887,7 @@
         "id": "soft-boiled",
         "name": "Soft Boiled",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -1902,7 +1902,7 @@
         "id": "smokescreen",
         "name": "Smokescreen",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -1917,7 +1917,7 @@
         "id": "sleep-talk",
         "name": "Sleep Talk",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {},
         "power": {},
         "targets": "random",
@@ -1929,7 +1929,7 @@
         "id": "slack-off",
         "name": "Slack Off",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Nature",
             "modifier": 0
@@ -1944,7 +1944,7 @@
         "id": "sketch",
         "name": "Sketch",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Perform",
             "modifier": 0
@@ -1959,7 +1959,7 @@
         "id": "sing",
         "name": "Sing",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Perform",
             "modifier": 0
@@ -1974,7 +1974,7 @@
         "id": "simple-beam",
         "name": "Simple Beam",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Allure",
             "modifier": 0
@@ -1989,7 +1989,7 @@
         "id": "shell-smash",
         "name": "Shell Smash",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Strength + Brawl",
             "modifier": 0
@@ -2004,7 +2004,7 @@
         "id": "sharpen",
         "name": "Sharpen",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Athletic",
             "modifier": 0
@@ -2019,7 +2019,7 @@
         "id": "screech",
         "name": "Screech",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Perform",
             "modifier": 0
@@ -2034,7 +2034,7 @@
         "id": "scary-face",
         "name": "Scary Face",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -2049,7 +2049,7 @@
         "id": "safeguard",
         "name": "Safeguard",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -2064,7 +2064,7 @@
         "id": "roar",
         "name": "Roar",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -2079,7 +2079,7 @@
         "id": "refresh",
         "name": "Refresh",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -2094,7 +2094,7 @@
         "id": "reflect-type",
         "name": "Reflect Type",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -2109,7 +2109,7 @@
         "id": "recycle",
         "name": "Recycle",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Nature",
             "modifier": 0
@@ -2124,7 +2124,7 @@
         "id": "recover",
         "name": "Recover",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -2139,7 +2139,7 @@
         "id": "psych-up",
         "name": "Psych Up",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Channel",
             "modifier": 0
@@ -2154,7 +2154,7 @@
         "id": "protect",
         "name": "Protect",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -2169,7 +2169,7 @@
         "id": "play-nice",
         "name": "Play Nice",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Allure",
             "modifier": 0
@@ -2184,7 +2184,7 @@
         "id": "perish-song",
         "name": "Perish Song",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Beauty + Perform",
             "modifier": 0
@@ -2199,7 +2199,7 @@
         "id": "pain-split",
         "name": "Pain Split",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -2214,7 +2214,7 @@
         "id": "odor-sleuth",
         "name": "Odor Sleuth",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Alert",
             "modifier": 0
@@ -2229,7 +2229,7 @@
         "id": "noble-roar",
         "name": "Noble Roar",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -2244,7 +2244,7 @@
         "id": "morning-sun",
         "name": "Morning Sun",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Nature",
             "modifier": 0
@@ -2259,7 +2259,7 @@
         "id": "minimize",
         "name": "Minimize",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -2274,7 +2274,7 @@
         "id": "mind-reader",
         "name": "Mind Reader",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Channel",
             "modifier": 0
@@ -2289,7 +2289,7 @@
         "id": "mimic",
         "name": "Mimic",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Perform",
             "modifier": 0
@@ -2304,7 +2304,7 @@
         "id": "milk-drink",
         "name": "Milk Drink",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Nature",
             "modifier": 0
@@ -2319,7 +2319,7 @@
         "id": "mean-look",
         "name": "Mean Look",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -2334,7 +2334,7 @@
         "id": "lucky-chant",
         "name": "Lucky Chant",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Perform",
             "modifier": 0
@@ -2349,7 +2349,7 @@
         "id": "lovely-kiss",
         "name": "Lovely Kiss",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "-Beauty + Allure",
             "modifier": 0
@@ -2364,7 +2364,7 @@
         "id": "lock-on",
         "name": "Lock-On",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Alert",
             "modifier": 0
@@ -2379,7 +2379,7 @@
         "id": "leer",
         "name": "Leer",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -2394,7 +2394,7 @@
         "id": "laser-focus",
         "name": "Laser Focus",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Alert",
             "modifier": 0
@@ -2409,7 +2409,7 @@
         "id": "howl",
         "name": "Howl",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cool + Intimidate",
             "modifier": 0
@@ -2424,7 +2424,7 @@
         "id": "helping-hand",
         "name": "Helping Hand",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Perform",
             "modifier": 0
@@ -2439,7 +2439,7 @@
         "id": "heal-bell",
         "name": "Heal Bell",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Perform",
             "modifier": 0
@@ -2454,7 +2454,7 @@
         "id": "harden",
         "name": "Harden",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Nature",
             "modifier": 0
@@ -2469,7 +2469,7 @@
         "id": "growth",
         "name": "Growth",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -2484,7 +2484,7 @@
         "id": "growl",
         "name": "Growl",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough/Cute + Perform",
             "modifier": 0
@@ -2506,7 +2506,7 @@
         "id": "glare",
         "name": "Glare",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -2521,7 +2521,7 @@
         "id": "foresight",
         "name": "Foresight",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Alert",
             "modifier": 0
@@ -2536,7 +2536,7 @@
         "id": "follow-me",
         "name": "Follow Me",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cool + Perform",
             "modifier": 0
@@ -2551,7 +2551,7 @@
         "id": "focus-energy",
         "name": "Focus Energy",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Channel",
             "modifier": 0
@@ -2566,7 +2566,7 @@
         "id": "flash",
         "name": "Flash",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -2581,7 +2581,7 @@
         "id": "entrainment",
         "name": "Entrainment",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cool + Perform",
             "modifier": 0
@@ -2596,7 +2596,7 @@
         "id": "endure",
         "name": "Endure",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -2611,7 +2611,7 @@
         "id": "encore",
         "name": "Encore",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cool + Allure",
             "modifier": 0
@@ -2626,7 +2626,7 @@
         "id": "double-team",
         "name": "Double Team",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Evasion",
             "modifier": 0
@@ -2641,7 +2641,7 @@
         "id": "disable",
         "name": "Disable",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Channel",
             "modifier": 0
@@ -2656,7 +2656,7 @@
         "id": "defense-curl",
         "name": "Defense Curl",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Brawl",
             "modifier": 0
@@ -2671,13 +2671,13 @@
         "id": "court-change",
         "name": "Court Change",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Etiquette",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon signals the referee for half-time, the referee complies and both parties swap their sides of the field. Wait. Did we forget something?",
         "image": "https://imgur.com/XgseKaG.png"
@@ -2686,7 +2686,7 @@
         "id": "copycat",
         "name": "Copycat",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {},
         "power": {},
         "targets": "foe",
@@ -2698,7 +2698,7 @@
         "id": "conversion-2",
         "name": "Conversion 2",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -2713,7 +2713,7 @@
         "id": "conversion",
         "name": "Conversion",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -2728,7 +2728,7 @@
         "id": "confide",
         "name": "Confide",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Allure",
             "modifier": 0
@@ -2743,7 +2743,7 @@
         "id": "captivate",
         "name": "Captivate",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Beauty + Allure",
             "modifier": 0
@@ -2758,7 +2758,7 @@
         "id": "camouflage",
         "name": "Camouflage",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -2773,7 +2773,7 @@
         "id": "block",
         "name": "Block",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Brawl",
             "modifier": 0
@@ -2788,7 +2788,7 @@
         "id": "bestow",
         "name": "Bestow",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cool + Etiquette",
             "modifier": 0
@@ -2803,7 +2803,7 @@
         "id": "belly-drum",
         "name": "Belly Drum",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Perform",
             "modifier": 0
@@ -2818,7 +2818,7 @@
         "id": "baton-pass",
         "name": "Baton Pass",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -2833,7 +2833,7 @@
         "id": "attract",
         "name": "Attract",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Beauty + Allure",
             "modifier": 0
@@ -2848,7 +2848,7 @@
         "id": "assist",
         "name": "Assist",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Perform",
             "modifier": 0
@@ -2863,7 +2863,7 @@
         "id": "after-you",
         "name": "After You",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cool + Etiquette",
             "modifier": 0
@@ -2878,7 +2878,7 @@
         "id": "accupressure",
         "name": "Accupressure",
         "type": "Normal",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Nature",
             "modifier": 0
@@ -3037,7 +3037,7 @@
         "id": "quick-guard",
         "name": "Quick Guard",
         "type": "Fighting",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Athletic",
             "modifier": 0
@@ -3190,7 +3190,7 @@
         "id": "octolock",
         "name": "Octolock",
         "type": "Fighting",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Strength + Brawl",
             "modifier": 0
@@ -3205,7 +3205,7 @@
         "id": "no-retreat",
         "name": "No Retreat",
         "type": "Fighting",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -3238,7 +3238,7 @@
         "id": "mat-block",
         "name": "Mat Block",
         "type": "Fighting",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Athletic",
             "modifier": 0
@@ -3520,7 +3520,7 @@
         "id": "detect",
         "name": "Detect",
         "type": "Fighting",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Alert",
             "modifier": 0
@@ -3706,13 +3706,13 @@
         "id": "tailwind",
         "name": "Tailwind",
         "type": "Flying",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "User flaps its wings and casts a turbulent wind that helps the team move significantly faster.",
         "image": "https://imgur.com/vBuxVLU.png"
@@ -3757,7 +3757,7 @@
         "id": "roost",
         "name": "Roost",
         "type": "Flying",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -3862,7 +3862,7 @@
         "id": "feather-dance",
         "name": "Feather Dance",
         "type": "Flying",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Beauty + Perform",
             "modifier": 0
@@ -3949,7 +3949,7 @@
         "id": "mirror-move",
         "name": "Mirror Move",
         "type": "Flying",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -3964,13 +3964,13 @@
         "id": "defog",
         "name": "Defog",
         "type": "Flying",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "A strong current of wind that blows away any fog and even invisible barriers.",
         "image": "https://imgur.com/LtWKIGy.png"
@@ -4159,7 +4159,7 @@
         "id": "venom-drench",
         "name": "Venom Drench",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -4174,7 +4174,7 @@
         "id": "toxic-thread",
         "name": "Toxic Thread",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Channel",
             "modifier": 0
@@ -4189,13 +4189,13 @@
         "id": "toxic-spikes",
         "name": "Toxic Spikes",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Stealth",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user lays a trap of scattered poison spikes that attach to the opponent's feet leaving them with a bad case of fever.",
         "image": "https://imgur.com/332S6RJ.png"
@@ -4204,7 +4204,7 @@
         "id": "toxic",
         "name": "Toxic",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -4291,7 +4291,7 @@
         "id": "purify",
         "name": "Purify",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -4342,7 +4342,7 @@
         "id": "poison-powder",
         "name": "Poison Powder",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -4375,7 +4375,7 @@
         "id": "poison-gas",
         "name": "Poison Gas",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -4426,7 +4426,7 @@
         "id": "gastro-acid",
         "name": "Gastro Acid",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -4459,7 +4459,7 @@
         "id": "coil",
         "name": "Coil",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -4510,7 +4510,7 @@
         "id": "baneful-bunker",
         "name": "Baneful Bunker",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Nature",
             "modifier": 0
@@ -4543,7 +4543,7 @@
         "id": "acid-armor",
         "name": "Acid Armor",
         "type": "Poison",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -4843,13 +4843,13 @@
         "id": "mud-sport",
         "name": "Mud Sport",
         "type": "Ground",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user covers everything with mud, reducing the effectiveness of electric attacks made on the field.",
         "image": "https://imgur.com/m0IA77f.png"
@@ -4876,13 +4876,13 @@
         "id": "rototiller",
         "name": "Rototiller",
         "type": "Ground",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon digs around and moves the soil to make it ideal for plant growth.",
         "image": "https://imgur.com/8DTiLtD.png"
@@ -4891,7 +4891,7 @@
         "id": "sand-attack",
         "name": "Sand Attack",
         "type": "Ground",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Channel",
             "modifier": 0
@@ -4924,7 +4924,7 @@
         "id": "shore-up",
         "name": "Shore Up",
         "type": "Ground",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -4939,13 +4939,13 @@
         "id": "spikes",
         "name": "Spikes",
         "type": "Ground",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon shoots pointy pebbles or thorns around the field that deal damage to anyone coming from that side.",
         "image": "https://imgur.com/VqTu25a.png"
@@ -5116,7 +5116,7 @@
         "id": "rock-polish",
         "name": "Rock Polish",
         "type": "Rock",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Channel",
             "modifier": 0
@@ -5221,13 +5221,13 @@
         "id": "sandstorm",
         "name": "Sandstorm",
         "type": "Rock",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon casts a fierce wind that carries millions of rough sand particles.",
         "image": "https://imgur.com/y6vqMZB.png"
@@ -5254,13 +5254,13 @@
         "id": "stealth-rock",
         "name": "Stealth Rock",
         "type": "Rock",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Stealth",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon hides sharp and pointy rocks all over the foe's side of the battlefield.",
         "image": "https://imgur.com/hPxo0t9.png"
@@ -5287,7 +5287,7 @@
         "id": "tar-shot",
         "name": "Tar Shot",
         "type": "Rock",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -5302,7 +5302,7 @@
         "id": "wide-guard",
         "name": "Wide Guard",
         "type": "Rock",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Brawl",
             "modifier": 0
@@ -5371,7 +5371,7 @@
         "id": "defend-order",
         "name": "Defend Order",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Nature",
             "modifier": 0
@@ -5437,7 +5437,7 @@
         "id": "heal-order",
         "name": "Heal Order",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Nature",
             "modifier": 0
@@ -5488,7 +5488,7 @@
         "id": "tail-glow",
         "name": "Tail Glow",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -5557,7 +5557,7 @@
         "id": "quiver-dance",
         "name": "Quiver Dance",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Beauty + Perform",
             "modifier": 0
@@ -5572,7 +5572,7 @@
         "id": "powder",
         "name": "Powder",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -5659,7 +5659,7 @@
         "id": "rage-powder",
         "name": "Rage Powder",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Intimidate",
             "modifier": 0
@@ -5710,13 +5710,13 @@
         "id": "spider-web",
         "name": "Spider Web",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Stealth",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user quietly releases a web on the field. All foes will be trapped.",
         "image": "https://imgur.com/4Zt7PVB.png"
@@ -5743,13 +5743,13 @@
         "id": "sticky-web",
         "name": "Sticky Web",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon quickly covers the arena with a sticky web, newly arrived foes will have trouble moving with ease.",
         "image": "https://imgur.com/oD657Kk.png"
@@ -5758,7 +5758,7 @@
         "id": "string-shot",
         "name": "String Shot",
         "type": "Bug",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -5809,7 +5809,7 @@
         "id": "confuse-ray",
         "name": "Confuse Ray",
         "type": "Ghost",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -5824,7 +5824,7 @@
         "id": "curse",
         "name": "Curse",
         "type": "Ghost",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -5839,7 +5839,7 @@
         "id": "curse-non-ghost",
         "name": "Curse",
         "type": "Ghost",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -5854,7 +5854,7 @@
         "id": "destiny-bond",
         "name": "Destiny Bond",
         "type": "Ghost",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -5869,7 +5869,7 @@
         "id": "grudge",
         "name": "Grudge",
         "type": "Ghost",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -5974,7 +5974,7 @@
         "id": "nightmare",
         "name": "Nightmare",
         "type": "Ghost",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -6148,7 +6148,7 @@
         "id": "spite",
         "name": "Spite",
         "type": "Ghost",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Intimidate",
             "modifier": 0
@@ -6163,7 +6163,7 @@
         "id": "trick-or-treat",
         "name": "Trick-or-Treat",
         "type": "Ghost",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Allure",
             "modifier": 0
@@ -6196,7 +6196,7 @@
         "id": "autotomize",
         "name": "Autotomize",
         "type": "Steel",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Channel",
             "modifier": 0
@@ -6337,7 +6337,7 @@
         "id": "gear-up",
         "name": "Gear Up",
         "type": "Steel",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Channel",
             "modifier": 0
@@ -6388,7 +6388,7 @@
         "id": "iron-defense",
         "name": "Iron Defense",
         "type": "Steel",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Channel",
             "modifier": 0
@@ -6439,7 +6439,7 @@
         "id": "kings-shield",
         "name": "King's Shield",
         "type": "Steel",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Brawl",
             "modifier": 0
@@ -6505,7 +6505,7 @@
         "id": "metal-sound",
         "name": "Metal Sound",
         "type": "Steel",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Perform",
             "modifier": 0
@@ -6556,7 +6556,7 @@
         "id": "shift-gear",
         "name": "Shift Gear",
         "type": "Steel",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Channel",
             "modifier": 0
@@ -7237,13 +7237,13 @@
         "id": "sunny-day",
         "name": "Sunny Day",
         "type": "Fire",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon will raise the temperature along with the sun, it doesn't work at night, indoors, underground or underwater.",
         "image": "https://imgur.com/8xVCGA7.png"
@@ -7270,7 +7270,7 @@
         "id": "will-o-wisp",
         "name": "Will-o-Wisp",
         "type": "Fire",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Channel",
             "modifier": 0
@@ -7303,7 +7303,7 @@
         "id": "aqua-ring",
         "name": "Aqua Ring",
         "type": "Water",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -7516,7 +7516,7 @@
         "id": "life-dew",
         "name": "Life Dew",
         "type": "Water",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -7603,13 +7603,13 @@
         "id": "rain-dance",
         "name": "Rain Dance",
         "type": "Water",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user performs a curious mystic dance that summons a heavy rainfall.",
         "image": "https://imgur.com/8nO1A1p.png"
@@ -7672,7 +7672,7 @@
         "id": "soak",
         "name": "Soak",
         "type": "Water",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -7831,13 +7831,13 @@
         "id": "water-sport",
         "name": "Water Sport",
         "type": "Water",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user soaks the battlefield with moisture, making it harder for fire attacks to ignite.",
         "image": "https://imgur.com/GhckijL.png"
@@ -7900,7 +7900,7 @@
         "id": "withdraw",
         "name": "Withdraw",
         "type": "Water",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Brawl",
             "modifier": 0
@@ -7951,7 +7951,7 @@
         "id": "aromatherapy",
         "name": "Aromatherapy",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -8002,7 +8002,7 @@
         "id": "cotton-guard",
         "name": "Cotton Guard",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Channel",
             "modifier": 0
@@ -8017,7 +8017,7 @@
         "id": "cotton-spore",
         "name": "Cotton Spore",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Channel",
             "modifier": 0
@@ -8068,7 +8068,7 @@
         "id": "forests-curse",
         "name": "Forest's Curse",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Nature",
             "modifier": 0
@@ -8155,7 +8155,7 @@
         "id": "grass-whistle",
         "name": "Grass Whistle",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Perform",
             "modifier": 0
@@ -8170,13 +8170,13 @@
         "id": "grassy-terrain",
         "name": "Grassy Terrain",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon calls upon the healing power of nature to grow a patch of miraculous grass on its side of the battlefield.",
         "image": "https://imgur.com/c3BjDsX.png"
@@ -8221,7 +8221,7 @@
         "id": "ingrain",
         "name": "Ingrain",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -8308,7 +8308,7 @@
         "id": "leech-seed",
         "name": "Leech Seed",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -8503,7 +8503,7 @@
         "id": "sleep-powder",
         "name": "Sleep Powder",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -8572,7 +8572,7 @@
         "id": "spiky-shield",
         "name": "Spiky Shield",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Brawl",
             "modifier": 0
@@ -8587,7 +8587,7 @@
         "id": "spore",
         "name": "Spore",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -8602,7 +8602,7 @@
         "id": "strength-sap",
         "name": "Strength Sap",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -8617,7 +8617,7 @@
         "id": "stun-spore",
         "name": "Stun Spore",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -8632,7 +8632,7 @@
         "id": "synthesis",
         "name": "Synthesis",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -8701,7 +8701,7 @@
         "id": "worry-seed",
         "name": "Worry Seed",
         "type": "Grass",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -8788,7 +8788,7 @@
         "id": "electrify",
         "name": "Electrify",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -8803,13 +8803,13 @@
         "id": "electric-terrain",
         "name": "Electric Terrain",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user electrifies the terrain making it impossible to get a good night's sleep on it.",
         "image": "https://imgur.com/v69aMSm.png"
@@ -8818,7 +8818,7 @@
         "id": "eerie-impulse",
         "name": "Eerie Impulse",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -8869,7 +8869,7 @@
         "id": "charge",
         "name": "Charge",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -8938,13 +8938,13 @@
         "id": "ion-deluge",
         "name": "Ion Deluge",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user amplifies all electrically charged particles in the environment. The results are shocking!",
         "image": "https://imgur.com/qUe4BOq.png"
@@ -8953,7 +8953,7 @@
         "id": "magnet-rise",
         "name": "Magnet Rise",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -8968,13 +8968,13 @@
         "id": "ion-deluge",
         "name": "Ion Deluge",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user amplifies all electrically charged particles in the environment. The results are shocking!",
         "image": "https://imgur.com/qUe4BOq.png"
@@ -8983,7 +8983,7 @@
         "id": "magnetic-flux",
         "name": "Magnetic Flux",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -9196,7 +9196,7 @@
         "id": "thunder-wave",
         "name": "Thunder Wave",
         "type": "Electric",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -9337,7 +9337,7 @@
         "id": "agility",
         "name": "Agility",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Athletic",
             "modifier": 0
@@ -9352,7 +9352,7 @@
         "id": "ally-switch",
         "name": "Ally Switch",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9367,7 +9367,7 @@
         "id": "amnesia",
         "name": "Amnesia",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Alert",
             "modifier": 0
@@ -9382,7 +9382,7 @@
         "id": "barrier",
         "name": "Barrier",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9397,7 +9397,7 @@
         "id": "calm-mind",
         "name": "Calm Mind",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Channel",
             "modifier": 0
@@ -9430,7 +9430,7 @@
         "id": "cosmic-power",
         "name": "Cosmic Power",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9517,13 +9517,13 @@
         "id": "gravity",
         "name": "Gravity",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The gravity is intensified, bringing everyone to their knees. Flying Pokémon are slammed to the ground.",
         "image": "https://imgur.com/ik8re47.png"
@@ -9532,7 +9532,7 @@
         "id": "guard-split",
         "name": "Guard Split",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9547,7 +9547,7 @@
         "id": "guard-swap",
         "name": "Guard Swap",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9562,7 +9562,7 @@
         "id": "heal-block",
         "name": "Heal Block",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9577,7 +9577,7 @@
         "id": "heal-pulse",
         "name": "Heal Pulse",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -9592,7 +9592,7 @@
         "id": "healing-wish",
         "name": "Healing Wish",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -9625,7 +9625,7 @@
         "id": "heart-swap",
         "name": "Heart Swap",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Allure",
             "modifier": 0
@@ -9658,7 +9658,7 @@
         "id": "hypnosis",
         "name": "Hypnosis",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Allure",
             "modifier": 0
@@ -9673,7 +9673,7 @@
         "id": "imprison",
         "name": "Imprison",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Channel",
             "modifier": 0
@@ -9688,7 +9688,7 @@
         "id": "instruct",
         "name": "Instruct",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Perform",
             "modifier": 0
@@ -9703,7 +9703,7 @@
         "id": "kinesis",
         "name": "Kinesis",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9718,7 +9718,7 @@
         "id": "light-screen",
         "name": "Light Screen",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9733,7 +9733,7 @@
         "id": "lunar-dance",
         "name": "Lunar Dance",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Perform",
             "modifier": 0
@@ -9766,7 +9766,7 @@
         "id": "magic-coat",
         "name": "Magic Coat",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9781,7 +9781,7 @@
         "id": "magic-powder",
         "name": "Magic Powder",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9796,13 +9796,13 @@
         "id": "magic-room",
         "name": "Magic Room",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "Inside the effects of Magic Room technology and manually activated tools and items do not work. Automated technology will function as normal.",
         "image": "https://imgur.com/0qCMBd8.png"
@@ -9811,7 +9811,7 @@
         "id": "meditate",
         "name": "Meditate",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -9826,7 +9826,7 @@
         "id": "miracle-eye",
         "name": "Miracle Eye",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Alert",
             "modifier": 0
@@ -9841,7 +9841,7 @@
         "id": "mirror-coat",
         "name": "Mirror Coat",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Channel",
             "modifier": 0
@@ -9892,7 +9892,7 @@
         "id": "power-split",
         "name": "Power Split",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9907,7 +9907,7 @@
         "id": "power-swap",
         "name": "Power Swap",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -9922,7 +9922,7 @@
         "id": "power-trick",
         "name": "Power Trick",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -10009,13 +10009,13 @@
         "id": "psychic-terrain",
         "name": "Psychic Terrain",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The arena becomes radiated by psychic waves. Everyone begins to think slowly due to the buzz in their heads making all tasks take more time.",
         "image": "https://imgur.com/hTzhgYw.png"
@@ -10060,7 +10060,7 @@
         "id": "psycho-shift",
         "name": "Psycho Shift",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Channel",
             "modifier": 0
@@ -10126,7 +10126,7 @@
         "id": "reflect",
         "name": "Reflect",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -10141,7 +10141,7 @@
         "id": "rest",
         "name": "Rest",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Vitality + Nature",
             "modifier": 0
@@ -10156,7 +10156,7 @@
         "id": "role-play",
         "name": "Role Play",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Perform",
             "modifier": 0
@@ -10171,7 +10171,7 @@
         "id": "skill-swap",
         "name": "Skill Swap",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Perform",
             "modifier": 0
@@ -10186,7 +10186,7 @@
         "id": "speed-swap",
         "name": "Speed Swap",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -10237,7 +10237,7 @@
         "id": "telekinesis",
         "name": "Telekinesis",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -10252,7 +10252,7 @@
         "id": "teleport",
         "name": "Teleport",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -10267,7 +10267,7 @@
         "id": "trick",
         "name": "Trick",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Allure",
             "modifier": 0
@@ -10282,13 +10282,13 @@
         "id": "trick-room",
         "name": "Trick Room",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "This reality altering move can manipulate time so slow creatures are fast and fast creatures are slow.",
         "image": "https://imgur.com/u8Q3y9c.png"
@@ -10297,13 +10297,13 @@
         "id": "wonder-room",
         "name": "Wonder Room",
         "type": "Psychic",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "Inside the Wonder Room a strong mind makes a strong body and a resilient body makes a resilient mind. However, if the mind is weak, the body will be weak and vice versa.",
         "image": "https://imgur.com/bXRPDjO.png"
@@ -10348,7 +10348,7 @@
         "id": "aurora-veil",
         "name": "Aurora Veil",
         "type": "Ice",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Channel",
             "modifier": 0
@@ -10489,13 +10489,13 @@
         "id": "hail",
         "name": "Hail",
         "type": "Ice",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user summons a hailstorm that will stay on the battlefield for some time.",
         "image": "https://imgur.com/AV6nGGD.png"
@@ -10504,13 +10504,13 @@
         "id": "haze",
         "name": "Haze",
         "type": "Ice",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user sends out a haze that disturbs all the Pokémon engaged in battle. It may conceal whoever is inside.",
         "image": "https://imgur.com/haFWYQG.png"
@@ -10699,7 +10699,7 @@
         "id": "mist",
         "name": "Mist",
         "type": "Ice",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Special + Nature",
             "modifier": 0
@@ -10783,7 +10783,7 @@
         "id": "clangerous-soul",
         "name": "Clangerous Soul",
         "type": "Dragon",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Perform",
             "modifier": 0
@@ -10921,7 +10921,7 @@
         "id": "dragon-dance",
         "name": "Dragon Dance",
         "type": "Dragon",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Perform",
             "modifier": 0
@@ -11242,7 +11242,7 @@
         "id": "dark-void",
         "name": "Dark Void",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Channel",
             "modifier": 0
@@ -11293,7 +11293,7 @@
         "id": "flatter",
         "name": "Flatter",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cool + Allure",
             "modifier": 0
@@ -11344,7 +11344,7 @@
         "id": "fake-tears",
         "name": "Fake Tears",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Perform",
             "modifier": 0
@@ -11359,7 +11359,7 @@
         "id": "embargo",
         "name": "Embargo",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -11392,7 +11392,7 @@
         "id": "hone-claws",
         "name": "Hone Claws",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -11461,7 +11461,7 @@
         "id": "memento",
         "name": "Memento",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Will + Channel",
             "modifier": 0
@@ -11476,7 +11476,7 @@
         "id": "nasty-plot",
         "name": "Nasty Plot",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Alert",
             "modifier": 0
@@ -11545,7 +11545,7 @@
         "id": "quash",
         "name": "Quash",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -11632,7 +11632,7 @@
         "id": "parting-shot",
         "name": "Parting Shot",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -11647,7 +11647,7 @@
         "id": "obstruct",
         "name": "Obstruct",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Dexterity + Intimidate",
             "modifier": 0
@@ -11662,7 +11662,7 @@
         "id": "snatch",
         "name": "Snatch",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Clever + Stealth",
             "modifier": 0
@@ -11695,7 +11695,7 @@
         "id": "switcheroo",
         "name": "Switcheroo",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Stealth",
             "modifier": 0
@@ -11710,7 +11710,7 @@
         "id": "taunt",
         "name": "Taunt",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -11761,7 +11761,7 @@
         "id": "topsy-turvy",
         "name": "Topsy Turvy",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -11776,7 +11776,7 @@
         "id": "torment",
         "name": "Torment",
         "type": "Dark",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Tough + Intimidate",
             "modifier": 0
@@ -11809,7 +11809,7 @@
         "id": "geomancy",
         "name": "Geomancy",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -11824,13 +11824,13 @@
         "id": "flower-shield",
         "name": "Flower Shield",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The Pokémon uses a mysterious power that causes flowers to bloom beneath every Grass Pokémon nearby. Flora in this field is more resilient and beautiful.",
         "image": "https://imgur.com/dDTjsMK.png"
@@ -11839,7 +11839,7 @@
         "id": "floral-healing",
         "name": "Floral Healing",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -11890,13 +11890,13 @@
         "id": "fairy-lock",
         "name": "Fairy Lock",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user moves as if locking a door. It takes a few moments before everyone realizes they are not really trapped.",
         "image": "https://imgur.com/2lxq4Vj.png"
@@ -11923,7 +11923,7 @@
         "id": "aromatic-mist",
         "name": "Aromatic Mist",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -11938,7 +11938,7 @@
         "id": "baby-doll-eyes",
         "name": "Baby-Doll Eyes",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Allure",
             "modifier": 0
@@ -11953,7 +11953,7 @@
         "id": "charm",
         "name": "Charm",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Allure",
             "modifier": 0
@@ -11968,7 +11968,7 @@
         "id": "crafty-shield",
         "name": "Crafty Shield",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
@@ -12001,7 +12001,7 @@
         "id": "decorate",
         "name": "Decorate",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Beauty + Nature",
             "modifier": 0
@@ -12034,7 +12034,7 @@
         "id": "sweet-kiss",
         "name": "Sweet Kiss",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Cute + Allure",
             "modifier": 0
@@ -12169,15 +12169,102 @@
         "id": "misty-terrain",
         "name": "Misty Terrain",
         "type": "Fairy",
-        "category": "Status",
+        "category": "Support",
         "accuracy": {
             "formula": "Insight + Nature",
             "modifier": 0
         },
         "power": {},
-        "targets": "Field",
+        "targets": "battlefield",
         "effects": [],
         "description": "The user surrounds the battlefield with a mystical mist that feels protective. Mythical Pokémon find something eerie about it.",
         "image": "https://imgur.com/nHiipvc.png"
+    },
+    {
+        "id": "struggle",
+        "name": "Struggle",
+        "type": "None",
+        "category": ["Physical", "Special"],
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {
+            "base": 0,
+            "scaling": ["Strength", "Special"]
+        },
+        "targets": "foe",
+        "effects": [],
+        "description": "",
+        "image": "https://imgur.com/JaU30Om.png"
+    },
+    {
+        "id": "grapple",
+        "name": "Grapple",
+        "type": "None",
+        "category": ["Support"],
+        "accuracy": {
+            "formula": "Strength + Brawl",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "foe",
+        "effects": [],
+        "description": "The foe is Blocked. Foe can resist this Maneuver by rolling their Strength or Dexterity score and scoring the same or more successes than the user.",
+        "image": "https://imgur.com/M4lmTU8.png"
+    },
+    {
+        "id": "help-another",
+        "name": "Help Another",
+        "type": "None",
+        "category": ["Support"],
+        "accuracy": {},
+        "power": {},
+        "targets": "ally",
+        "effects": [],
+        "description": "Roll your Accuracy as if it was Chance Dice. If successful, add one die to the action of an ally. Up to 6 dice may be added this way.",
+        "image": "https://imgur.com/Tsqj1Hg.png"
+    },
+    {
+        "id": "cover-an-ally",
+        "name": "Cover an Ally",
+        "type": "None",
+        "category": ["Support"],
+        "accuracy": {},
+        "power": {},
+        "targets": "ally",
+        "effects": [],
+        "description": "The user will provide cover to the target from ranged attacks and is more likely to be hit by close-range attacks. The level of cover the user provides will depend on its size.",
+        "image": "https://imgur.com/1Inx2Da.png"
+    },
+    {
+        "id": "stabilize-an-ally",
+        "name": "Stabilize an Ally",
+        "type": "None",
+        "category": ["Support"],
+        "accuracy": {
+            "formula": "Clever + Medicine",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "ally",
+        "effects": [],
+        "description": "The user applies CPR and/or first aid to an unconcious ally. Target won't receive Lethal Damage each hour anymore. Each Lethal Damage on the Ally reduces 1 Success to the Accuracy Pool of this Maneuver.",
+        "image": "https://imgur.com/ywHwYm9.png"
+    },
+    {
+        "id": "run-away",
+        "name": "Run Away",
+        "type": "None",
+        "category": ["Support"],
+        "accuracy": {
+            "formula": "Dexterity + Athletic",
+            "modifier": 0
+        },
+        "power": {},
+        "targets": "user",
+        "effects": [],
+        "description": "The user runs away from the battlefield. This effect ends the battle. Foes might try to prevent this by rolling Dexterity + Athletic and scoring the same or more successes. If the user is Blocked this Maneuver fails.",
+        "image": "https://imgur.com/f2Ej86f.png"
     }
 ]
