@@ -18952,5 +18952,50 @@
             "Ice": 0.5
         },
         "image": "https://imgur.com/N5iWdd3.png"
+    },
+    {
+        "id": "sylveon",
+        "name": "Sylveon",
+        "types": ["Fairy"],
+        "baseStats": {
+            "HP": 4,
+            "strength": 2,
+            "dexterity": 2,
+            "vitality": 2,
+            "special": 3,
+            "insight": 3
+        },
+        "maxStats": {
+            "strength": 4,
+            "dexterity": 4,
+            "vitality": 4,
+            "special": 6,
+            "insight": 7
+        },
+        "abilities": ["Cute Charm"],
+        "moves": {
+            "starter": ["tackle", "tail-whip"],
+            "beginner": ["sand-attack", "helping-hand", "fairy-wind"],
+            "amateur": ["disarming-voice", "quick-attack", "swift", "draining-kiss", "skill-swap", "misty-terrain", "light-screen"],
+            "ace": ["moonblast", "last-resort", "psych-up"],
+            "pro": ["captivate", "wish", "hyper-voice"],
+            "master": []
+        },
+        "rank": "amateur",
+        "height": 1,
+        "weight": 23,
+        "weaknesses": {
+            "Poison": 2,
+            "Steel": 2
+        },
+        "immunities": {
+            "Dragon": 0
+        },
+        "resistances": {
+            "Fighting": 0.5,
+            "Bug": 0.5,
+            "Dark": 0.5
+        },
+        "image": "https://imgur.com/1gAtDSp.png"
     }
 ]
