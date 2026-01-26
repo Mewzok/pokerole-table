@@ -339,3 +339,18 @@ button:hover {
     margin-bottom: 4px;
     opacity: 0.8;
 }
+
+/* --- Center Scene Display --- */
+#scene-display {
+    border-bottom: 1px solid #444;
+    min-height: 120px;
+}
+
+#scene-characters {
+    min-height: 300px;
+}
+
+#player-ui {
+    border-top: 1px solid #444;
+    min-height: 150px;
+}

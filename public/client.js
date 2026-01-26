@@ -70,6 +70,10 @@ window.POKEMON = [];
 // move variables
 let MOVES = {};
 
+// scene variables
+let SCENE_CHARACTERS = [];
+let SCENE_POSTS = [];
+
 // handle pokemon
 async function loadPokemonData() {
     try {
@@ -194,6 +198,22 @@ window.onload = () => {
     } else {
         showNameEntryScreen();
     }
+
+    document.getElementById("scene-post-btn")?.addEventListener("click", () => {
+        const input = document.getElementById("scene-text-input");
+        if(!input || !input.value.trim()) {
+            return;
+        }
+
+        SCENE_POSTS.push({
+            if: crypto.randomUUID(),
+            speaker: "GM",
+            text: input.value.trim()
+        });
+
+        input.value = "";
+        renderScenePosts(SCENE_POSTS);
+    });
 };
 
 // ---- server events ----
@@ -264,6 +284,7 @@ socket.on("character-list", (chars) => {
     CHARACTERS = chars;
     renderCharacterList();
     renderCharacters(chars);
+    populateSceneSpeakers(chars);
 });
 
 // ---- character updates ----
@@ -918,3 +939,63 @@ function deactiveMove(moveId) {
 if(!window.isGM) {
     document.querySelectorAll(".gm-only").forEach(e => e.remove());
 }
+
+// scene
+document.getElementById("scene-post-btn")?.addEventListener("click", () => {
+    const input = document.getElementById("scene-text-input");
+    if(!input || !input.value.trim()) {
+        return;
+    }
+
+    socket.emit("scene-post", {
+        speaker: "GM",
+        text: input.value.trim()
+    });
+
+    input.value = "";
+});
+
+function renderScenePosts(posts) {
+    const display = document.getElementById("scene-display");
+    if(!display) {
+        return;
+    }
+
+    display.innerHTML = "";
+
+    posts.forEach(post => {
+        const el = document.createElement("div");
+        el.className = "scene-post";
+
+        if(post.speaker) {
+            const speaker = document.createElement("strong");
+            speaker.textContent = post.speaker + ": ";
+            el.appendChild(speaker);
+        }
+
+        const text = document.createElement("span");
+        text.textContent = post.text;
+        el.appendChild(text);
+
+        display.appendChild(el);
+    });
+
+    display.scrollTop = display.scrollHeight;
+}
+
+function populateSceneSpeakers(characters) {
+    const select = document.getElementById("scene-speaker");
+    select.innerHTML = `<option value="">Narrator</option>`;
+
+    characters.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c.name;
+        opt.textContent = c.name;
+        select.appendChild(opt);
+    });
+}
+
+socket.on("scene-update", posts => {
+    SCENE_POSTS = posts;
+    renderScenePosts(SCENE_POSTS);
+});

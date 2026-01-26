@@ -33,6 +33,30 @@
                  <section class="tabView active" id="tab-game">
                     <h2>Game View</h2>
 
+                    <div id="scene-panel">
+                        <!-- narration / dialog -->
+                        <div id="scene-display"></div>
+                            <div id="scene-input">
+                                <input id="scene-text-input" type="text" placeholder="Enter narration or dialog"/>
+                                <button id="scene-post-btn">Post</button>
+                            </div>
+                        </div>
+
+                        <!-- characters present in the scene -->
+                        <div id="scene-characters">
+                            <!-- NPC cards (top) -->
+                            <div id="npc-row"></div>
+
+                            <!-- player cards (bottom) -->
+                            <div id="player-row"></div>
+                        </div>
+
+                        <!-- player ui (stats, items, moves, etc) -->
+                        <div id="player-ui">
+                            <!-- later hold character sheet, items, rolls, etc -->
+                        </div>
+                    </div>
+
                     <section id="characters-area">
                         <h3>Characters</h3>
                         <div id="character-grid"></div>

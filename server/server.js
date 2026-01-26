@@ -19,6 +19,8 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
+let SCENE_POSTS = [];
+
 const RULES = {
     MAX_ACTIVE_MOVES: 4 // set to null for unlimited
 };
@@ -115,8 +117,27 @@ io.on("connection", socket => {
 
         console.log("[request-join] registered player for socket:", socket.id, "->", playerData);
         socket.emit("join-approved", playerData);
+        socket.emit("scene-update", SCENE_POSTS);
         io.emit("playerJoinedAnnouncement", playerData.name);
         io.emit("player-list", Array.from(players.values()));
+    });
+
+    socket.on("scene-post", post => {
+        // basic validation
+        if(!post || !post.text) {
+            return;
+        }
+
+        const scenePost = {
+            id: crypto.randomUUID(),
+            speaker: post.speaker || null,
+            text: post.text,
+            timestamp: Date.now()
+        };
+
+        SCENE_POSTS.push(scenePost);
+
+        io.emit("scene-update", SCENE_POSTS);
     });
 
     socket.on("change-name", (newName) => {
