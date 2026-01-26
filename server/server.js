@@ -21,6 +21,11 @@ const io = new Server(server);
 
 let SCENE_POSTS = [];
 
+const sceneState = {
+    characters: [],
+    log: []
+};
+
 const RULES = {
     MAX_ACTIVE_MOVES: 4 // set to null for unlimited
 };
@@ -123,20 +128,21 @@ io.on("connection", socket => {
     });
 
     socket.on("scene-post", post => {
-        // basic validation
         if(!post || !post.text) {
             return;
         }
 
+        const character = post.speakerId ? characters.get(post.speakerId) : null;
+
         const scenePost = {
             id: crypto.randomUUID(),
-            speaker: post.speaker || null,
+            speakerId: post.speaker || null,
+            speakerName: character ? character.name : null,
             text: post.text,
             timestamp: Date.now()
         };
 
         SCENE_POSTS.push(scenePost);
-
         io.emit("scene-update", SCENE_POSTS);
     });
 

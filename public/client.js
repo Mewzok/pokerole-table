@@ -283,8 +283,8 @@ function addLog(message) {
 socket.on("character-list", (chars) => {
     CHARACTERS = chars;
     renderCharacterList();
-    renderCharacters(chars);
-    populateSceneSpeakers(chars);
+    renderCharacters(CHARACTERS);
+    populateSceneSpeakers(CHARACTERS);
 });
 
 // ---- character updates ----
@@ -943,13 +943,15 @@ if(!window.isGM) {
 // scene
 document.getElementById("scene-post-btn")?.addEventListener("click", () => {
     const input = document.getElementById("scene-text-input");
+    const speakerSelect = document.getElementById("scene-speaker");
+
     if(!input || !input.value.trim()) {
         return;
     }
 
     socket.emit("scene-post", {
-        speaker: "GM",
-        text: input.value.trim()
+        text: input.value.trim(),
+        speakerId: speakerSelect?.value || null
     });
 
     input.value = "";
@@ -967,9 +969,9 @@ function renderScenePosts(posts) {
         const el = document.createElement("div");
         el.className = "scene-post";
 
-        if(post.speaker) {
+        if(post.speakerName) {
             const speaker = document.createElement("strong");
-            speaker.textContent = post.speaker + ": ";
+            speaker.textContent = post.speakerName + ": ";
             el.appendChild(speaker);
         }
 
