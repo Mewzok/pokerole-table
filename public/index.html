@@ -14,7 +14,7 @@
             </aside>
 
             <!-- Main Panel -->
-             <main id="main-panel">
+            <main id="main-panel">
                 <div id="dashboardHeader">
                     <h1>Dashboard</h1>
 
@@ -30,7 +30,7 @@
                 </div>
 
                 <!-- Game Tab -->
-                 <section class="tabView active" id="tab-game">
+                <section class="tabView active" id="tab-game">
                     <h2>Game View</h2>
 
                     <div id="scene-panel">
@@ -53,24 +53,28 @@
 
                             <!-- player cards (bottom) -->
                             <div id="player-row"></div>
+
+                            <div id="scene-roster-controls">
+                                <h3>Scene Characters</h3>
+                                <div id="scene-roster-list"></div>
+                            </div>
                         </div>
 
                         <!-- player ui (stats, items, moves, etc) -->
                         <div id="player-ui">
-                            <!-- later hold character sheet, items, rolls, etc -->
+                            
                         </div>
-                    </div>
 
-                    <section id="characters-area">
-                        <h3>Characters</h3>
-                        <div id="character-grid"></div>
-                    </section>
+                        <section id="characters-area">
+                            <h3>Characters</h3>
+                            <div id="character-grid"></div>
+                        </section>
 
-                    <section id="dice-area">
-                        <h3>Dice & Rolls</h3>
-                        <div id="diceResults"></div>
+                        <section id="dice-area">
+                            <h3>Dice & Rolls</h3>
+                            <div id="diceResults"></div>
+                        </section>
                     </section>
-                 </section>
 
                 <!-- Characters Tab -->
                 <section class="tabView" id="tab-characters">
@@ -227,7 +231,7 @@
                             <h3>Skills</h3>
 
                             <div id="sheet-skills" class="skill-grid">
-                                <div> Brawl <input id="skill-braw" type="number" min="0" max="5"></div>
+                                <div> Brawl <input id="skill-brawl" type="number" min="0" max="5"></div>
                                 <div> Channel <input id="skill-channel" type="number" min="0" max="5"></div>
                                 <div> Clash <input id="skill-clash" type="number" min="0" max="5"></div>
                                 <div> Evasion <input id="skill-evasion" type="number" min="0" max="5"></div>

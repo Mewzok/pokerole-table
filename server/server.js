@@ -109,6 +109,24 @@ io.on("connection", socket => {
             playerData = { id: crypto.randomUUID(), name };
         }
 
+        socket.on("scene-add-character", (charId) => {
+            const player = players.get(socket.id);
+            const char = characters.get(charId);
+            if(!player || !char) {
+                return;
+            }
+
+            if(!player.isGM) {
+                return;
+            }
+
+            if(!sceneState.characters.includes(charId)) {
+                sceneState.characters.push(charId);
+            }
+
+            io.emit("scene-roster-update", sceneState.characters);
+        });
+
         // first player to join is GM temporarily
         playerData.isGM = playersById.size === 0;
 

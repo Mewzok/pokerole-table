@@ -36,11 +36,14 @@ const sheetCancel = document.getElementById("sheet-cancel");
 const sheetDelete = document.getElementById("sheet-delete");
 const createCharacterBtn = document.getElementById("createCharacterBtn");
 const SKILLS = ["Brawl", "Channel", "Clash", "Evasion", "Alert", "Athletic", "Nature", "Stealth", "Allure", "Etiquette", "Intimidate", "Perform"];
+const SOCIALS = ["Tough", "Cool", "Beauty", "Cute", "Clever"];
 const sizeSlider = document.getElementById("sheet-size");
 const sizeLabel = document.getElementById("sheet-size-label");
 const dimensionsDiv = document.getElementById("sheet-dimensions");
 let skillPointsRemaining = 3;
 let skillValues = {};
+let socialPointsRemaining = 1;
+let socialValues = {};
 
 // move variables
 const MOVE_EXP_COSTS = {
@@ -330,6 +333,7 @@ socket.on("name-change-denied", (data) => {
 });
 
 // ---- characters ----
+// render current characters on the main page
 function renderCharacters(characters) {
     characterGrid.innerHTML = "";
 
@@ -409,6 +413,17 @@ function openCharacterSheet(char) {
     renderMovesPanel(char);
 }
 
+// render the character sheet, taking into account a new or old character
+function renderCharacterSheet(character) {
+    if(!character) {
+        return;
+    }
+
+    // progression
+    document.getElementById("sheet-level").textContent = character.level ?? 1;
+    document.getElementById("sheet-exp").textContent = character.exp ?? 0;
+}
+
 document.getElementById("createCharacterBtn").onclick = () => {
     editingCharacterId = null;
     
@@ -485,12 +500,12 @@ function resetSkills() {
     skillPointsRemaining = 3;
     skillValues = {};
     SKILLS.forEach(s => skillValues[s] = 0);
-    renderSkills();
+    renderSkills("sheet-skills", "sheet-skill-points");
 }
 
-function renderSkills() {
-    const container = document.getElementById("sheet-skills");
-    const pointsLabel = document.getElementById("sheet-skill-points");
+function renderSkills(skillType, pointLabel) {
+    const container = document.getElementById(skillType);
+    const pointsLabel = document.getElementById(pointLabel);
 
     container.innerHTML = "";
     pointsLabel.textContent = `Points Remaining: ${skillPointsRemaining}`;
@@ -531,7 +546,7 @@ document.getElementById("sheet-skills").addEventListener("click", e => {
     skillValues[skill] += dir;
     skillPointsRemaining -= dir;
 
-    renderSkills();
+    renderSkills("sheet-skills", "sheet-skill-points");
     renderCalculated(currentSpecies, skillValues);
 });
 
@@ -544,7 +559,7 @@ document.getElementById("skills-randomize").onclick = () => {
             skillPointsRemaining--;
         }
     }
-    renderSkills();
+    renderSkills("sheet-skills", "sheet-skill-points");
     renderCalculated(currentSpecies, skillValues);
 };
 
@@ -996,6 +1011,47 @@ function populateSceneSpeakers(characters) {
         select.appendChild(opt);
     });
 }
+
+function renderSceneRoster(sceneCharacterIds) {
+    const container = document.getElementById("scene-roster-list");
+    if(!container) {
+        return;
+    }
+
+    container.innerHTML = "";
+
+    sceneCharacterIds.forEach(id => {
+        const character = CHARACTERS.find(c => c.id === id);
+        if(!character) {
+            return;
+        }
+
+        const row = document.createElement("div");
+        row.className = "scene-roster-row";
+
+        row.textContent = character.name;
+
+        // gm remove button
+        if(IS_GM) {
+            const btn = document.createElement("button");
+            btn.textContent = "Remove";
+            btn.onclick = () => {
+                socket.emit("scene-remove-character", id);
+            };
+            row.appendChild(btn);
+        }
+
+        container.appendChild(row);
+    });
+}
+
+socket.on("scene-roster-update", (ids) => {
+    SCENE_CHARACTERs = ids;
+    renderSceneRoster(SCENE_CHARACTERS);
+
+    const charsInScene = CHARACTERS.filter(c => SCENE_CHARACTERs.includes(c.id));
+    populateSceneSpeakers(charsInScene);
+});
 
 socket.on("scene-update", posts => {
     SCENE_POSTS = posts;

@@ -12,6 +12,37 @@ const MOVE_EXP_COST = {
     champion: 30
 };
 
+export const UNIVERSAL_MOVES = [
+    "struggle",
+    "grapple",
+    "help-another",
+    "cover-an-ally",
+    "stabilize-an-ally",
+    "run-away"
+]
+
+export const MOVE_RANK_ORDER = [
+    "starter",
+    "beginner",
+    "amateur",
+    "ace",
+    "pro",
+    "master",
+    "champion"
+];
+
+export const ATTRIBUTE_RULES = {
+    totalPoints: 5,
+    min: 1,
+    max: 5
+};
+
+export const SOCIAL_SKILLS_RULES = {
+    totalPoints: 5,
+    min: 1,
+    max: 5
+};
+
 export class Character {
     constructor({ id, ownerId, ownerName, pokemonId, nickname = null }) {
         this.id = id;
@@ -300,6 +331,72 @@ export class Character {
         this.level += 1;
         return true;
     }
+}
+
+export function createCharacter({ pokemonId, name }) {
+    const species = POKEMON.find(p => p.id === pokemonId);
+    if(!species) {
+        throw new Error("Invalid Pokémon species.");
+    }
+
+    const character = {
+        if: crypto.randomUUID(),
+        pokemonId,
+        speciesName: species.name,
+        name: name || species.name,
+
+        // progression
+        level: 1,
+        exp: 0,
+
+        // attributes
+        attributes: {
+            logic: 1,
+            instinct: 1,
+            primal: 1
+        },
+
+        // social skills
+        socialSkills: {
+            tough: 1,
+            cool: 1,
+            beauty: 1,
+            cute: 1,
+            clever: 1
+        },
+
+        // ability and nature (set later by UI)
+        ability: null,
+        nature: null,
+
+        // moves
+        moves: {
+            universal: [...UNIVERSAL_MOVES],
+            learned: [],
+            active: []
+        }
+    };
+
+    autoLearnStarterMoves(character, species);
+
+    return character;
+}
+
+function autoLearnStarterMoves(character, species) {
+    if(!species.moves) {
+        return;
+    }
+
+    const starterMoves = species.moves.filter(m => m.rank === "starter");
+
+    starterMoves.forEach(move => {
+        if(!character.moves.learned.includes(move.id)) {
+            character.moves.learned.push(move.id);
+        }
+    });
+
+    // auto-slot up to 4
+    character.moves.active = character.moves.learned.slice(0, 4);
 }
 
 // number of total active move slots. set to null for unlimited
